@@ -11,6 +11,6 @@ file_list <- list.files(path = source_folder,
 # 3. Load each file as data frame
 for (file_path in file_list) {
   base_name <- basename(file_path)
-  object_name <- gsub('\\.rds$', '', base_name)
+  object_name <- substr(gsub('\\.rds$', '', base_name), 18, nchar(gsub('\\.rds$', '', base_name)))
   assign(object_name, readRDS(file_path))
 }
