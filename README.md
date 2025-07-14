@@ -5,3 +5,5 @@ Welcome to the repository for the Age of Wonder: Curated Dataset, being develope
 This line has been added from R studio
 
 This Line has been added from GitHub
+
+This line has been added by James T
