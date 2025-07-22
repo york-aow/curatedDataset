@@ -1,11 +1,13 @@
-#Run loadData.R first
+# Run loadData.R first
 
-#Load required packages
+# Load required packages
 library(tidyverse)
 library(haven)
 
 print_labels(recruitment_dr24$has_survey_m231)
 print_labels(recruitment_dr24$has_survey_m232)
+
+#### Exclude participants missing 231 or 232 ####
 
 # How many have both survey modules 231 and 232?
 table(as_factor(recruitment_dr24$has_survey_m231), 
@@ -13,16 +15,16 @@ table(as_factor(recruitment_dr24$has_survey_m231),
 # 11,713
 
 # Select only those who have both survey modules
-both_mods_24 <- recruitment_dr24 %>% 
+both_mods <- recruitment_dr24 %>% 
   filter(as_factor(has_survey_m231) == "Yes",
          as_factor(has_survey_m232) == "Yes")
 
 # How many unique participant IDs?
-length(unique(as.factor(both_mods_24$aow_person_id)))
+length(unique(as.factor(both_mods$aow_person_id)))
 # 10,034
 
 # How many unique recruitment IDs?
-length(unique(as.factor(both_mods_24$aow_recruitment_id)))
+length(unique(as.factor(both_mods$aow_recruitment_id)))
 # 11,713
 
 
@@ -51,14 +53,14 @@ survey_mod232_main_dr24 <- survey_mod232_main_dr24 %>%
 
 
 # Identify repeated variables in recruitment and survey data (excluding recruitment ID)
-repeated_vars1 <- intersect(names(both_mods_24), names(survey_mod231_main_dr24)) %>%
+repeated_vars1 <- intersect(names(both_mods), names(survey_mod231_main_dr24)) %>%
   setdiff("aow_recruitment_id")
 # Identify repeated variables in mod231 and mod232 data (excluding recruitment ID)
 repeated_vars2 <- intersect(names(survey_mod231_main_dr24), names(survey_mod232_main_dr24)) %>%
   setdiff("aow_recruitment_id")
 
 # Join both module dataframes excluding repeated variables
-both_mods_24 <- both_mods_24 %>%
+both_mods <- both_mods %>%
   left_join(
     survey_mod231_main_dr24 %>% select(-any_of(repeated_vars1)),
     by = "aow_recruitment_id"
@@ -70,4 +72,62 @@ both_mods_24 <- both_mods_24 %>%
 
 # Get list of variables in combined dataset
 # Run Functions.R to create df_info function
-df_info(both_mods_24, file = "both_mods_24.csv")
+df_info(both_mods, file = "both_mods.csv")
+
+#### Time between survey modules ####
+# Is there any difference in age between surveys?
+both_mods$survey_age_diff <- (both_mods$age_survey232_m - both_mods$age_survey231_m)
+summary(both_mods$survey_age_diff)
+# Yes, there is...
+table(both_mods$survey_age_diff)
+
+#### Filter data to only include 23-24 data (removing 22-23 data) ####
+table(both_mods$recruitment_era)
+both_mods_24 <- both_mods %>% 
+  filter(recruitment_era == '2023-24')
+table(both_mods_24$recruitment_era)
+
+#### Identify (and remove) duplicates ####
+both_mods_24_duplicates <- both_mods_24 %>%
+  group_by(aow_person_id) %>%
+  filter(n() > 1) %>% # Keep groups that have more than one row
+  ungroup()
+#implement rule for duplicated patient IDs (take data from earliest time point based on participant age in months)
+both_mods_24 <- both_mods_24 %>% 
+  group_by(aow_person_id) %>% 
+  arrange(age_survey231_m) %>% 
+  slice(1) %>% # Keep the first row in each group
+  ungroup()
+
+# How many unique participant IDs?
+length(unique(as.factor(both_mods_24$aow_person_id)))
+# 7962
+
+# How many unique recruitment IDs?
+length(unique(as.factor(both_mods_24$aow_recruitment_id)))
+# 7962
+
+# How many with age (months) difference between survey mod 231 and 232
+table(both_mods_24$survey_age_diff)
+7962 - 7555 # 407
+
+#### TO DO: Address those with months between survey modules ####
+
+#### Survey Version ####
+table(both_mods_24$survey231_version) # All version 10
+table(both_mods_24$survey232_version) # All version 10
+# Survey mode
+table(as_factor(both_mods_24$survey231_mode))
+table(as_factor(both_mods_24$survey232_mode))
+table(as_factor(both_mods_24$survey231_mode),
+      as_factor(both_mods_24$survey232_mode))
+
+#### TO DO: Add height, weight, BMI data ####
+
+#### Missing Data ####
+
+# Percentage of responses NA on each variable
+missing_data <- colMeans(is.na(both_mods_24))*100
+# Save as csv
+write.table(missing_data, file = "missing_table.csv", sep = ",")
+# 84 variables have 100% missingness
