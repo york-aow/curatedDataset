@@ -28,19 +28,46 @@ length(unique(as.factor(both_mods_24$aow_recruitment_id)))
 
 #### Add data from survey modules ####
 
-# Identify repeated variables in recruitment and survey data (excluding recruitment ID)
-repeated_vars <- intersect(names(both_mods_24), names(survey_mod231_main_dr24)) %>%
-  setdiff("aow_recruitment_id")
-
-# Join both module dataframes excluding repeated variables
-both_mods_24_joined <- both_mods_24 %>%
-  left_join(
-    survey_mod231_main_dr24 %>% select(-any_of(repeated_vars)),
-    by = "aow_recruitment_id"
-  ) %>%
-  left_join(
-    survey_mod232_main_dr24 %>% select(-any_of(repeated_vars)),
-    by = "aow_recruitment_id"
+# Rename survey_version and survey_mode variables to distinguish between modules
+survey_mod231_main_dr24 <- survey_mod231_main_dr24 %>%
+  rename(
+    survey231_version = survey_version,
+    survey231_mode = survey_mode
+  )
+survey_mod232_main_dr24 <- survey_mod232_main_dr24 %>%
+  rename(
+    survey232_version = survey_version,
+    survey232_mode = survey_mode
+  )
+# Rename age_survey_m to distinguish between modules (check they were completed at the same time)
+survey_mod231_main_dr24 <- survey_mod231_main_dr24 %>%
+  rename(
+    age_survey231_m = age_survey_m,
+  )
+survey_mod232_main_dr24 <- survey_mod232_main_dr24 %>%
+  rename(
+    age_survey232_m = age_survey_m,
   )
 
 
+# Identify repeated variables in recruitment and survey data (excluding recruitment ID)
+repeated_vars1 <- intersect(names(both_mods_24), names(survey_mod231_main_dr24)) %>%
+  setdiff("aow_recruitment_id")
+# Identify repeated variables in mod231 and mod232 data (excluding recruitment ID)
+repeated_vars2 <- intersect(names(survey_mod231_main_dr24), names(survey_mod232_main_dr24)) %>%
+  setdiff("aow_recruitment_id")
+
+# Join both module dataframes excluding repeated variables
+both_mods_24 <- both_mods_24 %>%
+  left_join(
+    survey_mod231_main_dr24 %>% select(-any_of(repeated_vars1)),
+    by = "aow_recruitment_id"
+  ) %>%
+  left_join(
+    survey_mod232_main_dr24 %>% select(-any_of(repeated_vars2)),
+    by = "aow_recruitment_id"
+  )
+
+# Get list of variables in combined dataset
+# Run Functions.R to create df_info function
+df_info(both_mods_24, file = "both_mods_24.csv")
