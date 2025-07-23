@@ -77,9 +77,8 @@ df_info(both_mods, file = "both_mods.csv")
 #### Time between survey modules ####
 # Is there any difference in age between surveys?
 both_mods$survey_age_diff <- (both_mods$age_survey232_m - both_mods$age_survey231_m)
-summary(both_mods$survey_age_diff)
-# Yes, there is...
 table(both_mods$survey_age_diff)
+# Yes, there is...
 
 #### Filter data to only include 23-24 data (removing 22-23 data) ####
 table(both_mods$recruitment_era)
@@ -107,22 +106,98 @@ length(unique(as.factor(both_mods_24$aow_person_id)))
 length(unique(as.factor(both_mods_24$aow_recruitment_id)))
 # 7962
 
-# How many with age (months) difference between survey mod 231 and 232
+#### Exclude participants with age (months) difference between survey modules ####
+
+# How many with age (months) difference between survey mod 231 and 232?
 table(both_mods_24$survey_age_diff)
 7962 - 7555 # 407
 
-#### TO DO: Address those with months between survey modules ####
+# Filter participants with no age diff between modules
+both_mods_24_x <- both_mods_24 %>% 
+  filter(survey_age_diff == '0')
+table(both_mods_24_x$survey_age_diff)
 
 #### Survey Version ####
-table(both_mods_24$survey231_version) # All version 10
-table(both_mods_24$survey232_version) # All version 10
+table(both_mods_24_x$survey231_version) # All version 10
+table(both_mods_24_x$survey232_version) # All version 10
 # Survey mode
-table(as_factor(both_mods_24$survey231_mode))
-table(as_factor(both_mods_24$survey232_mode))
-table(as_factor(both_mods_24$survey231_mode),
-      as_factor(both_mods_24$survey232_mode))
+table(as_factor(both_mods_24_x$survey231_mode))
+table(as_factor(both_mods_24_x$survey232_mode))
+table(as_factor(both_mods_24_x$survey231_mode),
+      as_factor(both_mods_24_x$survey232_mode)) # All completed both in the same mode
 
-#### TO DO: Add height, weight, BMI data ####
+
+#### Add height and weight data ####
+
+# Rename age in months at measurement to distinguish between dataframes
+heightweight_dr24 <- heightweight_dr24 %>%
+  rename(age_m_heightweight = age_m)
+
+# Identify repeated variables
+repeated_vars1 <- intersect(names(both_mods_24_x), names(heightweight_dr24)) %>%
+  setdiff("aow_recruitment_id")
+# Join dataframes excluding repeated variables
+both_mods_24_x <- both_mods_24_x %>%
+  left_join(
+    heightweight_dr24 %>% select(-any_of(repeated_vars1)),
+    by = "aow_recruitment_id"
+  )
+
+
+#### Add skinfold data ####
+
+# Rename age in months at measurement to distinguish between dataframes
+skinfold_dr24 <- skinfold_dr24 %>%
+  rename(age_m_skinfold = age_m)
+
+# Identify repeated variables
+repeated_vars1 <- intersect(names(both_mods_24_x), names(skinfold_dr24)) %>%
+  setdiff("aow_recruitment_id")
+# Join dataframes excluding repeated variables
+both_mods_24_x <- both_mods_24_x %>%
+  left_join(
+    skinfold_dr24 %>% select(-any_of(repeated_vars1)),
+    by = "aow_recruitment_id"
+  )
+
+
+#### Add bloodpressure data ####
+
+# Rename age in months at measurement to distinguish between dataframes
+bloodpressure_dr24 <- bloodpressure_dr24 %>%
+  rename(age_m_bloodpressure = age_m)
+
+# Identify repeated variables
+repeated_vars1 <- intersect(names(both_mods_24_x), names(bloodpressure_dr24)) %>%
+  setdiff("aow_recruitment_id")
+# Join dataframes excluding repeated variables
+both_mods_24_x <- both_mods_24_x %>%
+  left_join(
+    bloodpressure_dr24 %>% select(-any_of(repeated_vars1)),
+    by = "aow_recruitment_id"
+  )
+
+
+#### Add bioimpedance data ####
+
+# Rename age in months at measurement to distinguish between dataframes
+bioimpedance_dr24 <- bioimpedance_dr24 %>%
+  rename(age_m_bioimpedance = age_m)
+
+# Identify repeated variables
+repeated_vars1 <- intersect(names(both_mods_24_x), names(bioimpedance_dr24)) %>%
+  setdiff("aow_recruitment_id")
+# Join dataframes excluding repeated variables
+both_mods_24_x <- both_mods_24_x %>%
+  left_join(
+    bioimpedance_dr24 %>% select(-any_of(repeated_vars1)),
+    by = "aow_recruitment_id"
+  )
+
+#### List all variables ####
+# Run Functions.R to create df_info function
+df_info(both_mods_24_x, file = "both_mods_24_x.csv")
+
 
 #### Missing Data ####
 
