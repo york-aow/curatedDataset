@@ -1,4 +1,5 @@
-# Run loadData.R first
+# Run loadData.R
+# Run Functions.R
 
 # Load required packages
 library(tidyverse)
@@ -194,15 +195,38 @@ both_mods_24_x <- both_mods_24_x %>%
     by = "aow_recruitment_id"
   )
 
+#### Select participants by year group ####
+print_labels(both_mods_24_x$year_group)
+table(both_mods_24_x$year_group)
+
+year_8 <- both_mods_24_x %>% 
+  filter(year_group == 8)
+
+year_9 <- both_mods_24_x %>% 
+  filter(year_group == 9)
+
+year_10 <- both_mods_24_x %>% 
+  filter(year_group == 10)
+
 #### List all variables ####
 # Run Functions.R to create df_info function
 df_info(both_mods_24_x, file = "both_mods_24_x.csv")
 
-
 #### Missing Data ####
 
 # Percentage of responses NA on each variable
-missing_data <- colMeans(is.na(both_mods_24))*100
+missing_data <- colMeans(is.na(both_mods_24_x))*100
 # Save as csv
 write.table(missing_data, file = "missing_table.csv", sep = ",")
 # 84 variables have 100% missingness
+
+# By year group
+missing_data_y8 <- colMeans(is.na(year_8))*100
+missing_data_y9 <- colMeans(is.na(year_9))*100
+missing_data_y10 <- colMeans(is.na(year_10))*100
+
+missing_data_years <- data.frame(missing_data,
+                                 missing_data_y8, missing_data_y9, missing_data_y10)
+# Save as csv
+write.table(missing_data_years, file = "missing_table_years.csv", sep = ",")
+
