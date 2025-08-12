@@ -114,4 +114,4 @@ table(both_mods_24_x$EDEQS_complete)
 6411+1144 # 7555
 6411/7555 # 84.9% complete / 15% missing
 
-
+# Calculate total scores for those with complete EDEQS
