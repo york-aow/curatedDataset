@@ -73,7 +73,7 @@ both_mods <- both_mods %>%
 
 # Get list of variables in combined dataset
 # Run Functions.R to create df_info function
-df_info(both_mods, file = "both_mods.csv")
+#df_info(both_mods, file = "both_mods.csv")
 
 #### Time between survey modules ####
 # Is there any difference in age between surveys?
