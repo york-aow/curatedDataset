@@ -150,6 +150,8 @@ rcads_anx_items <- c("awb2_1_illhealth_2",
                      "awb2_1_illhealth_23",
                      "awb2_1_illhealth_25")
 
+rcads_items <- c(rcads_anx_items, rcads_dep_items)
+
 # Check item responses
 for(item in rcads_anx_items) {print(table(both_mods_24_x[[item]], useNA = "ifany"))}
 for(item in rcads_dep_items) {print(table(both_mods_24_x[[item]], useNA = "ifany"))}
@@ -291,6 +293,12 @@ sdq_pro_items <- c("awb2_1_sdq_1_a10",
 
 sdq_items <- c(sdq_emo_items, sdq_con_items, sdq_hyp_items, sdq_peer_items, sdq_pro_items)
 
+sdq_int_items <- c(sdq_emo_items, sdq_peer_items)
+
+sdq_ext_items <- c(sdq_con_items, sdq_hyp_items) 
+
+sdq_dif_items <- c(sdq_int_items, sdq_ext_items)
+
 sdq_reverse_items <- c("awb2_1_sdq_7_a10", # This item is reverse coded
                        "awb2_1_sdq_21_a10", # This item is reverse coded
                        "awb2_1_sdq_25_a10", # This item is reverse coded
@@ -412,7 +420,7 @@ table(as_factor(both_mods_24_x$ucla3_nas), as_factor(both_mods_24_x$ucla3_comple
 ucla4_items <- c("awb2_4_loneliness_1",
                  "awb2_4_loneliness_2",
                  "awb2_4_loneliness_3",
-                 "awb2_4_loneliness_3")
+                 "awb2_4_loneliness_4")
 
 # Check item responses
 for(item in ucla4_items) {print(table(both_mods_24_x[[item]], useNA = "ifany"))}
@@ -485,25 +493,109 @@ both_mods_24_x <- both_mods_24_x %>%
 table(as_factor(both_mods_24_x$brs_nas))
 table(as_factor(both_mods_24_x$brs_nas), as_factor(both_mods_24_x$brs_complete), useNA = "ifany")
 
-#### END ####
+
+#### YAP-S ####
+
+yaps_items <- c("awb4_2_outside_schl_1_r7",
+                "awb4_2_outside_schl_2_r7",
+                "awb4_2_outside_schl_3_r7",
+                "awb4_2_outside_schl_4_r7",
+                "awb4_2_overall_a5")
+
+# Check item responses
+for(item in yaps_items) {print(table(both_mods_24_x[[item]], useNA = "ifany"))}
+
+# Identify complete YAP-S responses
+both_mods_24_x <- both_mods_24_x %>%
+  mutate(yaps_complete = rowSums(is.na(select(., !!!yaps_items))) == 0)
+
+table(both_mods_24_x$yaps_complete)
+
+# Compute total scores for those with complete YAP-S, and assign NA to those without
+both_mods_24_x <- both_mods_24_x %>%
+  mutate(yaps_total = ifelse(yaps_complete, rowSums(select(., !!!yaps_items), na.rm = TRUE), NA))
+
+# Sense check
+summary(both_mods_24_x$yaps_total)
+table(as_factor(both_mods_24_x$yaps_total), useNA = "ifany")
+table(both_mods_24_x$yaps_complete, as_factor(both_mods_24_x$yaps_total), useNA = "ifany")
+
+# Create a variable that counts the number of NAs across the items for each participant
+both_mods_24_x <- both_mods_24_x %>%
+  mutate(yaps_nas = rowSums(is.na(select(., !!!yaps_items))))
+
+table(as_factor(both_mods_24_x$yaps_nas))
+table(as_factor(both_mods_24_x$yaps_nas), as_factor(both_mods_24_x$yaps_complete), useNA = "ifany")
+
+
+#### GHSQ ####
+
+ghsq_items <- c("awb2_9_seek_hlp_ppl_1_r4",
+                "awb2_9_seek_hlp_ppl_2",
+                "awb2_9_seek_hlp_ppl_3",
+                "awb2_9_seek_hlp_ppl_4",
+                "awb2_9_seek_hlp_ppl_5",
+                "awb2_9_seek_hlp_ppl_6",
+                "awb2_9_seek_hlp_ppl_7",
+                "awb2_9_seek_hlp_ppl_8",
+                "awb2_9_seek_hlp_ppl_10",  # This item is reverse coded
+                "awb2_9_seek_hlp_ppl_othr_a3")
+
+# Check item responses
+for(item in ghsq_items) {print(table(both_mods_24_x[[item]], useNA = "ifany"))}
+# The last item has been binarised...
+
+
+#### Reliability ####
 
 # Inter-item correlations
 cor(both_mods_24_x[edeqs_items], use = "pairwise.complete.obs")
-
-# Internal reliability
-alpha(both_mods_24_x[edeqs_items])
-
-# Inter-item correlations
 cor(both_mods_24_x[rcads_dep_items], use = "pairwise.complete.obs")
 cor(both_mods_24_x[rcads_anx_items], use = "pairwise.complete.obs")
-
-# Internal reliability
-alpha(both_mods_24_x[rcads_dep_items])
-alpha(both_mods_24_x[rcads_anx_items])
+cor(both_mods_24_x[yaps_items], use = "pairwise.complete.obs")
 
 # Correlation between subscales
 cor(both_mods_24_x$rcads_dep_total, both_mods_24_x$rcads_anx_total, use = "pairwise.complete.obs")
+print(ucla4_items)
 
+# Item reliability
+# Under "Item statistics" check raw.r (item-total correlation) and mean (item mean) - for prorating
+alpha(both_mods_24_x[sdq_con_items])
+alpha(both_mods_24_x[sdq_emo_items])
+alpha(both_mods_24_x[sdq_hyp_items])
+alpha(both_mods_24_x[sdq_peer_items])
+alpha(both_mods_24_x[sdq_pro_items])
+alpha(both_mods_24_x[sdq_int_items])
+alpha(both_mods_24_x[sdq_ext_items])
+alpha(both_mods_24_x[sdq_dif_items])
+
+alpha(both_mods_24_x[brs_items])
+
+alpha(both_mods_24_x[edeqs_items])
+
+alpha(both_mods_24_x[rcads_dep_items])
+alpha(both_mods_24_x[rcads_anx_items])
+alpha(both_mods_24_x[rcads_items])
+
+alpha(both_mods_24_x[swemwbs_items])
+
+alpha(both_mods_24_x[ucla3_items])
+alpha(both_mods_24_x[ucla4_items])
+
+alpha(both_mods_24_x[yaps_items])
+
+
+#### Pro-rate ####
+https://search.r-project.org/CRAN/refmans/misty/html/item.scores.html
+install.packages("misty")
+library(misty)
+
+both_mods_24_x$sdq_emo_prorated <- item.scores(both_mods_24_x[, sdq_emo_items], 
+                                               fun = "sum",
+                                               n.avail = 3)
+
+summary(both_mods_24_x$sdq_emo_prorated)
+summary(both_mods_24_x$sdq_emo_total)
 
 
 
