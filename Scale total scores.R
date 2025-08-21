@@ -591,8 +591,8 @@ install.packages("misty")
 library(misty)
 
 both_mods_24_x$sdq_emo_prorated <- item.scores(both_mods_24_x[, sdq_emo_items], 
-                                               fun = "sum",
-                                               n.avail = 3)
+                                               fun = "sum", # Function = multiply mean of available items by total number of items
+                                               n.avail = 3) # Minimum number of available item responses
 
 summary(both_mods_24_x$sdq_emo_prorated)
 summary(both_mods_24_x$sdq_emo_total)
