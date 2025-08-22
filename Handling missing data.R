@@ -1,4 +1,9 @@
-### Missing Data ###
+# install.packages("misty")
+
+library(misty) # Function to prorate scale scores
+
+
+# Missing Data ####
 
 # Create a list of scale total scores
 measures <- c("edeqs_total", "rcads_anx_total", "rcads_dep_total", "rcads_total",
@@ -14,7 +19,7 @@ colMeans(is.na(year_8[, measures]))*100
 colMeans(is.na(year_9[, measures]))*100
 colMeans(is.na(year_10[, measures]))*100
 
-#### Create variables to count the number of NAs on each subscale ####
+# Create variables to count the number of NAs on each subscale ####
 
 both_mods_24_x <- both_mods_24_x %>%
   mutate(edeqs_nas = rowSums(is.na(select(., !!!edeqs_items)))) %>%
@@ -53,21 +58,81 @@ year_9 <- both_mods_24_x %>%
 year_10 <- both_mods_24_x %>% 
   filter(year_group == 10)
 
-#### Pro-rate missing items ####
-install.packages("misty")
-library(misty)
-https://search.r-project.org/CRAN/refmans/misty/html/item.scores.html
+# Pro-rate missing items ####
 
-# SDQ scoring algorithm prorates subscale scores with 3 or 4 item responses 
+## SDQ ####
+
+# SDQ scoring algorithm prorates subscale scores with 3 or more item responses
 https://sdqinfo.org/c9.html
+
+both_mods_24_x$sdq_con_prorated <- item.scores(both_mods_24_x[, sdq_con_items], 
+                                               fun = "sum", # Function = multiply mean of available items by total number of items
+                                               n.avail = 3) # Minimum number of available item responses
+both_mods_24_x$sdq_con_prorated <- round(both_mods_24_x$sdq_con_prorated) # Round to integer
 
 both_mods_24_x$sdq_emo_prorated <- item.scores(both_mods_24_x[, sdq_emo_items], 
                                                fun = "sum", # Function = multiply mean of available items by total number of items
                                                n.avail = 3) # Minimum number of available item responses
+both_mods_24_x$sdq_emo_prorated <- round(both_mods_24_x$sdq_emo_prorated)
 
-summary(both_mods_24_x$sdq_emo_prorated)
-summary(both_mods_24_x$sdq_emo_total)
+both_mods_24_x$sdq_hyp_prorated <- item.scores(both_mods_24_x[, sdq_hyp_items], 
+                                               fun = "sum", # Function = multiply mean of available items by total number of items
+                                               n.avail = 3) # Minimum number of available item responses
+both_mods_24_x$sdq_hyp_prorated <- round(both_mods_24_x$sdq_hyp_prorated)
 
-#### Multiple imputation of scale total scores ####
+both_mods_24_x$sdq_peer_prorated <- item.scores(both_mods_24_x[, sdq_peer_items], 
+                                               fun = "sum", # Function = multiply mean of available items by total number of items
+                                               n.avail = 3) # Minimum number of available item responses
+both_mods_24_x$sdq_peer_prorated <- round(both_mods_24_x$sdq_peer_prorated)
+
+both_mods_24_x$sdq_pro_prorated <- item.scores(both_mods_24_x[, sdq_pro_items], 
+                                               fun = "sum", # Function = multiply mean of available items by total number of items
+                                               n.avail = 3) # Minimum number of available item responses
+both_mods_24_x$sdq_pro_prorated <- round(both_mods_24_x$sdq_pro_prorated)
+
+
+table(both_mods_24_x$sdq_con_nas, both_mods_24_x$sdq_con_prorated, useNA = "ifany")
+table(both_mods_24_x$sdq_con_total, both_mods_24_x$sdq_con_prorated, useNA = "ifany")
+
+table(both_mods_24_x$sdq_emo_nas, both_mods_24_x$sdq_emo_prorated, useNA = "ifany")
+table(both_mods_24_x$sdq_emo_total, both_mods_24_x$sdq_emo_prorated, useNA = "ifany")
+
+table(both_mods_24_x$sdq_hyp_nas, both_mods_24_x$sdq_hyp_prorated, useNA = "ifany")
+table(both_mods_24_x$sdq_hyp_total, both_mods_24_x$sdq_hyp_prorated, useNA = "ifany")
+
+table(both_mods_24_x$sdq_hyp_nas, both_mods_24_x$sdq_hyp_prorated, useNA = "ifany")
+table(both_mods_24_x$sdq_hyp_total, both_mods_24_x$sdq_hyp_prorated, useNA = "ifany")
+
+### Compute internalising, externalising, total difficulties ####
+
+both_mods_24_x$sdq_ext_prorated <- 
+  ifelse(is.na(both_mods_24_x$sdq_con_prorated) | is.na(both_mods_24_x$sdq_hyp_prorated), NA, 
+         both_mods_24_x$sdq_con_prorated + both_mods_24_x$sdq_hyp_prorated)
+
+both_mods_24_x$sdq_int_prorated <- 
+  ifelse(is.na(both_mods_24_x$sdq_emo_prorated) | is.na(both_mods_24_x$sdq_peer_prorated), NA, 
+         both_mods_24_x$sdq_emo_prorated + both_mods_24_x$sdq_peer_prorated)
+
+both_mods_24_x$sdq_dif_prorated <- 
+  ifelse(is.na(both_mods_24_x$sdq_ext_prorated) | is.na(both_mods_24_x$sdq_int_prorated), NA, 
+         both_mods_24_x$sdq_ext_prorated + both_mods_24_x$sdq_int_prorated)
+
+summary(both_mods_24_x$sdq_ext_total)
+summary(both_mods_24_x$sdq_ext_prorated)
+
+summary(both_mods_24_x$sdq_int_total)
+summary(both_mods_24_x$sdq_int_prorated)
+
+summary(both_mods_24_x$sdq_dif_total)
+summary(both_mods_24_x$sdq_dif_prorated)
+
+## RCADS ####
+
+
+
+## EDEQS ####
+
+
+# Multiple imputation of scale total scores ####
 
 # Separate imputation model per year group, due to different measures in different years

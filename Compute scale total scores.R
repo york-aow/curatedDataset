@@ -4,7 +4,7 @@
 
 library(psych)
 
-#### Create recode functions ####
+# Create recode functions ####
 
 # Recode Likert scale 1-4 to 0-3
 recode14_03 <- function(x) {
@@ -40,7 +40,7 @@ recode15_51 <- function(x) {
 }
 
 
-#### EDE-QS ####
+# EDE-QS ####
 
 # Create list of items
 edeqs_items <-
@@ -74,7 +74,7 @@ both_mods_24_x <- both_mods_24_x %>%
 both_mods_24_x <- both_mods_24_x %>%
   mutate(edeqs_total = ifelse(edeqs_complete, rowSums(select(., !!!edeqs_items), na.rm = TRUE), NA))
 
-#### RCADS ####
+# RCADS ####
 
 # Create list of depression items
 rcads_dep_items <- c("awb2_1_illhealth_1",
@@ -134,7 +134,7 @@ both_mods_24_x$rcads_total <-
   ifelse(is.na(both_mods_24_x$rcads_anx_total) | is.na(both_mods_24_x$rcads_dep_total), NA, 
          both_mods_24_x$rcads_anx_total + both_mods_24_x$rcads_dep_total)
 
-#### SWEMWBS ####
+# SWEMWBS ####
 
 # Create a list of SWEMWBS items
 swemwbs_items <- c("awb2_2_optmstc_1_a4",
@@ -154,7 +154,7 @@ both_mods_24_x <- both_mods_24_x %>%
   mutate(swemwbs_total = ifelse(swemwbs_complete, rowSums(select(., !!!swemwbs_items), na.rm = TRUE), NA))
 
 
-#### SDQ ####
+# SDQ ####
 
 # List items
 
@@ -247,7 +247,7 @@ both_mods_24_x$sdq_dif_total <-
          both_mods_24_x$sdq_ext_total + both_mods_24_x$sdq_int_total)
 
 
-#### UCLA-3 ####
+# UCLA-3 ####
 
 ucla3_items <- c("awb2_4_loneliness_1",
                  "awb2_4_loneliness_2",
@@ -262,7 +262,7 @@ both_mods_24_x <- both_mods_24_x %>%
   mutate(ucla3_total = ifelse(ucla3_complete, rowSums(select(., !!!ucla3_items), na.rm = TRUE), NA))
 
 
-#### UCLA-4 ####
+# UCLA-4 ####
 
 ucla4_items <- c("awb2_4_loneliness_1",
                  "awb2_4_loneliness_2",
@@ -278,7 +278,7 @@ both_mods_24_x <- both_mods_24_x %>%
   mutate(ucla4_total = ifelse(ucla4_complete, rowSums(select(., !!!ucla4_items), na.rm = TRUE), NA))
 
 
-#### BRS ####
+# BRS ####
 
 brs_items <- c("awb2_9_resil1_a5",
                "awb2_9_resil2_a5", # This item is reverse coded

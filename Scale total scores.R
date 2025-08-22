@@ -76,8 +76,6 @@ both_mods_24_x <- both_mods_24_x %>%
 # Check new item response frequencies and NA's against old (above)
 for(item in edeqs_items) {print(table(both_mods_24_x[[item]], useNA = "ifany"))}
 
-
-
 # How many responded 0-days to Q9 (and therefore skipped Q10)?
 table(as_factor(both_mods_24_x$awb2_12_eat_hbt_9_a5), useNA = "ifany")
 table(as_factor(both_mods_24_x$awb2_12_eat_hbt_10_a5), useNA = "ifany")
