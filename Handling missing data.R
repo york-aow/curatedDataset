@@ -19,7 +19,7 @@ colMeans(is.na(year_8[, measures]))*100
 colMeans(is.na(year_9[, measures]))*100
 colMeans(is.na(year_10[, measures]))*100
 
-# Create variables to count the number of NAs on each subscale ####
+# Create variables to count number of NAs on each scale ####
 
 both_mods_24_x <- both_mods_24_x %>%
   mutate(edeqs_nas = rowSums(is.na(select(., !!!edeqs_items)))) %>%
@@ -63,7 +63,7 @@ year_10 <- both_mods_24_x %>%
 ## SDQ ####
 
 # SDQ scoring algorithm prorates subscale scores with 3 or more item responses
-https://sdqinfo.org/c9.html
+# https://sdqinfo.org/c9.html
 
 both_mods_24_x$sdq_con_prorated <- item.scores(both_mods_24_x[, sdq_con_items], 
                                                fun = "sum", # Function = multiply mean of available items by total number of items
@@ -103,7 +103,7 @@ table(both_mods_24_x$sdq_hyp_total, both_mods_24_x$sdq_hyp_prorated, useNA = "if
 table(both_mods_24_x$sdq_hyp_nas, both_mods_24_x$sdq_hyp_prorated, useNA = "ifany")
 table(both_mods_24_x$sdq_hyp_total, both_mods_24_x$sdq_hyp_prorated, useNA = "ifany")
 
-### Compute internalising, externalising, total difficulties ####
+### Compute internalising, externalising, total difficulties (SDQ) ####
 
 both_mods_24_x$sdq_ext_prorated <- 
   ifelse(is.na(both_mods_24_x$sdq_con_prorated) | is.na(both_mods_24_x$sdq_hyp_prorated), NA, 
@@ -127,11 +127,80 @@ summary(both_mods_24_x$sdq_dif_total)
 summary(both_mods_24_x$sdq_dif_prorated)
 
 ## RCADS ####
+# RCADS manual recommends prorating up to 2 items on depression scale and 3 items on anxiety scale
+# https://rcads.ucla.edu/manualscoring
 
+both_mods_24_x$rcads_dep_prorated <- item.scores(both_mods_24_x[, rcads_dep_items], 
+                                               fun = "sum", # Function = multiply mean of available items by total number of items
+                                               n.avail = 8) # Minimum number of available item responses
+both_mods_24_x$rcads_dep_prorated <- round(both_mods_24_x$rcads_dep_prorated) # Round to integer
 
+both_mods_24_x$rcads_anx_prorated <- item.scores(both_mods_24_x[, rcads_anx_items], 
+                                                 fun = "sum", # Function = multiply mean of available items by total number of items
+                                                 n.avail = 12) # Minimum number of available item responses
+both_mods_24_x$rcads_anx_prorated <- round(both_mods_24_x$rcads_anx_prorated) # Round to integer
+
+### Compute RCADS total score ####
+
+both_mods_24_x$rcads_prorated <- 
+  ifelse(is.na(both_mods_24_x$rcads_dep_prorated) | is.na(both_mods_24_x$rcads_anx_prorated), NA, 
+         both_mods_24_x$rcads_dep_prorated + both_mods_24_x$rcads_anx_prorated)
+
+summary(both_mods_24_x$rcads_total)
+summary(both_mods_24_x$rcads_prorated)
+
+summary(both_mods_24_x$rcads_dep_total)
+summary(both_mods_24_x$rcads_dep_prorated)
+
+summary(both_mods_24_x$rcads_anx_total)
+summary(both_mods_24_x$rcads_anx_prorated)
 
 ## EDEQS ####
 
+both_mods_24_x$edeqs_prorated <- item.scores(both_mods_24_x[, edeqs_items], 
+                                               fun = "sum",
+                                               p.avail = 0.8) # Minimum proportion of available item responses
+both_mods_24_x$edeqs_prorated <- round(both_mods_24_x$edeqs_prorated)
+
+summary(both_mods_24_x$edeqs_total)
+summary(both_mods_24_x$edeqs_prorated)
+
+table(both_mods_24_x$edeqs_nas)
+
+## SWEMWBS ####
+
+both_mods_24_x$swemwbs_prorated <- item.scores(both_mods_24_x[, swemwbs_items], 
+                                               fun = "sum",
+                                               p.avail = 0.8) # Minimum proportion of available item responses
+both_mods_24_x$swemwbs_prorated <- round(both_mods_24_x$swemwbs_prorated)
+
+summary(both_mods_24_x$swemwbs_total)
+summary(both_mods_24_x$swemwbs_prorated)
+table(both_mods_24_x$swemwbs_nas)
+
+## YAPS ####
+
+both_mods_24_x$yaps_prorated <- item.scores(both_mods_24_x[, yaps_items], 
+                                            fun = "sum",
+                                            p.avail = 0.8) # Minimum proportion of available item responses
+both_mods_24_x$yaps_prorated <- round(both_mods_24_x$yaps_prorated)
+
+summary(both_mods_24_x$yaps_total)
+summary(both_mods_24_x$yaps_prorated)
+table(both_mods_24_x$yaps_nas)
+table(both_mods_24_x$yaps_prorated)
+
+## BRS ####
+
+both_mods_24_x$brs_prorated <- item.scores(both_mods_24_x[, brs_items], 
+                                           fun = "sum",
+                                           p.avail = 0.8) # Minimum proportion of available item responses
+both_mods_24_x$brs_prorated <- round(both_mods_24_x$brs_prorated)
+
+summary(both_mods_24_x$brs_total)
+summary(both_mods_24_x$brs_prorated)
+table(both_mods_24_x$brs_nas)
+table(both_mods_24_x$brs_prorated)
 
 # Multiple imputation of scale total scores ####
 
