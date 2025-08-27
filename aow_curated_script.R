@@ -173,8 +173,7 @@ recode14_03 <- function(x) {
              2 ~ 1,
              3 ~ 2,
              4 ~ 3,
-             NA ~ NA
-  )
+             NA ~ NA)
 }
 
 # Reverse code 0-2 Likert scale
@@ -183,8 +182,7 @@ recode02_20 <- function(x) {
              0 ~ 2,
              1 ~ 1,
              2 ~ 0,
-             NA ~ NA
-  )
+             NA ~ NA)
 }
 
 # Reverse code 1-5 Likert scale
@@ -195,8 +193,7 @@ recode15_51 <- function(x) {
              3 ~ 3,
              4 ~ 2,
              5 ~ 1,
-             NA ~ NA
-  )
+             NA ~ NA)
 }
 
 
@@ -336,11 +333,11 @@ sdq_hyp_items <- c("awb2_1_sdq_2_a10",
                    "awb2_1_sdq_21_a10", # This item is reverse coded
                    "awb2_1_sdq_25_a10") # This item is reverse coded
 
-sdq_peer_items <- c("awb2_1_sdq_6_a10",
-                    "awb2_1_sdq_11_a10", # This item is reverse coded
-                    "awb2_1_sdq_14_a10", # This item is reverse coded
-                    "awb2_1_sdq_19_a10", 
-                    "awb2_1_sdq_23_a10")
+sdq_pee_items <- c("awb2_1_sdq_6_a10",
+                   "awb2_1_sdq_11_a10", # This item is reverse coded
+                   "awb2_1_sdq_14_a10", # This item is reverse coded
+                   "awb2_1_sdq_19_a10", 
+                   "awb2_1_sdq_23_a10")
 
 sdq_pro_items <- c("awb2_1_sdq_1_a10",
                    "awb2_1_sdq_4_a10", 
@@ -348,7 +345,7 @@ sdq_pro_items <- c("awb2_1_sdq_1_a10",
                    "awb2_1_sdq_17_a10", 
                    "awb2_1_sdq_20_a10")
 
-sdq_int_items <- c(sdq_emo_items, sdq_peer_items)
+sdq_int_items <- c(sdq_emo_items, sdq_pee_items)
 
 sdq_ext_items <- c(sdq_con_items, sdq_hyp_items) 
 
@@ -377,7 +374,7 @@ aow_curated <- aow_curated %>%
   mutate(sdq_hyp_complete = rowSums(is.na(select(., !!!sdq_hyp_items))) == 0)
 
 aow_curated <- aow_curated %>%
-  mutate(sdq_peer_complete = rowSums(is.na(select(., !!!sdq_peer_items))) == 0)
+  mutate(sdq_pee_complete = rowSums(is.na(select(., !!!sdq_pee_items))) == 0)
 
 aow_curated <- aow_curated %>%
   mutate(sdq_pro_complete = rowSums(is.na(select(., !!!sdq_pro_items))) == 0)
@@ -387,7 +384,7 @@ aow_curated <- aow_curated %>%
   mutate(sdq_con_total = ifelse(sdq_con_complete, rowSums(select(., !!!sdq_con_items), na.rm = TRUE), NA)) %>%
   mutate(sdq_emo_total = ifelse(sdq_emo_complete, rowSums(select(., !!!sdq_emo_items), na.rm = TRUE), NA)) %>%
   mutate(sdq_hyp_total = ifelse(sdq_hyp_complete, rowSums(select(., !!!sdq_hyp_items), na.rm = TRUE), NA)) %>%
-  mutate(sdq_peer_total = ifelse(sdq_peer_complete, rowSums(select(., !!!sdq_peer_items), na.rm = TRUE), NA)) %>%
+  mutate(sdq_pee_total = ifelse(sdq_pee_complete, rowSums(select(., !!!sdq_pee_items), na.rm = TRUE), NA)) %>%
   mutate(sdq_pro_total = ifelse(sdq_pro_complete, rowSums(select(., !!!sdq_pro_items), na.rm = TRUE), NA))
 
 # Compute internalising and externalising scores
@@ -397,8 +394,8 @@ aow_curated$sdq_ext_total <-
          aow_curated$sdq_con_total + aow_curated$sdq_hyp_total)
 
 aow_curated$sdq_int_total <- 
-  ifelse(is.na(aow_curated$sdq_emo_total) | is.na(aow_curated$sdq_peer_total), NA, 
-         aow_curated$sdq_emo_total + aow_curated$sdq_peer_total)
+  ifelse(is.na(aow_curated$sdq_emo_total) | is.na(aow_curated$sdq_pee_total), NA, 
+         aow_curated$sdq_emo_total + aow_curated$sdq_pee_total)
 
 # Compute total difficulties 
 
@@ -491,7 +488,7 @@ summary(aow_curated$swemwbs_total)
 summary(aow_curated$sdq_con_total)
 summary(aow_curated$sdq_emo_total)
 summary(aow_curated$sdq_hyp_total)
-summary(aow_curated$sdq_peer_total)
+summary(aow_curated$sdq_pee_total)
 summary(aow_curated$sdq_pro_total)
 summary(aow_curated$sdq_int_total)
 summary(aow_curated$sdq_ext_total)
@@ -504,11 +501,12 @@ summary(aow_curated$yaps_total)
 
 # 4. Divide data into year groups ####
 
-aow_curated_y8 <- aow_curated %>% 
+year_8 <- aow_curated %>% 
   filter(year_group == 8)
 
-aow_curated_y9 <- aow_curated %>% 
+year_9 <- aow_curated %>% 
   filter(year_group == 9)
 
-aow_curated_y10 <- aow_curated %>% 
+year_10 <- aow_curated %>% 
   filter(year_group == 10)
+
