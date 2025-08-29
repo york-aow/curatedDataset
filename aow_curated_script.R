@@ -510,3 +510,81 @@ year_9 <- aow_curated %>%
 year_10 <- aow_curated %>% 
   filter(year_group == 10)
 
+
+
+# Rename variables ####
+
+# Put RCADS item list in right order
+rcads_items <- c("awb2_1_illhealth_1",
+                 "awb2_1_illhealth_2",
+                 "awb2_1_illhealth_3",
+                 "awb2_1_illhealth_4",
+                 "awb2_1_illhealth_5",
+                 "awb2_1_illhealth_6",
+                 "awb2_1_illhealth_7",
+                 "awb2_1_illhealth_8",
+                 "awb2_1_illhealth_9",
+                 "awb2_1_illhealth_10",
+                 "awb2_1_illhealth_11",
+                 "awb2_1_illhealth_12",
+                 "awb2_1_illhealth_13",
+                 "awb2_1_illhealth_14",
+                 "awb2_1_illhealth_15",
+                 "awb2_1_illhealth_16",
+                 "awb2_1_illhealth_17",
+                 "awb2_1_illhealth_18",
+                 "awb2_1_illhealth_19",
+                 "awb2_1_illhealth_20",
+                 "awb2_1_illhealth_21",
+                 "awb2_1_illhealth_22",
+                 "awb2_1_illhealth_23",
+                 "awb2_1_illhealth_24",
+                 "awb2_1_illhealth_25")
+
+# Put SDQ items list in right order
+sdq_items <- c("awb2_1_sdq_1_a10",
+              "awb2_1_sdq_2_a10",
+              "awb2_1_sdq_3_a10",
+              "awb2_1_sdq_4_a10",
+              "awb2_1_sdq_5_a10",
+              "awb2_1_sdq_6_a10",
+              "awb2_1_sdq_7_a10",
+              "awb2_1_sdq_8_a10",
+              "awb2_1_sdq_9_a10",
+              "awb2_1_sdq_10_a10",
+              "awb2_1_sdq_11_a10",
+              "awb2_1_sdq_12_a10",
+              "awb2_1_sdq_13_a10",
+              "awb2_1_sdq_14_a10",
+              "awb2_1_sdq_15_a10",
+              "awb2_1_sdq_16_a10",
+              "awb2_1_sdq_17_a10",
+              "awb2_1_sdq_18_a10",
+              "awb2_1_sdq_19_a10",
+              "awb2_1_sdq_20_a10",
+              "awb2_1_sdq_21_a10",
+              "awb2_1_sdq_22_a10",
+              "awb2_1_sdq_23_a10",
+              "awb2_1_sdq_24_a10",
+              "awb2_1_sdq_25_a10")
+
+# Create new variable names
+rcads_items_new <- paste("rcads_item", seq_along(rcads_items), sep = "_")
+sdq_items_new <- paste("sdq_item", seq_along(sdq_items), sep = "_")
+edeqs_items_new <- paste("edeqs_item", seq_along(edeqs_items), sep = "_")
+swemwbs_items_new <- paste("swemwbs_item", seq_along(swemwbs_items), sep = "_")
+brs_items_new <- paste("brs_item", seq_along(brs_items), sep = "_")
+yaps_items_new <- paste("yaps_item", seq_along(yaps_items), sep = "_")
+
+# Rename the variables
+aow_curated <- aow_curated %>%
+  rename(!!!setNames(rcads_items, rcads_items_new)) %>%
+  rename(!!!setNames(sdq_items, sdq_items_new)) %>%
+  rename(!!!setNames(edeqs_items, edeqs_items_new)) %>%
+  rename(!!!setNames(swemwbs_items, swemwbs_items_new)) %>%
+  rename(!!!setNames(brs_items, brs_items_new)) %>%
+  rename(!!!setNames(yaps_items, yaps_items_new))
+
+
+df_info(aow_curated, file = "aow_curated_2.csv")
+
