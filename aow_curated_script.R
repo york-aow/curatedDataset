@@ -12,7 +12,7 @@ library(psych) # Function to pro-rate missing items (item.scores)
 # 1. Load raw AoW data ####
 
 # a. Set the source folder path
-source_folder <- 'G:/Shared drives/Curated Dataset/data/source' # Paste the filepath here
+source_folder <- 'G:/Shared drives/Curated Dataset/data/source' # Paste the filepath here. would be good to have path set automatically e.g. using 'getwd'?
 
 # b. Create a list of the files
 file_list <- list.files(path = source_folder,
@@ -725,5 +725,5 @@ aow_curated <- aow_curated %>%
   rename(!!!setNames(yaps_items, yaps_items_new))
 
 
-df_info(aow_curated, file = "aow_curated_2.csv")
+df_info(aow_curated, file = "aow_curated_2.csv") # doesn't work without the function script. save to output folder??
 
