@@ -161,8 +161,147 @@ table(aow_curated$age_survey231_m, aow_curated$age_m_skinfold)
 table(aow_curated$age_survey231_m, aow_curated$age_m_bloodpressure)
 table(aow_curated$age_survey231_m, aow_curated$age_m_bioimpedance)
 
+# 3. Remove unnecessary variables ####
 
-# 3. Compute scale total scores ####
+aow_curated <- aow_curated %>% 
+  select(
+    -has_survey_m231, # all included observations have a survey
+    -has_survey_m232, # all included observations have a survey
+    -has_survey_m1, # all included observations have a survey
+    -has_survey_m2, # all included observations have a survey
+    -has_survey_m3, # all included observations have a survey
+    -has_survey_m4, # all included observations have a survey
+    -has_survey, # all included observations have a survey
+    -has_data, # all included observations have some AoW data
+    -aw1_2_years_lvd_r4, # 100% missing, alternative version (aw1_2_years_lvd_a4) with responses
+    -awb1_2_ethnicity_arb_r4, # 100% missing, alternative version (awb1_2_ethnicity_arb_a4) with responses.
+    -awb3_1y_save_mny_a5___1, # 100% missing, alternative version (r10) with responses
+    -awb3_1y_save_mny_a5___2, # 100% missing, alternative version (r10) with responses
+    -awb3_1y_save_mny_a5___3, # 100% missing, alternative version (r10) with responses
+    -awb3_1y_save_mny_a5___4, # 100% missing, alternative version (r10) with responses
+    -awb3_1y_save_mny_a5___5, # 100% missing, alternative version (r10) with responses
+    -awb3_1y_save_mny_a5___6, # 100% missing
+    -awb3_1y_save_mny_othr_a5, # 100% missing
+    -awb3_2_homes_1_ppl___1, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___2, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___3, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___4, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___5, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___6, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___7, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___8, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___9, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___10, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___11, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___12, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___13, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___14, # 100% missing, alternative version (r10) with responses
+    -awb3_2_homes_1_ppl___15, # 100% missing, alternative version (r10) with responses
+    -aw3_6_comparison_2, # 100% missing, alternative version (aw3_6_comparison_2_r10) with responses
+    -awb3_activities_3_r5, # 100% missing, alternative version (awb3_activities_3_r10) with responses
+    -awb3_activities_15_r5, # 100% missing, alternative version (awb3_activities_15_r10) with responses
+    -awb3_activities_11_r5, # 100% missing, alternative version (awb3_activities_11_r10) with responses
+    -awb3_activities_17_r5, # 100% missing, alternative version (awb3_activities_17_r10) with responses
+    -awb3_activities_18_r5, # 100% missing, alternative version (awb3_activities_18_r10) with responses
+    -awb3_activities_6_r5, # 100% missing, alternative version (awb3_activities_6_r10) with responses
+    -awb3_activities_14_r5, # 100% missing, alternative version (awb3_activities_14_r10) with responses
+    -awb3_activities_16_r5, # 100% missing, alternative version (awb3_activities_16_r10) with responses
+    -awb3_activities_1_r5, # 100% missing, alternative version (awb3_activities_1_r10) with responses
+    -awb3_activities_10_r5, # 100% missing, alternative version (awb3_activities_10_r10) with responses
+    -awb3_activities_12_r5, # 100% missing, alternative version (awb3_activities_12_r10) with responses
+    -awb3_activities_13_r5, # 100% missing, alternative version (awb3_activities_13_r10) with responses
+    -awb3_activities_2_r5, # 100% missing, alternative version (awb3_activities_2_r10) with responses
+    -awb3_activities_4_r5, # 100% missing, alternative version (awb3_activities_4_r10) with responses
+    -awb3_activities_5_r5, # 100% missing, alternative version (awb3_activities_5_r10) with responses
+    -awb3_activities_7_r5, # 100% missing, alternative version (awb3_activities_7_r10) with responses
+    -awb3_activities_8_r5, # 100% missing, alternative version (awb3_activities_8_r10) with responses
+    -awb3_activities_9_r5, # 100% missing, alternative version (awb3_activities_9_r10) with responses
+    -awb5_1_hearing_sght_1, # 100% missing, alternative version (awb5_1_hearing_sght_1_r10, Have you been told to, or do you need to wear glasses in order to see clearly?) with responses
+    -awb5_1_cigs2_a5, # 100% missing, alternative version (awb5_1_cigs2_r10) with responses
+    -awb5_2_vape_r4, # 100% missing, alternative version (awb5_2_vape_r10) with responses
+    -awb5_2_drugs_11, # 100% missing, NA
+    -awb5_2_drugs_13, # 100% missing, NA
+    -awb5_2_drugs_14, # 100% missing, NA
+    -awb5_2_drugs_16, # 100% missing, NA
+    -awb5_2_gambling_2_a5, # 100% missing, alternative version (awb5_2_gambling_2_r10, Gambling: Last spent money (National Lottery games)) with responses
+    -awb5_2_gambling_6_a5, # 100% missing, alternative version (awb5_2_gambling_6_r10, Gambling: Last spent money (Slot machines)) with responses
+    -awb5_2_gambling_7_a5, # 100% missing, alternative version (awb5_2_gambling_7_r10, Gambling: Last spent money (Private bets for money)) with responses
+    -awb5_2_gambling_8_a5, # 100% missing, alternative version (awb5_2_gambling_8_r10, Gambling: Last spent money (Playing cards for money)) with responses
+    -awb5_2_gambling_9_a5, # 100% missing, alternative version (awb5_2_gambling_9_r10, Gambling: Last spent money (Bingo at bingo club)) with responses
+    -awb5_2_gambling_10_a5, # 100% missing, alternative version (awb5_2_gambling_10_r10, Gambling: Last spent money (Bingo not at a bingo club)) with responses
+    -awb5_2_gambling_11_a5, # 100% missing, alternative version (awb5_2_gambling_11_r10, Gambling: Last spent money (Gaming machines in betting shop)) with responses
+    -awb5_2_gambling_12_a5, # 100% missing, alternative version (awb5_2_gambling_12_r10, Gambling: Last spent money (Placing a bet at a betting shop)) with responses
+    -awb5_2_gambling_13_a5, # 100% missing, alternative version (awb5_2_gambling_13_r10, Gambling: Last spent money (Visiting a casino to play casino games)) with responses
+    -awb5_2_gambling_14_a5, # 100% missing, alternative version (awb5_2_gambling_14_r10, Gambling: Last spent money (Gambling websites/apps with cash prizes)) with responses
+    -awb7_1_bullying_1_on, # 100% missing, alternative question (awb7_1_bullying_1, 'Is bullying a problem at your school?') with responses
+    -awb7_1_bullying_1_off, # 100% missing, alternative question (awb7_1_bullying_1, 'Is bullying a problem at your school?') with responses
+    -awb7_1_safe1_r8, # 100% missing, alternative question (awb7_1_safe_r8, 'I feel safe when I am at school') with responses
+    -awb2_7_friends_physcl_a5, # 100% missing, alternative question (awb2_7_friends_physcl_r10, 'How many in-person friends do you have?') with responses
+    -awb2_7_friends_onln_a5, # 100% missing, alternative question (awb2_7_friends_onln_r10, 'How many online friends do you have?') with responses
+    -awb2_7_friends_clse_1_a5, # 100% missing
+    -awb2_7_friends_clse_2_a5, # 100% missing
+    -awb8_1_morality_1, # 100% missing, alternative question (awb8_1_morality_1_r10, 'Do people your age: Start a fight with someone?') with responses
+    -awb8_1_morality_2, # 100% missing, alternative question (awb8_1_morality_2_r10, 'Do people your age: Write things/spray paint on a building, fence, train') with responses
+    -awb8_1_morality_3, # 100% missing, alternative question (awb8_1_morality_3_r10, 'Do people your age: Take something from a shop without paying for it') with responses
+    -awb8_1_morality_4, # 100% missing, alternative question (awb8_1_morality_4_r10, 'Do people your age: Copy/download music/games/films without paying') with responses
+    -awb6_1_social_media___1, # 100% missing with alternative
+    -awb6_1_social_media___2, # 100% missing with alternative
+    -awb6_1_social_media___3, # 100% missing with alternative
+    -awb6_1_social_media___4, # 100% missing with alternative
+    -awb6_1_social_media___5, # 100% missing with alternative
+    -awb6_1_social_media___6, # 100% missing with alternative
+    -awb6_1_social_media___7, # 100% missing with alternative
+    -awb6_1_social_media___8, # 100% missing with alternative
+    -awb6_1_social_media___9, # 100% missing with alternative
+    -awb6_1_social_media___10, # 100% missing with alternative
+    -awb6_1_social_media___11, # 100% missing with alternative
+    -awb6_6_int_hme_hrs, # 100% missing, removed
+    -awb6_6_int_hme_hrs_wknd, # 100% missing, removed
+    -survey_age_diff, # all observations included have 0 age difference
+    -has_measure, # unnecessary
+    -survey231_version, # all version 10
+    -awb1_2_ethnicity_othr_othr, # free text responses
+    -awb1_2_language_hme_othr, # free text responses
+    -awb1_2y_religion_othr, # free text responses
+    -awb1_2_sex_othr, # free text responses
+    -awb1_2_gender_othr_r4, # free text responses
+    -awb3_2_homes_1_ppl_othr, # free text responses
+    -awb5_2_drugs_othr2_a10, # free text responses
+    -awb4_1y_sick_a5, # free text responses
+    -awb2_9_seek_hlp_ppl_11, # free text responses
+    -awb8_2_club_rsn_2, # free text responses
+    -awb8_2_excl_rsn_2, # free text responses
+    -awb8_2_age_rsn_2, # free text responses
+    -awb8_2_lang_rsn_2, # free text responses
+    -awb8_2_police_rsn_2, # free text responses
+    -awb8_2_shop_rsn_2, # free text responses
+    -awb8_2_names_rsn_2, # free text responses
+    -awb8_2_service_rsn_2, # free text responses
+    -awb8_2_int_rsn_2, # free text responses
+    -awb8_2_afraid_rsn_2, # free text responses
+    -awb8_2_threat_rsn_2, # free text responses
+    -awb6_1_social_media_othr, # free text responses
+    -awb6_1_positive_exp_othr, # free text responses
+    -awb6_1_neg_exp_othr_r5, # free text responses
+    -age_y, # age in months (age_m) more useful
+    -awb1_2_ethnicity_whte, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
+    -awb1_2_ethnicity_whte_othr, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
+    -awb1_2_ethnicity_mix, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
+    -awb1_2_ethnicity_mix_othr, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
+    -awb1_2_ethnicity_asn, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
+    -awb1_2_ethnicity_asn_othr, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
+    -awb1_2_ethnicity_blck, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
+    -awb1_2_ethnicity_blck_afrcn, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
+    -awb1_2_ethnicity_whte_crrbn, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
+    -awb1_2_ethnicity_arb_a4, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
+    -awb3_1y_save_mny_r10___1, # unclear whether missing or genuine 0 responses. Alternative questions cover this theme
+    -awb3_1y_save_mny_r10___2, # unclear whether missing or genuine 0 responses. Alternative questions cover this theme
+    -awb3_1y_save_mny_r10___3, # unclear whether missing or genuine 0 responses. Alternative questions cover this theme
+    -awb3_1y_save_mny_r10___4, # unclear whether missing or genuine 0 responses. Alternative questions cover this theme
+    -awb3_1y_save_mny_r10___5 # unclear whether missing or genuine 0 responses. Alternative questions cover this theme
+  )
+
+# 4. Compute scale total scores ####
 
 ## Create recode functions ####
 
@@ -499,7 +638,7 @@ summary(aow_curated$brs_total)
 summary(aow_curated$yaps_total)
 
 
-# 4. Divide data into year groups ####
+# 5. Divide data into year groups ####
 
 year_8 <- aow_curated %>% 
   filter(year_group == 8)
