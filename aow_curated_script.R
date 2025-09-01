@@ -1,18 +1,33 @@
 # 0. Install and load required packages ####
 
-install.packages("tidyverse") # tidy R packages for data manipulation etc
-install.packages("haven") # Import data of various formats
-install.packages("psych") # Function to pro-rate missing items (item.scores)
+# install tidyverse if not installed yet
+if (!"tidyverse" %in% installed.packages()[, "Package"]) { # tidy R packages for data manipulation etc
+  install.packages("tidyverse")
+} 
+# install haven if not installed yet
+if (!"haven" %in% installed.packages()[, "Package"]) { # Import data of various formats
+  install.packages("haven")
+} 
+# install psych if not installed yet
+if (!"psych" %in% installed.packages()[, "Package"]) { # Function to pro-rate missing items (item.scores)
+  install.packages("psych")
+}
+# install here if not installed yet
+if (!"here" %in% installed.packages()[, "Package"]) { # package for easy file referencing
+  install.packages("here")
+}
 
 library(tidyverse) # tidy R packages for data manipulation etc
 library(haven) # Import data of various formats
 library(psych) # Function to pro-rate missing items (item.scores)
-
+library(here) # package for easy file referencing
 
 # 1. Load raw AoW data ####
 
-# a. Set the source folder path
-source_folder <- 'G:/Shared drives/Curated Dataset/data/source' # Paste the filepath here. would be good to have path set automatically e.g. using 'getwd'?
+# a. Set the source folder path automatically using the 'here' package
+# Make sure you have a project file (.Rproj) or .git in your root directory.
+
+source_folder <- here('data', 'source')
 
 # b. Create a list of the files
 file_list <- list.files(path = source_folder,
@@ -725,5 +740,5 @@ aow_curated <- aow_curated %>%
   rename(!!!setNames(yaps_items, yaps_items_new))
 
 
-df_info(aow_curated, file = "aow_curated_2.csv") # doesn't work without the function script. save to output folder??
+df_info(aow_curated, file = "aow_curated_2.csv") # doesn't work without the function script. save to output/derived folder??
 
