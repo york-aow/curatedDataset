@@ -739,6 +739,3 @@ aow_curated <- aow_curated %>%
   rename(!!!setNames(brs_items, brs_items_new)) %>%
   rename(!!!setNames(yaps_items, yaps_items_new))
 
-
-df_info(aow_curated, file = "aow_curated_2.csv") # doesn't work without the function script. save to output/derived folder??
-
