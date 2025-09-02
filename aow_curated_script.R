@@ -176,7 +176,7 @@ table(aow_curated$age_survey231_m, aow_curated$age_m_skinfold)
 table(aow_curated$age_survey231_m, aow_curated$age_m_bloodpressure)
 table(aow_curated$age_survey231_m, aow_curated$age_m_bioimpedance)
 
-# 3. Remove unnecessary variables ####
+# 3. Remove redundant variables ####
 
 aow_curated <- aow_curated %>% 
   select(
@@ -298,7 +298,7 @@ aow_curated <- aow_curated %>%
     -awb6_1_social_media_othr, # free text responses
     -awb6_1_positive_exp_othr, # free text responses
     -awb6_1_neg_exp_othr_r5, # free text responses
-    -age_y, # age in months (age_m) more useful
+    -age_y, # age in months (age_m) more useful - 
     -awb1_2_ethnicity_whte, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
     -awb1_2_ethnicity_whte_othr, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
     -awb1_2_ethnicity_mix, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
@@ -653,20 +653,7 @@ summary(aow_curated$brs_total)
 summary(aow_curated$yaps_total)
 
 
-# 5. Divide data into year groups ####
-
-year_8 <- aow_curated %>% 
-  filter(year_group == 8)
-
-year_9 <- aow_curated %>% 
-  filter(year_group == 9)
-
-year_10 <- aow_curated %>% 
-  filter(year_group == 10)
-
-
-
-# Rename variables ####
+# 5. Rename variables to identify questionnaire items ####
 
 # Put RCADS item list in right order
 rcads_items <- c("awb2_1_illhealth_1",
@@ -722,7 +709,7 @@ sdq_items <- c("awb2_1_sdq_1_a10",
               "awb2_1_sdq_24_a10",
               "awb2_1_sdq_25_a10")
 
-# Create new variable names
+# Create lists of new variable names
 rcads_items_new <- paste("rcads_item", seq_along(rcads_items), sep = "_")
 sdq_items_new <- paste("sdq_item", seq_along(sdq_items), sep = "_")
 edeqs_items_new <- paste("edeqs_item", seq_along(edeqs_items), sep = "_")
@@ -730,12 +717,65 @@ swemwbs_items_new <- paste("swemwbs_item", seq_along(swemwbs_items), sep = "_")
 brs_items_new <- paste("brs_item", seq_along(brs_items), sep = "_")
 yaps_items_new <- paste("yaps_item", seq_along(yaps_items), sep = "_")
 
-# Rename the variables
+# Rename the variables using the lists
 aow_curated <- aow_curated %>%
-  rename(!!!setNames(rcads_items, rcads_items_new)) %>%
+  rename(!!!setNames(rcads_items, rcads_items_new)) %>% # when using setNames, the old names are specified first
   rename(!!!setNames(sdq_items, sdq_items_new)) %>%
   rename(!!!setNames(edeqs_items, edeqs_items_new)) %>%
   rename(!!!setNames(swemwbs_items, swemwbs_items_new)) %>%
   rename(!!!setNames(brs_items, brs_items_new)) %>%
   rename(!!!setNames(yaps_items, yaps_items_new))
 
+## Rename other variables that are from incomplete or altered scales ####
+# (new name = old name)
+aow_curated < aow_curated %>%
+  rename(loneliness_ucla3_item_1 = awb2_4_loneliness_1) %>%
+  rename(loneliness_ucla3_item_2 = awb2_4_loneliness_2) %>%
+  rename(loneliness_ucla3_item_3 = awb2_4_loneliness_3) %>%
+  rename(loneliness_ons_item = awb2_4_loneliness_4) %>%
+  rename(helpseek_ghsq_item_1a = awb2_9_seek_hlp_ppl_1_r4) %>% # partner
+  rename(helpseek_ghsq_item_1b = awb2_9_seek_hlp_ppl_2) %>% # friend
+  rename(helpseek_ghsq_item_1c = awb2_9_seek_hlp_ppl_3) %>% # parent
+  rename(helpseek_ghsq_item_1d = awb2_9_seek_hlp_ppl_4) %>% # relative
+  rename(helpseek_ghsq_item_1e = awb2_9_seek_hlp_ppl_5) %>% # mental health professional
+  rename(helpseek_ghsq_item_1f = awb2_9_seek_hlp_ppl_6) %>% # helpline
+  rename(helpseek_ghsq_item_1g = awb2_9_seek_hlp_ppl_7) %>% # doctor
+  rename(helpseek_ghsq_item_1h = awb2_9_seek_hlp_ppl_8) %>% # religious leader
+  rename(helpseek_ghsq_item_1i = awb2_9_seek_hlp_ppl_10) %>% # no-one
+  rename(helpseek_ghsq_item_1j_binary = awb2_9_seek_hlp_ppl_othr_a3) %>% # other
+  rename(helpseek_teacher = awb2_9_seek_hlp_ppl_9_a_4) %>% # teacher
+  rename(pliks_heard_voices = awb2_11_psychosis_3_r4) %>%
+  rename(pliks_heard_voices_distress = awb2_11_upsetting_3_a4) %>%
+  rename(pliks_heard_voices_frequency = awb2_11_pst_yr_3_a4) %>%
+  rename(pliks_seen_things = awb2_11_psychosis_5_r4) %>%
+  rename(pliks_seen_things_distress = awb2_11_upsetting_5_a4) %>%
+  rename(pliks_seen_things_frequency = awb2_11_pst_yr_5_a4) %>%
+  rename(pliks_spied_on = awb2_11_psychosis_2_r4) %>%
+  rename(pliks_spied_on_distress = awb2_11_upsetting_2_a4) %>%
+  rename(pliks_spied_on_frequency = awb2_11_pst_yr_2_a4) %>%
+  rename(pliks_spied_on_plot = awb2_11_plot_hrm_a4) %>%
+  rename(pliks_thoughts_read = awb2_11_psychosis_10_r4) %>%
+  rename(pliks_thoughts_read_distress = awb2_11_upsetting_10_a4) %>%
+  rename(pliks_thoughts_read_frequency = awb2_11_pst_yr_10_a4) %>%
+  rename(pliks_thoughts_read_powers = awb2_11_pwrs_read_a4) %>%
+  rename(pliks_tv_messages = awb2_11_psychosis_1_r4) %>%
+  rename(pliks_tv_messages_distress = awb2_11_upsetting_1_a4) %>%
+  rename(pliks_tv_messages_frequency = awb2_11_pst_yr_1_a4) %>%
+  rename(pliks_under_control = awb2_11_psychosis_4_r4) %>%
+  rename(pliks_under_control_distress = awb2_11_upsetting_4_a4) %>%
+  rename(pliks_under_control_frequency = awb2_11_pst_yr_4_a4) %>%
+  rename(pliks_under_control_who = awb2_11_cntrl_who_a4) %>%
+  rename(pliks_under_control_no_will = awb2_11_cntrl_no_will_a4) %>%
+  rename(pliks_special_powers = awb2_11_psychosis_9_r4) %>%
+  rename(pliks_special_powers_frequency = awb2_11_pst_yr_9_a4) %>%
+
+# 6. Divide data into year groups ####
+
+aow_year_8 <- aow_curated %>% 
+  filter(year_group == 8)
+
+aow_year_9 <- aow_curated %>% 
+  filter(year_group == 9)
+
+aow_year_10 <- aow_curated %>% 
+  filter(year_group == 10)
