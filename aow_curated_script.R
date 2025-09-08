@@ -17,10 +17,13 @@ if (!"here" %in% installed.packages()[, "Package"]) { # package for easy file re
   install.packages("here")
 }
 
+install.packages("labelled") # Function to remove unused value labels from haven_labelled variables
+
 library(tidyverse) # tidy R packages for data manipulation etc
 library(haven) # Import data of various formats
 library(psych) # Function to pro-rate missing items (item.scores)
 library(here) # package for easy file referencing
+library(labelled) # Function to remove unused value labels from haven_labelled variables
 
 # 1. Load raw AoW data ####
 
@@ -180,6 +183,20 @@ table(aow_curated$age_survey231_m, aow_curated$age_m_bioimpedance)
 
 aow_curated <- aow_curated %>% 
   select(
+    -aow_person_id, # aow_recruitment_id is the unique identifier
+    -BiBPersonID, # Not relevant
+    -is_bib, # Not relevant
+    -birth_year, # Unnecessary, age in years variable in data
+    -birth_month, # Unnecessary, age in months variable in data
+    -recruitment_era, # All 2023-2024
+    -recruitment_year, # either 2023 or 2024
+    -recruitment_month, # not relevant
+    -age_recruitment_y, # age at time of data collection more important
+    -age_recruitment_m, # age at time of data collection more important
+    -has_bioimp, # not necessary 
+    -has_bp, # not necessary 
+    -has_skinfld, # not necessary 
+    -has_htwt, # not necessary 
     -has_survey_m231, # all included observations have a survey
     -has_survey_m232, # all included observations have a survey
     -has_survey_m1, # all included observations have a survey
@@ -273,8 +290,11 @@ aow_curated <- aow_curated %>%
     -awb6_6_int_hme_hrs, # 100% missing, removed
     -awb6_6_int_hme_hrs_wknd, # 100% missing, removed
     -survey_age_diff, # all observations included have 0 age difference
+    -age_survey232_m, # same as age_survey231_m
     -has_measure, # unnecessary
     -survey231_version, # all version 10
+    -survey232_version, # all version 10
+    -survey232_mode, # same as survey 231 mode
     -awb1_2_ethnicity_othr_othr, # free text responses
     -awb1_2_language_hme_othr, # free text responses
     -awb1_2y_religion_othr, # free text responses
@@ -298,7 +318,7 @@ aow_curated <- aow_curated %>%
     -awb6_1_social_media_othr, # free text responses
     -awb6_1_positive_exp_othr, # free text responses
     -awb6_1_neg_exp_othr_r5, # free text responses
-    -age_y, # age in months (age_m) more useful - 
+    -age_y, # this is from the heightweight data, only need age in months to check time between data collection 
     -awb1_2_ethnicity_whte, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
     -awb1_2_ethnicity_whte_othr, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
     -awb1_2_ethnicity_mix, # awb1_2_ethnicity_r4 gives a value for ethnicity categories
@@ -728,7 +748,7 @@ aow_curated <- aow_curated %>%
 
 ## Rename other variables that are from incomplete or altered scales ####
 # (new name = old name)
-aow_curated < aow_curated %>%
+aow_curated <- aow_curated %>%
   rename(loneliness_ucla3_item_1 = awb2_4_loneliness_1) %>%
   rename(loneliness_ucla3_item_2 = awb2_4_loneliness_2) %>%
   rename(loneliness_ucla3_item_3 = awb2_4_loneliness_3) %>%
@@ -768,8 +788,126 @@ aow_curated < aow_curated %>%
   rename(pliks_under_control_no_will = awb2_11_cntrl_no_will_a4) %>%
   rename(pliks_special_powers = awb2_11_psychosis_9_r4) %>%
   rename(pliks_special_powers_frequency = awb2_11_pst_yr_9_a4) %>%
+  rename(age_m_survey = age_survey231_m) %>%
+  rename(age_y_survey = age_survey_y) %>%
+  rename(survey_mode = survey231_mode)
 
-# 6. Divide data into year groups ####
+
+# 6. Reduce categorical variables ####
+
+## Birth place ####
+print_labels(aow_curated$awb1_2_country_brth)
+table(aow_curated$awb1_2_country_brth)
+table(as_factor(aow_curated$awb1_2_country_brth), useNA = "ifany")
+
+# Replace "----------------" with NA
+aow_curated$awb1_2_country_brth[aow_curated$awb1_2_country_brth == 202] <- NA
+
+# Drop unused value labels
+aow_curated$awb1_2_country_brth <- drop_unused_value_labels(aow_curated$awb1_2_country_brth)
+
+aow_curated$birth_place <- case_match(aow_curated$awb1_2_country_brth,
+                                     c(1:4, 190) ~ "UK",
+                                     NA ~ NA,
+                                     .default = "Other")
+table(aow_curated$birth_place, useNA = "ifany")
+
+
+
+## Language spoken at home ####
+
+# Is English and/or other language spoken at home?
+
+aow_curated$lang_home <- ""
+aow_curated <- aow_curated %>%
+   mutate(other_languages = rowSums(select(., awb1_2_language_hme___2:awb1_2_language_hme___9)) > 0,
+          lang_home = case_when(
+            awb1_2_language_hme___1 == 1 & other_languages == TRUE ~ "English and other(s)",
+            awb1_2_language_hme___1 == 1 & other_languages == FALSE ~ "English only",
+            awb1_2_language_hme___1 == 0 & other_languages == TRUE ~ "Language(s) other than English",
+            TRUE ~ NA_character_ # default case for any other scenario
+          )) %>%
+   select(-other_languages) # Remove the temporary variable
+table(aow_curated$lang_home, useNA = "ifany")
+
+# How many languages are spoken at home?
+
+aow_curated <- aow_curated %>%
+  mutate(lang_number = rowSums(select(., starts_with("awb1_2_language_hme"))))
+aow_curated$lang_number[aow_curated$lang_number == 0] <- NA
+# Reduce to 1, 2, 3 or more
+aow_curated$lang_number <- case_match(aow_curated$lang_number,
+                                      1 ~ "1",
+                                      2 ~ "2",
+                                      c(3:9) ~ "3+",
+                                      NA ~ NA)
+table(aow_curated$lang_number, useNA = "ifany")
+
+## Religion ####
+
+# First rename the religion variables for transparency
+aow_curated <- aow_curated %>%
+  rename(has_religion = awb1_2_religion) %>%
+  rename(religion = awb1_2y_religion_r4)
+table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
+print_labels(aow_curated$has_religion) # 1 = Yes, 2 = No
+print_labels(aow_curated$religion)
+
+# Reduce religion categories
+aow_curated$religion <- case_match(aow_curated$religion,
+                                   1 ~ "Christianity",
+                                   5 ~ "Islam",
+                                   c(2:4, 6:7) ~ "Other/Not specified",
+                                   NA ~ NA)
+table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
+
+# For those who responded "Yes" to has_religion, but NA for religion, set religion to "Other/Not specified"
+aow_curated <- aow_curated %>%
+  mutate(religion = case_when(
+    has_religion == 1 & is.na(religion) ~ "Other/Not specified",
+    TRUE ~ religion
+  ))
+table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
+
+# For those who responded "No" to has_religion, set religion to "None"
+table(as_factor(aow_curated$has_religion), useNA = "ifany")
+aow_curated <- aow_curated %>%
+  mutate(religion = case_when(
+    has_religion == 2 ~ "None",
+    TRUE ~ religion
+  ))
+table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
+table(as_factor(aow_curated$religion), useNA = "ifany")
+
+## Who else lives in your home? ####
+
+# One/both parents
+table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___1), as_factor(aow_curated$awb3_2_homes_1_ppl_r10___2))
+# 5350 live with both parents, 1678 with one parent, 527 with neither
+
+# Siblings
+table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___9)) 
+# Binary yes/no, 6189 have siblings
+
+
+
+
+## Remove old and now redundant variables ####
+aow_curated <- aow_curated %>%
+  select(-awb1_2_country_brth, # replaced by new binary birth_place variable
+         -awb1_2_language_hme___1, # replaced by lang_home and lang_number variables
+         -awb1_2_language_hme___2, # replaced by lang_home and lang_number variables
+         -awb1_2_language_hme___3, # replaced by lang_home and lang_number variables
+         -awb1_2_language_hme___4, # replaced by lang_home and lang_number variables
+         -awb1_2_language_hme___5, # replaced by lang_home and lang_number variables
+         -awb1_2_language_hme___6, # replaced by lang_home and lang_number variables
+         -awb1_2_language_hme___7, # replaced by lang_home and lang_number variables
+         -awb1_2_language_hme___8, # replaced by lang_home and lang_number variables
+         -awb1_2_language_hme___9, # replaced by lang_home and lang_number variables
+         -has_religion, # This information is in religion variable
+  )
+
+# X. Divide data into year groups ####
 
 aow_year_8 <- aow_curated %>% 
   filter(year_group == 8)
