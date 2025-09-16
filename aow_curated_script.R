@@ -186,6 +186,11 @@ aow_curated <- aow_curated %>%
     -aow_person_id, # aow_recruitment_id is the unique identifier
     -BiBPersonID, # Not relevant
     -is_bib, # Not relevant
+    -gender, # Use self-reported gender instead
+    -ethnicity_1, # Use self-reported ethnicity instead
+    -ethnicity_2, # Use self-reported ethnicity instead
+    -LSOA11CD,
+    -IMD_2019_score, #IMD Decile more useful
     -birth_year, # Unnecessary, age in years variable in data
     -birth_month, # Unnecessary, age in months variable in data
     -recruitment_era, # All 2023-2024
@@ -746,7 +751,7 @@ aow_curated <- aow_curated %>%
   rename(!!!setNames(brs_items, brs_items_new)) %>%
   rename(!!!setNames(yaps_items, yaps_items_new))
 
-## Rename other variables that are from incomplete or altered scales ####
+## Rename other variables inc those from incomplete or altered scales ####
 # (new name = old name)
 aow_curated <- aow_curated %>%
   rename(loneliness_ucla3_item_1 = awb2_4_loneliness_1) %>%
@@ -762,7 +767,7 @@ aow_curated <- aow_curated %>%
   rename(helpseek_ghsq_item_1g = awb2_9_seek_hlp_ppl_7) %>% # doctor
   rename(helpseek_ghsq_item_1h = awb2_9_seek_hlp_ppl_8) %>% # religious leader
   rename(helpseek_ghsq_item_1i = awb2_9_seek_hlp_ppl_10) %>% # no-one
-  rename(helpseek_ghsq_item_1j_binary = awb2_9_seek_hlp_ppl_othr_a3) %>% # other
+  rename(helpseek_ghsq_item_1j_binary = awb2_9_seek_hlp_ppl_othr_a3) %>% # other, binarised
   rename(helpseek_teacher = awb2_9_seek_hlp_ppl_9_a_4) %>% # teacher
   rename(pliks_heard_voices = awb2_11_psychosis_3_r4) %>%
   rename(pliks_heard_voices_distress = awb2_11_upsetting_3_a4) %>%
@@ -788,11 +793,22 @@ aow_curated <- aow_curated %>%
   rename(pliks_under_control_no_will = awb2_11_cntrl_no_will_a4) %>%
   rename(pliks_special_powers = awb2_11_psychosis_9_r4) %>%
   rename(pliks_special_powers_frequency = awb2_11_pst_yr_9_a4) %>%
-  rename(age_m_survey = age_survey231_m) %>%
-  rename(age_y_survey = age_survey_y) %>%
-  rename(survey_mode = survey231_mode)
-
-
+  rename(age_m_survey = age_survey231_m) %>% # Rename age at survey to same format as age at measurement variables
+  rename(age_y_survey = age_survey_y) %>% # Rename age at survey to same format as age at measurement variables
+  rename(survey_mode = survey231_mode) %>% # No need to specify module, both modules same mode for all participants
+  rename(sex = awb1_2_sex) %>%
+  rename(gender = awb1_2_gender_r4) %>%
+  rename(years_in_uk = aw1_2_years_lvd_a4) %>%
+  rename(disability = awb1_2_disability) %>%
+  rename(disability_time = awb1_2_disability_tme_a4) %>%
+  rename(disability_limit = awb1_2_disability_impct_a4) %>%  
+  rename(assets_phone = awb3_1_assets_4) %>% 
+  rename(assets_computer = awb3_1_assets_5) %>% 
+  rename(assets_holiday = awb3_1_assets_6) %>% 
+  rename(assets_car = awb3_1_assets_7) %>% 
+  rename(assets_bedroom = awb3_1_assets_8) 
+  
+  
 # 6. Reduce categorical variables ####
 
 ## Birth place ####
@@ -812,6 +828,16 @@ aow_curated$birth_place <- case_match(aow_curated$awb1_2_country_brth,
                                      .default = "Other")
 table(aow_curated$birth_place, useNA = "ifany")
 
+
+## Ethnicity ####
+print_labels(aow_curated$awb1_2_ethnicity_r4)
+table(as_factor(aow_curated$awb1_2_ethnicity_r4), useNA = "ifany")
+aow_curated$ethnicity <- case_match(aow_curated$awb1_2_ethnicity_r4,
+                                    3 ~ "Asian or Asian British",
+                                    1 ~ "White",
+                                    c(2,4:6) ~ "Other",
+                                    NA ~ NA)
+table(as_factor(aow_curated$ethnicity), useNA = "ifany")
 
 
 ## Language spoken at home ####
@@ -839,7 +865,7 @@ aow_curated$lang_number[aow_curated$lang_number == 0] <- NA
 aow_curated$lang_number <- case_match(aow_curated$lang_number,
                                       1 ~ "1",
                                       2 ~ "2",
-                                      c(3:9) ~ "3+",
+                                      c(3:9) ~ "3 or more",
                                       NA ~ NA)
 table(aow_curated$lang_number, useNA = "ifany")
 
@@ -878,6 +904,16 @@ aow_curated <- aow_curated %>%
   ))
 table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
 table(as_factor(aow_curated$religion), useNA = "ifany")
+
+## Disability ####
+
+# Re-label disability_time values for transparency
+print_labels(aow_curated$disability_time)
+aow_curated$disability_time <- case_match(aow_curated$disability_time,
+                                    1 ~ "One year or more",
+                                    2 ~ "Less than a year",
+                                    NA ~ NA)
+table(as_factor(aow_curated$disability_time))
 
 ## Who else lives in your home? ####
 
