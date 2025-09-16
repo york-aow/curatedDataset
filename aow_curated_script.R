@@ -17,7 +17,10 @@ if (!"here" %in% installed.packages()[, "Package"]) { # package for easy file re
   install.packages("here")
 }
 
-install.packages("labelled") # Function to remove unused value labels from haven_labelled variables
+# install labelled if not installed yet
+if (!"labelled" %in% installed.packages()[, "Package"]) { # package for easy file referencing
+  install.packages("labelled")
+}
 
 library(tidyverse) # tidy R packages for data manipulation etc
 library(haven) # Import data of various formats
