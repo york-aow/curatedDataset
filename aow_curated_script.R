@@ -809,9 +809,13 @@ aow_curated <- aow_curated %>%
   rename(assets_computer = awb3_1_assets_5) %>% 
   rename(assets_holiday = awb3_1_assets_6) %>% 
   rename(assets_car = awb3_1_assets_7) %>% 
-  rename(assets_bedroom = awb3_1_assets_8) 
-  
-  
+  rename(assets_bedroom = awb3_1_assets_8) %>%
+  rename(assets_compare = awb3_1_compare_frnds) %>% 
+  rename(assets_worry = awb3_1_money_wrry) %>% 
+  rename(assets_warmth = awb3_1_warm_engh_a5) %>% 
+  rename(assets_save = awb3_1_save_mny_a5) %>% 
+  rename(live_where = awb3_2_live_where_a10)
+    
 # 6. Reduce categorical variables ####
 
 ## Birth place ####
@@ -872,6 +876,7 @@ aow_curated$lang_number <- case_match(aow_curated$lang_number,
                                       NA ~ NA)
 table(aow_curated$lang_number, useNA = "ifany")
 
+
 ## Religion ####
 
 # First rename the religion variables for transparency
@@ -908,6 +913,7 @@ aow_curated <- aow_curated %>%
 table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
 table(as_factor(aow_curated$religion), useNA = "ifany")
 
+
 ## Disability ####
 
 # Re-label disability_time values for transparency
@@ -918,16 +924,24 @@ aow_curated$disability_time <- case_match(aow_curated$disability_time,
                                     NA ~ NA)
 table(as_factor(aow_curated$disability_time))
 
+
 ## Who else lives in your home? ####
 
 # One/both parents
 table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___1), as_factor(aow_curated$awb3_2_homes_1_ppl_r10___2))
 # 5350 live with both parents, 1678 with one parent, 527 with neither
 
+table(as_factor(aow_curated$live_where))
+
+table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___1), as_factor(aow_curated$awb3_2_homes_1_ppl_r10___7))
+table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___1), as_factor(aow_curated$awb3_2_homes_1_ppl_r10___3))
+
+
 # Siblings
 table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___9)) 
 # Binary yes/no, 6189 have siblings
 
+table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___15)) 
 
 ## discouraged from joining a club ####
 
