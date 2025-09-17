@@ -929,6 +929,467 @@ table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___9))
 # Binary yes/no, 6189 have siblings
 
 
+## discouraged from joining a club ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_club_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    discouraged_club_reason = case_when(
+      
+      # If the main question 'awb8_2_club_1' is 0 ('No'), the reason is not applicable.
+      awb8_2_club_1 == 0 ~ 'discouraged_club answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      awb8_2_club_1 == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_club_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_club_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_club_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_club_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_club_rsn_1___5 == 1 ~ "Class",
+      awb8_2_club_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_club_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_club_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'discouraged_club answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Excluded from activities ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_excl_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    excluded_activities_reason = case_when(
+      
+      # If the main question 'awb8_2_excl_2' is 0 ('No'), the reason is not applicable.
+      awb8_2_excl_2 == 0 ~ 'excluded_activities answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      awb8_2_excl_2 == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_excl_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_excl_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_excl_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_excl_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_excl_rsn_1___5 == 1 ~ "Class",
+      awb8_2_excl_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_excl_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_excl_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'excluded_activities answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Expected less of than others your age ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_age_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    expected_less_reason = case_when(
+      
+      # If the main question 'awb8_2_age_3' is 0 ('No'), the reason is not applicable.
+      awb8_2_age_3 == 0 ~ 'expected_less answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      awb8_2_age_3 == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_age_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_age_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_age_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_age_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_age_rsn_1___5 == 1 ~ "Class",
+      awb8_2_age_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_age_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_age_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'expected_less answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have people assumed your English was poor ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_lang_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    assumed_english_reason = case_when(
+      
+      # If the main question 'awb8_2_lang_4' is 0 ('No'), the reason is not applicable.
+      awb8_2_lang_4 == 0 ~ 'assumed_english answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      awb8_2_lang_4 == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_lang_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_lang_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_lang_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_lang_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_lang_rsn_1___5 == 1 ~ "Class",
+      awb8_2_lang_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_lang_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_lang_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'assumed_english answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have you ever been hassled by police ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_police_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    hassled_police_reason = case_when(
+      
+      # If the main question 'awb8_2_police_5' is 0 ('No'), the reason is not applicable.
+      awb8_2_police_5 == 0 ~ 'hassled_police answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      awb8_2_police_5 == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_police_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_police_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_police_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_police_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_police_rsn_1___5 == 1 ~ "Class",
+      awb8_2_police_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_police_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_police_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'hassled_police answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have you ever been hassled by staff in a shop ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_shop_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    hassled_staff_reason = case_when(
+      
+      # If the main question 'awb8_2_shop_6' is 0 ('No'), the reason is not applicable.
+      awb8_2_shop_6 == 0 ~ 'hassled_staff answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      awb8_2_shop_6 == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_shop_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_shop_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_shop_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_shop_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_shop_rsn_1___5 == 1 ~ "Class",
+      awb8_2_shop_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_shop_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_shop_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'hassled_staff answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have you ever been called insulting names ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_names_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    insulting_names_reason = case_when(
+      
+      # If the main question 'awb8_2_names_7' is 0 ('No'), the reason is not applicable.
+      awb8_2_names_7 == 0 ~ 'insulting_names answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      awb8_2_names_7 == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_names_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_names_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_names_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_names_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_names_rsn_1___5 == 1 ~ "Class",
+      awb8_2_names_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_names_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_names_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'insulting_names answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have you ever received poor service in a shop/restaurant ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_service_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    poor_service_reason = case_when(
+      
+      # If the main question 'awb8_2_service_8' is 0 ('No'), the reason is not applicable.
+      awb8_2_service_8 == 0 ~ 'poor_service answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      awb8_2_service_8 == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_service_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_service_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_service_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_service_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_service_rsn_1___5 == 1 ~ "Class",
+      awb8_2_service_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_service_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_service_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'poor_service answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have people ever acted as though you were not intelligent ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_int_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    act_intelligent_reason = case_when(
+      
+      # If the main question 'awb8_2_int_9' is 0 ('No'), the reason is not applicable.
+      awb8_2_int_9 == 0 ~ 'act_intelligent answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      awb8_2_int_9 == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_int_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_int_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_int_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_int_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_int_rsn_1___5 == 1 ~ "Class",
+      awb8_2_int_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_int_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_int_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'act_intelligent answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have people ever acted like they're afraid of you ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_afraid_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    act_afraid_reason = case_when(
+      
+      # If the main question 'awb8_2_afraid_10' is 0 ('No'), the reason is not applicable.
+      awb8_2_afraid_10 == 0 ~ 'act_afraid answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      awb8_2_afraid_10 == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_afraid_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_afraid_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_afraid_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_afraid_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_afraid_rsn_1___5 == 1 ~ "Class",
+      awb8_2_afraid_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_afraid_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_afraid_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'act_afraid answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have you ever been threatened ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_threat_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    been_threatened_reason = case_when(
+      
+      # If the main question 'awb8_2_threat_11' is 0 ('No'), the reason is not applicable.
+      awb8_2_threat_11 == 0 ~ 'been_threatened answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      awb8_2_threat_11 == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_threat_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_threat_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_threat_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_threat_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_threat_rsn_1___5 == 1 ~ "Class",
+      awb8_2_threat_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_threat_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_threat_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'been_threatened answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
 
 
 ## Remove old and now redundant variables ####
