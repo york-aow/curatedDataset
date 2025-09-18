@@ -746,75 +746,96 @@ brs_items_new <- paste("brs_item", seq_along(brs_items), sep = "_")
 yaps_items_new <- paste("yaps_item", seq_along(yaps_items), sep = "_")
 
 # Rename the variables using the lists
+# Create one combined vector for all renaming rules
+all_renames <- c(
+  setNames(rcads_items, rcads_items_new), #setNames(old name, new name)
+  setNames(sdq_items, sdq_items_new),
+  setNames(edeqs_items, edeqs_items_new),
+  setNames(swemwbs_items, swemwbs_items_new),
+  setNames(brs_items, brs_items_new),
+  setNames(yaps_items, yaps_items_new)
+)
+
+# Apply all renames in a single step
 aow_curated <- aow_curated %>%
-  rename(!!!setNames(rcads_items, rcads_items_new)) %>% # when using setNames, the old names are specified first
-  rename(!!!setNames(sdq_items, sdq_items_new)) %>%
-  rename(!!!setNames(edeqs_items, edeqs_items_new)) %>%
-  rename(!!!setNames(swemwbs_items, swemwbs_items_new)) %>%
-  rename(!!!setNames(brs_items, brs_items_new)) %>%
-  rename(!!!setNames(yaps_items, yaps_items_new))
+  rename(!!!all_renames)
 
 ## Rename other variables inc those from incomplete or altered scales ####
 # (new name = old name)
 aow_curated <- aow_curated %>%
-  rename(loneliness_ucla3_item_1 = awb2_4_loneliness_1) %>%
-  rename(loneliness_ucla3_item_2 = awb2_4_loneliness_2) %>%
-  rename(loneliness_ucla3_item_3 = awb2_4_loneliness_3) %>%
-  rename(loneliness_ons_item = awb2_4_loneliness_4) %>%
-  rename(helpseek_ghsq_item_1a = awb2_9_seek_hlp_ppl_1_r4) %>% # partner
-  rename(helpseek_ghsq_item_1b = awb2_9_seek_hlp_ppl_2) %>% # friend
-  rename(helpseek_ghsq_item_1c = awb2_9_seek_hlp_ppl_3) %>% # parent
-  rename(helpseek_ghsq_item_1d = awb2_9_seek_hlp_ppl_4) %>% # relative
-  rename(helpseek_ghsq_item_1e = awb2_9_seek_hlp_ppl_5) %>% # mental health professional
-  rename(helpseek_ghsq_item_1f = awb2_9_seek_hlp_ppl_6) %>% # helpline
-  rename(helpseek_ghsq_item_1g = awb2_9_seek_hlp_ppl_7) %>% # doctor
-  rename(helpseek_ghsq_item_1h = awb2_9_seek_hlp_ppl_8) %>% # religious leader
-  rename(helpseek_ghsq_item_1i = awb2_9_seek_hlp_ppl_10) %>% # no-one
-  rename(helpseek_ghsq_item_1j_binary = awb2_9_seek_hlp_ppl_othr_a3) %>% # other, binarised
-  rename(helpseek_teacher = awb2_9_seek_hlp_ppl_9_a_4) %>% # teacher
-  rename(pliks_heard_voices = awb2_11_psychosis_3_r4) %>%
-  rename(pliks_heard_voices_distress = awb2_11_upsetting_3_a4) %>%
-  rename(pliks_heard_voices_frequency = awb2_11_pst_yr_3_a4) %>%
-  rename(pliks_seen_things = awb2_11_psychosis_5_r4) %>%
-  rename(pliks_seen_things_distress = awb2_11_upsetting_5_a4) %>%
-  rename(pliks_seen_things_frequency = awb2_11_pst_yr_5_a4) %>%
-  rename(pliks_spied_on = awb2_11_psychosis_2_r4) %>%
-  rename(pliks_spied_on_distress = awb2_11_upsetting_2_a4) %>%
-  rename(pliks_spied_on_frequency = awb2_11_pst_yr_2_a4) %>%
-  rename(pliks_spied_on_plot = awb2_11_plot_hrm_a4) %>%
-  rename(pliks_thoughts_read = awb2_11_psychosis_10_r4) %>%
-  rename(pliks_thoughts_read_distress = awb2_11_upsetting_10_a4) %>%
-  rename(pliks_thoughts_read_frequency = awb2_11_pst_yr_10_a4) %>%
-  rename(pliks_thoughts_read_powers = awb2_11_pwrs_read_a4) %>%
-  rename(pliks_tv_messages = awb2_11_psychosis_1_r4) %>%
-  rename(pliks_tv_messages_distress = awb2_11_upsetting_1_a4) %>%
-  rename(pliks_tv_messages_frequency = awb2_11_pst_yr_1_a4) %>%
-  rename(pliks_under_control = awb2_11_psychosis_4_r4) %>%
-  rename(pliks_under_control_distress = awb2_11_upsetting_4_a4) %>%
-  rename(pliks_under_control_frequency = awb2_11_pst_yr_4_a4) %>%
-  rename(pliks_under_control_who = awb2_11_cntrl_who_a4) %>%
-  rename(pliks_under_control_no_will = awb2_11_cntrl_no_will_a4) %>%
-  rename(pliks_special_powers = awb2_11_psychosis_9_r4) %>%
-  rename(pliks_special_powers_frequency = awb2_11_pst_yr_9_a4) %>%
-  rename(age_m_survey = age_survey231_m) %>% # Rename age at survey to same format as age at measurement variables
-  rename(age_y_survey = age_survey_y) %>% # Rename age at survey to same format as age at measurement variables
-  rename(survey_mode = survey231_mode) %>% # No need to specify module, both modules same mode for all participants
-  rename(sex = awb1_2_sex) %>%
-  rename(gender = awb1_2_gender_r4) %>%
-  rename(years_in_uk = aw1_2_years_lvd_a4) %>%
-  rename(disability = awb1_2_disability) %>%
-  rename(disability_time = awb1_2_disability_tme_a4) %>%
-  rename(disability_limit = awb1_2_disability_impct_a4) %>%  
-  rename(assets_phone = awb3_1_assets_4) %>% 
-  rename(assets_computer = awb3_1_assets_5) %>% 
-  rename(assets_holiday = awb3_1_assets_6) %>% 
-  rename(assets_car = awb3_1_assets_7) %>% 
-  rename(assets_bedroom = awb3_1_assets_8) %>%
-  rename(assets_compare = awb3_1_compare_frnds) %>% 
-  rename(assets_worry = awb3_1_money_wrry) %>% 
-  rename(assets_warmth = awb3_1_warm_engh_a5) %>% 
-  rename(assets_save = awb3_1_save_mny_a5) %>% 
-  rename(live_where = awb3_2_live_where_a10)
+  rename(
+    # Loneliness
+    loneliness_ucla3_item_1 = awb2_4_loneliness_1,
+    loneliness_ucla3_item_2 = awb2_4_loneliness_2,
+    loneliness_ucla3_item_3 = awb2_4_loneliness_3,
+    loneliness_ons_item     = awb2_4_loneliness_4,
+    
+    # Help Seeking (GHSQ)
+    helpseek_ghsq_item_1a        = awb2_9_seek_hlp_ppl_1_r4, # partner
+    helpseek_ghsq_item_1b        = awb2_9_seek_hlp_ppl_2, # friend
+    helpseek_ghsq_item_1c        = awb2_9_seek_hlp_ppl_3, # parent
+    helpseek_ghsq_item_1d        = awb2_9_seek_hlp_ppl_4, # relative
+    helpseek_ghsq_item_1e        = awb2_9_seek_hlp_ppl_5, # mental health professional
+    helpseek_ghsq_item_1f        = awb2_9_seek_hlp_ppl_6, # helpline
+    helpseek_ghsq_item_1g        = awb2_9_seek_hlp_ppl_7, # doctor
+    helpseek_ghsq_item_1h        = awb2_9_seek_hlp_ppl_8, # religious leader
+    helpseek_ghsq_item_1i        = awb2_9_seek_hlp_ppl_10, # no-one
+    helpseek_ghsq_item_1j_binary = awb2_9_seek_hlp_ppl_othr_a3, # other, binary
+    
+    # Help Seeking (other)
+    helpseek_teacher = awb2_9_seek_hlp_ppl_9_a_4, # teacher
+    
+    # Psychosis-like Symptoms (PLIKS)
+    pliks_heard_voices             = awb2_11_psychosis_3_r4,
+    pliks_heard_voices_distress    = awb2_11_upsetting_3_a4,
+    pliks_heard_voices_frequency   = awb2_11_pst_yr_3_a4,
+    pliks_seen_things              = awb2_11_psychosis_5_r4,
+    pliks_seen_things_distress     = awb2_11_upsetting_5_a4,
+    pliks_seen_things_frequency    = awb2_11_pst_yr_5_a4,
+    pliks_spied_on                 = awb2_11_psychosis_2_r4,
+    pliks_spied_on_distress        = awb2_11_upsetting_2_a4,
+    pliks_spied_on_frequency       = awb2_11_pst_yr_2_a4,
+    pliks_spied_on_plot            = awb2_11_plot_hrm_a4,
+    pliks_thoughts_read            = awb2_11_psychosis_10_r4,
+    pliks_thoughts_read_distress   = awb2_11_upsetting_10_a4,
+    pliks_thoughts_read_frequency  = awb2_11_pst_yr_10_a4,
+    pliks_thoughts_read_powers     = awb2_11_pwrs_read_a4,
+    pliks_tv_messages              = awb2_11_psychosis_1_r4,
+    pliks_tv_messages_distress     = awb2_11_upsetting_1_a4,
+    pliks_tv_messages_frequency    = awb2_11_pst_yr_1_a4,
+    pliks_under_control            = awb2_11_psychosis_4_r4,
+    pliks_under_control_distress   = awb2_11_upsetting_4_a4,
+    pliks_under_control_frequency  = awb2_11_pst_yr_4_a4,
+    pliks_under_control_who        = awb2_11_cntrl_who_a4,
+    pliks_under_control_no_will    = awb2_11_cntrl_no_will_a4,
+    pliks_special_powers           = awb2_11_psychosis_9_r4,
+    pliks_special_powers_frequency = awb2_11_pst_yr_9_a4,
+    
+    # Demographics
+    age_m_survey = age_survey231_m, # Rename age at survey to same format as age at measurement variables
+    age_y_survey = age_survey_y, # Rename age at survey to same format as age at measurement variables
+    survey_mode  = survey231_mode, # No need to specify module, both modules same mode for all participants
+    sex          = awb1_2_sex,
+    gender       = awb1_2_gender_r4,
+    years_in_uk  = aw1_2_years_lvd_a4,
+    live_where   = awb3_2_live_where_a10,
+    
+    # Disability
+    disability       = awb1_2_disability,
+    disability_time  = awb1_2_disability_tme_a4,
+    disability_limit = awb1_2_disability_impct_a4,
+    
+    # Assets
+    assets_phone    = awb3_1_assets_4,
+    assets_computer = awb3_1_assets_5,
+    assets_holiday  = awb3_1_assets_6,
+    assets_car      = awb3_1_assets_7,
+    assets_bedroom  = awb3_1_assets_8,
+    assets_compare  = awb3_1_compare_frnds,
+    assets_worry    = awb3_1_money_wrry,
+    assets_warmth   = awb3_1_warm_engh_a5,
+    assets_save     = awb3_1_save_mny_a5
+  )
     
 # 6. Reduce categorical variables ####
 
