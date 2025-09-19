@@ -1064,11 +1064,11 @@ aow_curated <- aow_curated %>%
     # Create the new categorical variable using conditional logic
     discouraged_club_reason = case_when(
       
-      # If the main question 'awb8_2_club_1' is 0 ('No'), the reason is not applicable.
-      awb8_2_club_1 == 0 ~ 'discouraged_club answer == 0',
+      # If the main question 'discouraged_club' is 0 ('No'), the reason is not applicable.
+      discouraged_club == 0 ~ 'discouraged_club answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      awb8_2_club_1 == 1 & reason_count == 0 ~ "No reason given",
+      discouraged_club == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1106,11 +1106,11 @@ aow_curated <- aow_curated %>%
     # Create the new categorical variable using conditional logic
     excluded_activities_reason = case_when(
       
-      # If the main question 'awb8_2_excl_2' is 0 ('No'), the reason is not applicable.
-      awb8_2_excl_2 == 0 ~ 'excluded_activities answer == 0',
+      # If the main question 'excluded_activities' is 0 ('No'), the reason is not applicable.
+      excluded_activities == 0 ~ 'excluded_activities answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      awb8_2_excl_2 == 1 & reason_count == 0 ~ "No reason given",
+      excluded_activities == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1148,11 +1148,11 @@ aow_curated <- aow_curated %>%
     # Create the new categorical variable using conditional logic
     expected_less_reason = case_when(
       
-      # If the main question 'awb8_2_age_3' is 0 ('No'), the reason is not applicable.
-      awb8_2_age_3 == 0 ~ 'expected_less answer == 0',
+      # If the main question 'expected_less' is 0 ('No'), the reason is not applicable.
+      expected_less == 0 ~ 'expected_less answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      awb8_2_age_3 == 1 & reason_count == 0 ~ "No reason given",
+      expected_less == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1190,11 +1190,11 @@ aow_curated <- aow_curated %>%
     # Create the new categorical variable using conditional logic
     assumed_english_reason = case_when(
       
-      # If the main question 'awb8_2_lang_4' is 0 ('No'), the reason is not applicable.
-      awb8_2_lang_4 == 0 ~ 'assumed_english answer == 0',
+      # If the main question 'assumed_english' is 0 ('No'), the reason is not applicable.
+      assumed_english == 0 ~ 'assumed_english answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      awb8_2_lang_4 == 1 & reason_count == 0 ~ "No reason given",
+      assumed_english == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1232,11 +1232,11 @@ aow_curated <- aow_curated %>%
     # Create the new categorical variable using conditional logic
     hassled_police_reason = case_when(
       
-      # If the main question 'awb8_2_police_5' is 0 ('No'), the reason is not applicable.
-      awb8_2_police_5 == 0 ~ 'hassled_police answer == 0',
+      # If the main question 'hassled_police' is 0 ('No'), the reason is not applicable.
+      hassled_police == 0 ~ 'hassled_police answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      awb8_2_police_5 == 1 & reason_count == 0 ~ "No reason given",
+      hassled_police == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1274,11 +1274,11 @@ aow_curated <- aow_curated %>%
     # Create the new categorical variable using conditional logic
     hassled_staff_reason = case_when(
       
-      # If the main question 'awb8_2_shop_6' is 0 ('No'), the reason is not applicable.
-      awb8_2_shop_6 == 0 ~ 'hassled_staff answer == 0',
+      # If the main question 'hassled_staff' is 0 ('No'), the reason is not applicable.
+      hassled_staff == 0 ~ 'hassled_staff answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      awb8_2_shop_6 == 1 & reason_count == 0 ~ "No reason given",
+      hassled_staff == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1316,11 +1316,11 @@ aow_curated <- aow_curated %>%
     # Create the new categorical variable using conditional logic
     insulting_names_reason = case_when(
       
-      # If the main question 'awb8_2_names_7' is 0 ('No'), the reason is not applicable.
-      awb8_2_names_7 == 0 ~ 'insulting_names answer == 0',
+      # If the main question 'insulting_names' is 0 ('No'), the reason is not applicable.
+      insulting_names == 0 ~ 'insulting_names answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      awb8_2_names_7 == 1 & reason_count == 0 ~ "No reason given",
+      insulting_names == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1358,11 +1358,11 @@ aow_curated <- aow_curated %>%
     # Create the new categorical variable using conditional logic
     poor_service_reason = case_when(
       
-      # If the main question 'awb8_2_service_8' is 0 ('No'), the reason is not applicable.
-      awb8_2_service_8 == 0 ~ 'poor_service answer == 0',
+      # If the main question 'poor_service' is 0 ('No'), the reason is not applicable.
+      poor_service == 0 ~ 'poor_service answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      awb8_2_service_8 == 1 & reason_count == 0 ~ "No reason given",
+      poor_service == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1400,11 +1400,11 @@ aow_curated <- aow_curated %>%
     # Create the new categorical variable using conditional logic
     act_intelligent_reason = case_when(
       
-      # If the main question 'awb8_2_int_9' is 0 ('No'), the reason is not applicable.
-      awb8_2_int_9 == 0 ~ 'act_intelligent answer == 0',
+      # If the main question 'act_intelligent' is 0 ('No'), the reason is not applicable.
+      act_intelligent == 0 ~ 'act_intelligent answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      awb8_2_int_9 == 1 & reason_count == 0 ~ "No reason given",
+      act_intelligent == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1442,11 +1442,11 @@ aow_curated <- aow_curated %>%
     # Create the new categorical variable using conditional logic
     act_afraid_reason = case_when(
       
-      # If the main question 'awb8_2_afraid_10' is 0 ('No'), the reason is not applicable.
-      awb8_2_afraid_10 == 0 ~ 'act_afraid answer == 0',
+      # If the main question 'act_afraid' is 0 ('No'), the reason is not applicable.
+      act_afraid == 0 ~ 'act_afraid answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      awb8_2_afraid_10 == 1 & reason_count == 0 ~ "No reason given",
+      act_afraid == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1484,11 +1484,11 @@ aow_curated <- aow_curated %>%
     # Create the new categorical variable using conditional logic
     been_threatened_reason = case_when(
       
-      # If the main question 'awb8_2_threat_11' is 0 ('No'), the reason is not applicable.
-      awb8_2_threat_11 == 0 ~ 'been_threatened answer == 0',
+      # If the main question 'been_threatened' is 0 ('No'), the reason is not applicable.
+      been_threatened == 0 ~ 'been_threatened answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      awb8_2_threat_11 == 1 & reason_count == 0 ~ "No reason given",
+      been_threatened == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
