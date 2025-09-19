@@ -834,7 +834,93 @@ aow_curated <- aow_curated %>%
     assets_compare  = awb3_1_compare_frnds,
     assets_worry    = awb3_1_money_wrry,
     assets_warmth   = awb3_1_warm_engh_a5,
-    assets_save     = awb3_1_save_mny_a5
+    assets_save     = awb3_1_save_mny_a5,
+    
+    # Self Efficacy
+    self_efficacy = awb2_3_self_effccy,
+    
+    # Trust
+    trust = awb2_9_trust,
+    
+    # Self Harm
+    self_harm = awb2_9_seek_hurt_self_a5,
+    
+    # Natural Environment
+    greenspace_winter = awb7_1_wntr_mnths,
+    greenspace_summer = awb7_1_smmr_mnths,
+    air_quality       = awb7_2_pollution,
+    environment       = awb7_3_clmte_chnge_feelng,
+    
+    # School
+    school_enjoy     = awb7_1_like,
+    school_trust     = awb7_1_trust,
+    school_bullying  = awb7_1_bullying_1,
+    school_safe      = awb7_1_safe_r8,
+    school_pressure1 = awb7_2_grades_a5,
+    school_pressure2 = awb7_2_fam_diss_a5,
+    school_pressure3 = awb7_2_prnt_preshr_a5,
+    school_pressure4 = awb7_2_progrssng_a5,
+    school_pressure5 = awb7_2_dnt_do_well_a5,
+    school_pressure6 = awb7_2_acad_strss_r8,
+    school_pressure7 = awb7_2_test_wrries_a5,
+    
+    # Friendships
+    friends_offline = awb2_7_friends_physcl_r10,
+    friends_online  = awb2_7_friends_onln_r10,
+    friends_close   = awb2_7_friends_clse_a5,
+    
+    # Morality
+    morality1 = awb8_1_morality_1_r10,
+    morality2 = awb8_1_morality_2_r10,
+    morality3 = awb8_1_morality_3_r10,
+    morality4 = awb8_1_morality_4_r10,
+    
+    # Bullying
+    bullying1 = awb8_3_bully,
+    bullying2 = awb8_2_bullied,
+    bullying3 = awb8_2_bullied_onlne,
+    bullying4 = awb8_2_bully_onlne,
+    
+    # Discrimination
+    discouraged_club    = awb8_2_club_1,
+    excluded_activities = awb8_2_excl_2,
+    expected_less       = awb8_2_age_3,
+    assumed_english     = awb8_2_lang_4,
+    hassled_police      = awb8_2_police_5,
+    hassled_staff       = awb8_2_shop_6,
+    insulting_names     = awb8_2_names_7,
+    poor_service        = awb8_2_service_8,
+    act_intelligent     = awb8_2_int_9,
+    act_afraid          = awb8_2_afraid_10,
+    been_threatened     = awb8_2_threat_11,
+    
+    #Social Media Use
+    sm_use_Facebook  = awb6_1_social_media_r10___1,
+    sm_use_Instagram = awb6_1_social_media_r10___2,
+    sm_use_X         = awb6_1_social_media_r10___3,
+    sm_use_TikTok    = awb6_1_social_media_r10___4,
+    sm_use_Snapchat  = awb6_1_social_media_r10___5,
+    sm_use_other     = awb6_1_social_media_r10___11,
+    sm_time_weekday  = awb6_1_time_weekday,
+    sm_time_weekend  = awb6_1_time_weekend,
+    sm_positive1     = awb6_1_positive_exp___1,
+    sm_positive2     = awb6_1_positive_exp___2,
+    sm_positive3     = awb6_1_positive_exp___3,
+    sm_positive4     = awb6_1_positive_exp___4,
+    sm_positive5     = awb6_1_positive_exp___5,
+    sm_positive6     = awb6_1_positive_exp___6,
+    sm_negative1     = awb6_1_negative_exp_r5___1,
+    sm_negative2     = awb6_1_negative_exp_r5___2,
+    sm_negative3     = awb6_1_negative_exp_r5___3,
+    sm_negative4     = awb6_1_negative_exp_r5___4,
+    sm_negative5     = awb6_1_negative_exp_r5___5,
+    sm_negative6     = awb6_1_negative_exp_r5___6,
+    sm_negative7     = awb6_1_negative_exp_r5___7,
+    sm_experience    = awb6_1_pos_neg,
+    
+    # Internet
+    internet_access  = awb6_6_int_hme,
+    internet_quality = awb6_6_int_hme_gd
   )
     
 # 6. Reduce categorical variables ####
