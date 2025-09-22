@@ -745,217 +745,184 @@ brs_items_new <- paste("brs_item", seq_along(brs_items), sep = "_")
 yaps_items_new <- paste("yaps_item", seq_along(yaps_items), sep = "_")
 
 # Rename the variables using the lists
+# Create one combined vector for all renaming rules
+all_renames <- c(
+  setNames(rcads_items, rcads_items_new), #setNames(old name, new name)
+  setNames(sdq_items, sdq_items_new),
+  setNames(edeqs_items, edeqs_items_new),
+  setNames(swemwbs_items, swemwbs_items_new),
+  setNames(brs_items, brs_items_new),
+  setNames(yaps_items, yaps_items_new)
+)
+
+# Apply all renames in a single step
 aow_curated <- aow_curated %>%
-  rename(!!!setNames(rcads_items, rcads_items_new)) %>% # when using setNames, the old names are specified first
-  rename(!!!setNames(sdq_items, sdq_items_new)) %>%
-  rename(!!!setNames(edeqs_items, edeqs_items_new)) %>%
-  rename(!!!setNames(swemwbs_items, swemwbs_items_new)) %>%
-  rename(!!!setNames(brs_items, brs_items_new)) %>%
-  rename(!!!setNames(yaps_items, yaps_items_new))
+  rename(!!!all_renames)
 
 ## Rename other variables inc those from incomplete or altered scales ####
 # (new name = old name)
 aow_curated <- aow_curated %>%
-    rename(loneliness_ucla3_item_1 = awb2_4_loneliness_1,
-           loneliness_ucla3_item_2 = awb2_4_loneliness_2,
-           loneliness_ucla3_item_3 = awb2_4_loneliness_3,
-           loneliness_ons_item = awb2_4_loneliness_4,
-           helpseek_ghsq_item_1a = awb2_9_seek_hlp_ppl_1_r4, # partner
-           helpseek_ghsq_item_1b = awb2_9_seek_hlp_ppl_2, # friend
-           helpseek_ghsq_item_1c = awb2_9_seek_hlp_ppl_3, # parent
-           helpseek_ghsq_item_1d = awb2_9_seek_hlp_ppl_4, # relative
-           helpseek_ghsq_item_1e = awb2_9_seek_hlp_ppl_5, # mental health professional
-           helpseek_ghsq_item_1f = awb2_9_seek_hlp_ppl_6, # helpline
-           helpseek_ghsq_item_1g = awb2_9_seek_hlp_ppl_7, # doctor
-           helpseek_ghsq_item_1h = awb2_9_seek_hlp_ppl_8, # religious leader
-           helpseek_ghsq_item_1i = awb2_9_seek_hlp_ppl_10, # no-one
-           helpseek_ghsq_item_1j_binary = awb2_9_seek_hlp_ppl_othr_a3, # other, binarised
-           helpseek_teacher = awb2_9_seek_hlp_ppl_9_a_4, # teacher
-           pliks_heard_voices = awb2_11_psychosis_3_r4,
-           pliks_heard_voices_distress = awb2_11_upsetting_3_a4,
-           pliks_heard_voices_frequency = awb2_11_pst_yr_3_a4,
-           pliks_seen_things = awb2_11_psychosis_5_r4,
-           pliks_seen_things_distress = awb2_11_upsetting_5_a4,
-           pliks_seen_things_frequency = awb2_11_pst_yr_5_a4,
-           pliks_spied_on = awb2_11_psychosis_2_r4,
-           pliks_spied_on_distress = awb2_11_upsetting_2_a4,
-           pliks_spied_on_frequency = awb2_11_pst_yr_2_a4,
-           pliks_spied_on_plot = awb2_11_plot_hrm_a4,
-           pliks_thoughts_read = awb2_11_psychosis_10_r4,
-           pliks_thoughts_read_distress = awb2_11_upsetting_10_a4,
-           pliks_thoughts_read_frequency = awb2_11_pst_yr_10_a4,
-           pliks_thoughts_read_powers = awb2_11_pwrs_read_a4,
-           pliks_tv_messages = awb2_11_psychosis_1_r4,
-           pliks_tv_messages_distress = awb2_11_upsetting_1_a4,
-           pliks_tv_messages_frequency = awb2_11_pst_yr_1_a4,
-           pliks_under_control = awb2_11_psychosis_4_r4,
-           pliks_under_control_distress = awb2_11_upsetting_4_a4,
-           pliks_under_control_frequency = awb2_11_pst_yr_4_a4,
-           pliks_under_control_who = awb2_11_cntrl_who_a4,
-           pliks_under_control_no_will = awb2_11_cntrl_no_will_a4,
-           pliks_special_powers = awb2_11_psychosis_9_r4,
-           pliks_special_powers_frequency = awb2_11_pst_yr_9_a4,
-           age_m_survey = age_survey231_m, # Rename age at survey to same format as age at measurement variables
-           age_y_survey = age_survey_y, # Rename age at survey to same format as age at measurement variables
-           survey_mode = survey231_mode, # No need to specify module, both modules same mode for all participants
-           sex = awb1_2_sex,
-           gender = awb1_2_gender_r4, # Make sure school-reported "gender" variable has been deleted first
-           years_in_uk = aw1_2_years_lvd_a4,
-           disability = awb1_2_disability,
-           disability_time = awb1_2_disability_tme_a4,
-           disability_limit = awb1_2_disability_impct_a4,  
-           assets_phone = awb3_1_assets_4, 
-           assets_computer = awb3_1_assets_5, 
-           assets_holiday = awb3_1_assets_6, 
-           assets_car = awb3_1_assets_7, 
-           assets_bedroom = awb3_1_assets_8,
-           assets_compare = awb3_1_compare_frnds, 
-           assets_worry = awb3_1_money_wrry, 
-           assets_warmth = awb3_1_warm_engh_a5, 
-           assets_save = awb3_1_save_mny_a5, 
-           live_where = awb3_2_live_where_a10,  
-           lives_mother = awb3_2_homes_1_ppl_r10___1,
-           lives_father = awb3_2_homes_1_ppl_r10___2,
-           lives_guardian = awb3_2_homes_1_ppl_r10___3,
-           lives_foster = awb3_2_homes_1_ppl_r10___4,
-           lives_step_m = awb3_2_homes_1_ppl_r10___5,
-           lives_step_f = awb3_2_homes_1_ppl_r10___6,
-           lives_m_partner = awb3_2_homes_1_ppl_r10___7,
-           lives_f_partner = awb3_2_homes_1_ppl_r10___8,
-           lives_siblings = awb3_2_homes_1_ppl_r10___9,
-           lives_auntie = awb3_2_homes_1_ppl_r10___10,
-           lives_uncle = awb3_2_homes_1_ppl_r10___11,
-           lives_grandmother = awb3_2_homes_1_ppl_r10___12,
-           lives_grandfather = awb3_2_homes_1_ppl_r10___13,
-           lives_cousins = awb3_2_homes_1_ppl_r10___14,
-           lives_other = awb3_2_homes_1_ppl_r10___15,
-           birth_order = awb_2_6_family_brth_n_a5,
-           get_along_family = awb2_6_family_rltnshp_1_a5,
-           get_along_siblings = awb2_6_family_rltnshp_2_a5,
-           assets_money_pocket = awb3_4_personal_assts_1,
-           assets_money_chores = awb3_4_personal_assts_2,
-           assets_money_business = awb3_4_personal_assts_3,
-           assets_money_job = awb3_4_personal_assts_4,
-           assets_money_parents = awb3_4_personal_assts_5,
-           food_worry_1 = aw3_5_food_1,
-           food_worry_2 = aw3_5_food_2,
-           food_worry_3 = aw3_5_food_3,
-           food_worry_4 = aw3_5_food_4,
-           food_worry_5 = aw3_5_food_5,
-           social_comparison = aw3_6_comparison_2_r10,
-           nbhd_safety_night = awb3_7_prsnl_sfty_1,
-           nbhd_safety_day = awb3_7_prsnl_sfty_2,
-           nbhd_safety_school = awb3_7_prsnl_sfty_4,
-           victim_violence = awb3_7_violence,
-           activities_music = awb3_activities_3_r10,
-           activities_writing = awb3_activities_15_r10,
-           activities_volunteer = awb3_activities_11_r10,
-           activities_art = awb3_activities_17_r10,
-           activities_visual = awb3_activities_18_r10,
-           activities_read = awb3_activities_6_r10,
-           activities_poetry = awb3_activities_14_r10,
-           activities_perform = awb3_activities_16_r10,
-           activities_party = awb3_activities_1_r10,
-           activities_museum = awb3_activities_10_r10,
-           activities_political = awb3_activities_12_r10,
-           activities_religious = awb3_activities_13_r10,
-           activities_gaming = awb3_activities_19_a10,
-           activities_spectate = awb3_activities_2_r10,
-           activities_concert = awb3_activities_4_r10,
-           activities_thatre = awb3_activities_5_r10,
-           activities_club = awb3_activities_7_r10,
-           activities_scouts = awb3_activities_8_r10,
-           activities_library = awb3_activities_9_r10,
-           area_proud = awb3_pip_1_a10,
-           area_events_proud = awb3_pip_2_a10,
-           area_events_interest = awb3_pip_3_a10,
-           health_general = awb5_1_general_hlth,
-           health_vision = awb5_1_hearing_sght_1_r10,
-           health_hearing = awb5_1_hearing_sght_3,
-           food_breakfast = awb5_1_food_dt_2,
-           food_fruit = awb5_1_food_dt_3,
-           food_veg = awb5_1_food_dt_4,
-           food_drinks_sugarfree = awb5_1_food_dt_5,
-           food_drinks_sugar = awb5_1_food_dt_6_r7,
-           food_drinks_energy = awb5_1_food_dt_10_a10,
-           food_fastfood = awb5_1_food_dt_7,
-           teeth_brush = awb5_1_oral_hlth_1,
-           teeth_dentist = awb5_1_oral_hlth_3,
-           puberty_changes = awb4_4_puberty_a10,
-           puberty_periods = awb4_4y_gendersex_f_2,
-           puberty_periods_age = awb4_4y_gendersex_y_f_2,
-           drugs_cigarettes = awb5_1_cigs_a5,
-           drugs_cigarettes_freq = awb5_1_cigs2_r10,
-           drugs_vape = awb5_2_evr_vaped_a5,
-           drugs_vape_behav = awb5_2_vape_r10,
-           drugs_alcohol = awb5_2_alcohol,
-           drugs_alcohol_age = awb5_2y_alcohol_age,
-           drugs_alcohol_freq = awb5_2y_alcohol_frqncy,
-           drugs_alcohol_binge = awb5_2y_alcohol_qntty,
-           drugs_alcohol_binge_age = awb5_2_yalcohol_y_qntty_age,
-           drugs_alcohol_binge_freq = awb5_2_yalcohol_y_qntty_frqncy,
-           drugs_any = awb5_drugs,
-           drugs_cannibis = awb5_2_drugs_1,
-           drugs_ketamine = awb5_2_drugs_10,
-           drugs_spice = awb5_2_drugs_12,
-           drugs_nos = awb5_2_drugs_15,
-           drugs_presc = awb5_2_drugs_17,
-           drugs_cannibis_freq = awb5_2_cannabis_pstyr,
-           drugs_cocaine = awb5_2_drugs_2,
-           drugs_cocaine_freq = awb5_2_cocaine_pstyr,
-           drugs_ecstacy = awb5_2_drugs_4,
-           drugs_ecstacy_freq = awb5_2_ecstasy_pstyr,
-           drugs_ketamine_freq = awb5_2_ket_pstyr,
-           drugs_spice_freq = awb5_2_spice_pstyr,
-           drugs_nos_freq = awb5_2_nitrous_pstyr,
-           drugs_presc_freq = awb5_2_prescription_pstyr,
-           drugs_other = awb5_2_drugs_othr_a10,
-           drugs_other_freq = awb5_2_drugs_othr3_a10,
-           gambling_lottery = awb5_2_gambling_chk_a10___1,
-           gambling_slot = awb5_2_gambling_chk_a10___2,
-           gambling_bet_private = awb5_2_gambling_chk_a10___3,
-           gambling_cards = awb5_2_gambling_chk_a10___4,
-           gambling_bingo_club = awb5_2_gambling_chk_a10___5,
-           gambling_bingo_other = awb5_2_gambling_chk_a10___6,
-           gambling_machine = awb5_2_gambling_chk_a10___7,
-           gambling_bet_shop = awb5_2_gambling_chk_a10___8,
-           gambling_casino = awb5_2_gambling_chk_a10___9,
-           gambling_online = awb5_2_gambling_chk_a10___10,
-           gambling_none = awb5_2_gambling_chk_a10___0,
-           gambling_lottery_when = awb5_2_gambling_2_r10,
-           gambling_slot_when = awb5_2_gambling_6_r10,
-           gambling_bet_private_when = awb5_2_gambling_7_r10,
-           gambling_cards_when = awb5_2_gambling_8_r10,
-           gambling_bingo_club_when = awb5_2_gambling_9_r10,
-           gambling_bingo_other_when = awb5_2_gambling_10_r10,
-           gambling_machine_when = awb5_2_gambling_11_r10,
-           gambling_bet_shop_when = awb5_2_gambling_12_r10,
-           gambling_casino_when = awb5_2_gambling_13_r10,
-           gambling_online_when = awb5_2_gambling_14_r10,
-           gambling_family = awb5_2_gambling_fam_a10,
-           gaming_purchase_item = awb5_2_online_gamb3_a5___1,
-           gaming_purchase_unlock = awb5_2_online_gamb3_a5___2,
-           gaming_purchase_bet = awb5_2_online_gamb3_a5___3,
-           gaming_purchase_none = awb5_2_online_gamb3_a5___4,
-           carried_weapon = awb5_2y_knife,
-           police_stop = awb5_2_contactpolice_1,
-           police_caution = awb5_2_contactpolice_2,
-           pa_to_school = awb4_1_physical_actvty_1_a5,
-           pa_pe = awb4_1_physical_actvty_2_a5,
-           pa_lunch = awb4_1_physical_actvty_3_a5,
-           pa_break = awb4_1_physical_actvty_4_a5,
-           pa_from_school = awb4_1_physical_actvty_5_a5,
-           pa_after_school = awb4_1_physical_actvty_6_a5,
-           pa_evening = awb4_1_physical_actvty_7_a5,
-           pa_weekend = awb4_1_physical_actvty_8_a5,
-           pa_sick = awb4_1_sick_a5,
-           sleep_time_school = awb4_3_times2_a5,
-           sleep_wake_school = awb4_3_times3_a5,
-           sleep_time = awb4_3_times4_a5,
-           sleep_wake = awb4_3_times5_a5,
-           sleep_well = awb4_3_sleep_well_nght_a5,
-           sleepy_day = awb4_3_sleep_drngday_a5)
-  
+
+  rename(
+    # Loneliness
+    loneliness_ucla3_item_1 = awb2_4_loneliness_1,
+    loneliness_ucla3_item_2 = awb2_4_loneliness_2,
+    loneliness_ucla3_item_3 = awb2_4_loneliness_3,
+    loneliness_ons_item     = awb2_4_loneliness_4,
+    
+    # Help Seeking (GHSQ)
+    helpseek_ghsq_item_1a        = awb2_9_seek_hlp_ppl_1_r4, # partner
+    helpseek_ghsq_item_1b        = awb2_9_seek_hlp_ppl_2, # friend
+    helpseek_ghsq_item_1c        = awb2_9_seek_hlp_ppl_3, # parent
+    helpseek_ghsq_item_1d        = awb2_9_seek_hlp_ppl_4, # relative
+    helpseek_ghsq_item_1e        = awb2_9_seek_hlp_ppl_5, # mental health professional
+    helpseek_ghsq_item_1f        = awb2_9_seek_hlp_ppl_6, # helpline
+    helpseek_ghsq_item_1g        = awb2_9_seek_hlp_ppl_7, # doctor
+    helpseek_ghsq_item_1h        = awb2_9_seek_hlp_ppl_8, # religious leader
+    helpseek_ghsq_item_1i        = awb2_9_seek_hlp_ppl_10, # no-one
+    helpseek_ghsq_item_1j_binary = awb2_9_seek_hlp_ppl_othr_a3, # other, binary
+    
+    # Help Seeking (other)
+    helpseek_teacher = awb2_9_seek_hlp_ppl_9_a_4, # teacher
+    
+    # Psychosis-like Symptoms (PLIKS)
+    pliks_heard_voices             = awb2_11_psychosis_3_r4,
+    pliks_heard_voices_distress    = awb2_11_upsetting_3_a4,
+    pliks_heard_voices_frequency   = awb2_11_pst_yr_3_a4,
+    pliks_seen_things              = awb2_11_psychosis_5_r4,
+    pliks_seen_things_distress     = awb2_11_upsetting_5_a4,
+    pliks_seen_things_frequency    = awb2_11_pst_yr_5_a4,
+    pliks_spied_on                 = awb2_11_psychosis_2_r4,
+    pliks_spied_on_distress        = awb2_11_upsetting_2_a4,
+    pliks_spied_on_frequency       = awb2_11_pst_yr_2_a4,
+    pliks_spied_on_plot            = awb2_11_plot_hrm_a4,
+    pliks_thoughts_read            = awb2_11_psychosis_10_r4,
+    pliks_thoughts_read_distress   = awb2_11_upsetting_10_a4,
+    pliks_thoughts_read_frequency  = awb2_11_pst_yr_10_a4,
+    pliks_thoughts_read_powers     = awb2_11_pwrs_read_a4,
+    pliks_tv_messages              = awb2_11_psychosis_1_r4,
+    pliks_tv_messages_distress     = awb2_11_upsetting_1_a4,
+    pliks_tv_messages_frequency    = awb2_11_pst_yr_1_a4,
+    pliks_under_control            = awb2_11_psychosis_4_r4,
+    pliks_under_control_distress   = awb2_11_upsetting_4_a4,
+    pliks_under_control_frequency  = awb2_11_pst_yr_4_a4,
+    pliks_under_control_who        = awb2_11_cntrl_who_a4,
+    pliks_under_control_no_will    = awb2_11_cntrl_no_will_a4,
+    pliks_special_powers           = awb2_11_psychosis_9_r4,
+    pliks_special_powers_frequency = awb2_11_pst_yr_9_a4,
+    
+    # Demographics
+    age_m_survey = age_survey231_m, # Rename age at survey to same format as age at measurement variables
+    age_y_survey = age_survey_y, # Rename age at survey to same format as age at measurement variables
+    survey_mode  = survey231_mode, # No need to specify module, both modules same mode for all participants
+    sex          = awb1_2_sex,
+    gender       = awb1_2_gender_r4,
+    years_in_uk  = aw1_2_years_lvd_a4,
+    live_where   = awb3_2_live_where_a10,
+    
+    # Disability
+    disability       = awb1_2_disability,
+    disability_time  = awb1_2_disability_tme_a4,
+    disability_limit = awb1_2_disability_impct_a4,
+    
+    # Assets
+    assets_phone    = awb3_1_assets_4,
+    assets_computer = awb3_1_assets_5,
+    assets_holiday  = awb3_1_assets_6,
+    assets_car      = awb3_1_assets_7,
+    assets_bedroom  = awb3_1_assets_8,
+    assets_compare  = awb3_1_compare_frnds,
+    assets_worry    = awb3_1_money_wrry,
+    assets_warmth   = awb3_1_warm_engh_a5,
+    assets_save     = awb3_1_save_mny_a5,
+    
+    # Self Efficacy
+    self_efficacy = awb2_3_self_effccy,
+    
+    # Trust
+    trust = awb2_9_trust,
+    
+    # Self Harm
+    self_harm = awb2_9_seek_hurt_self_a5,
+    
+    # Natural Environment
+    greenspace_winter = awb7_1_wntr_mnths,
+    greenspace_summer = awb7_1_smmr_mnths,
+    air_quality       = awb7_2_pollution,
+    environment       = awb7_3_clmte_chnge_feelng,
+    
+    # School
+    school_enjoy     = awb7_1_like,
+    school_trust     = awb7_1_trust,
+    school_bullying  = awb7_1_bullying_1,
+    school_safe      = awb7_1_safe_r8,
+    school_pressure1 = awb7_2_grades_a5,
+    school_pressure2 = awb7_2_fam_diss_a5,
+    school_pressure3 = awb7_2_prnt_preshr_a5,
+    school_pressure4 = awb7_2_progrssng_a5,
+    school_pressure5 = awb7_2_dnt_do_well_a5,
+    school_pressure6 = awb7_2_acad_strss_r8,
+    school_pressure7 = awb7_2_test_wrries_a5,
+    
+    # Friendships
+    friends_offline = awb2_7_friends_physcl_r10,
+    friends_online  = awb2_7_friends_onln_r10,
+    friends_close   = awb2_7_friends_clse_a5,
+    
+    # Morality
+    morality1 = awb8_1_morality_1_r10,
+    morality2 = awb8_1_morality_2_r10,
+    morality3 = awb8_1_morality_3_r10,
+    morality4 = awb8_1_morality_4_r10,
+    
+    # Bullying
+    bullying1 = awb8_3_bully,
+    bullying2 = awb8_2_bullied,
+    bullying3 = awb8_2_bullied_onlne,
+    bullying4 = awb8_2_bully_onlne,
+    
+    # Discrimination
+    discouraged_club    = awb8_2_club_1,
+    excluded_activities = awb8_2_excl_2,
+    expected_less       = awb8_2_age_3,
+    assumed_english     = awb8_2_lang_4,
+    hassled_police      = awb8_2_police_5,
+    hassled_staff       = awb8_2_shop_6,
+    insulting_names     = awb8_2_names_7,
+    poor_service        = awb8_2_service_8,
+    act_intelligent     = awb8_2_int_9,
+    act_afraid          = awb8_2_afraid_10,
+    been_threatened     = awb8_2_threat_11,
+    
+    #Social Media Use
+    sm_use_Facebook  = awb6_1_social_media_r10___1,
+    sm_use_Instagram = awb6_1_social_media_r10___2,
+    sm_use_X         = awb6_1_social_media_r10___3,
+    sm_use_TikTok    = awb6_1_social_media_r10___4,
+    sm_use_Snapchat  = awb6_1_social_media_r10___5,
+    sm_use_other     = awb6_1_social_media_r10___11,
+    sm_time_weekday  = awb6_1_time_weekday,
+    sm_time_weekend  = awb6_1_time_weekend,
+    sm_positive1     = awb6_1_positive_exp___1,
+    sm_positive2     = awb6_1_positive_exp___2,
+    sm_positive3     = awb6_1_positive_exp___3,
+    sm_positive4     = awb6_1_positive_exp___4,
+    sm_positive5     = awb6_1_positive_exp___5,
+    sm_positive6     = awb6_1_positive_exp___6,
+    sm_negative1     = awb6_1_negative_exp_r5___1,
+    sm_negative2     = awb6_1_negative_exp_r5___2,
+    sm_negative3     = awb6_1_negative_exp_r5___3,
+    sm_negative4     = awb6_1_negative_exp_r5___4,
+    sm_negative5     = awb6_1_negative_exp_r5___5,
+    sm_negative6     = awb6_1_negative_exp_r5___6,
+    sm_negative7     = awb6_1_negative_exp_r5___7,
+    sm_experience    = awb6_1_pos_neg,
+    
+    # Internet
+    internet_access  = awb6_6_int_hme,
+    internet_quality = awb6_6_int_hme_gd
+  )
+    
 
 # 6. Reduce categorical variables ####
 
@@ -1065,6 +1032,486 @@ aow_curated$disability_time <- case_match(aow_curated$disability_time,
                                     NA ~ NA)
 table(as_factor(aow_curated$disability_time))
 
+
+## Who else lives in your home? ####
+
+# One/both parents
+table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___1), as_factor(aow_curated$awb3_2_homes_1_ppl_r10___2))
+# 5350 live with both parents, 1678 with one parent, 527 with neither
+
+table(as_factor(aow_curated$live_where))
+
+table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___1), as_factor(aow_curated$awb3_2_homes_1_ppl_r10___7))
+table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___1), as_factor(aow_curated$awb3_2_homes_1_ppl_r10___3))
+
+
+# Siblings
+table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___9)) 
+# Binary yes/no, 6189 have siblings
+
+table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___15)) 
+
+## discouraged from joining a club ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_club_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    discouraged_club_reason = case_when(
+      
+      # If the main question 'discouraged_club' is 0 ('No'), the reason is not applicable.
+      discouraged_club == 0 ~ 'discouraged_club answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      discouraged_club == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_club_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_club_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_club_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_club_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_club_rsn_1___5 == 1 ~ "Class",
+      awb8_2_club_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_club_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_club_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'discouraged_club answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Excluded from activities ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_excl_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    excluded_activities_reason = case_when(
+      
+      # If the main question 'excluded_activities' is 0 ('No'), the reason is not applicable.
+      excluded_activities == 0 ~ 'excluded_activities answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      excluded_activities == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_excl_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_excl_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_excl_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_excl_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_excl_rsn_1___5 == 1 ~ "Class",
+      awb8_2_excl_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_excl_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_excl_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'excluded_activities answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Expected less of than others your age ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_age_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    expected_less_reason = case_when(
+      
+      # If the main question 'expected_less' is 0 ('No'), the reason is not applicable.
+      expected_less == 0 ~ 'expected_less answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      expected_less == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_age_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_age_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_age_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_age_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_age_rsn_1___5 == 1 ~ "Class",
+      awb8_2_age_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_age_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_age_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'expected_less answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have people assumed your English was poor ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_lang_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    assumed_english_reason = case_when(
+      
+      # If the main question 'assumed_english' is 0 ('No'), the reason is not applicable.
+      assumed_english == 0 ~ 'assumed_english answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      assumed_english == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_lang_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_lang_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_lang_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_lang_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_lang_rsn_1___5 == 1 ~ "Class",
+      awb8_2_lang_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_lang_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_lang_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'assumed_english answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have you ever been hassled by police ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_police_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    hassled_police_reason = case_when(
+      
+      # If the main question 'hassled_police' is 0 ('No'), the reason is not applicable.
+      hassled_police == 0 ~ 'hassled_police answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      hassled_police == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_police_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_police_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_police_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_police_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_police_rsn_1___5 == 1 ~ "Class",
+      awb8_2_police_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_police_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_police_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'hassled_police answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have you ever been hassled by staff in a shop ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_shop_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    hassled_staff_reason = case_when(
+      
+      # If the main question 'hassled_staff' is 0 ('No'), the reason is not applicable.
+      hassled_staff == 0 ~ 'hassled_staff answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      hassled_staff == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_shop_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_shop_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_shop_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_shop_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_shop_rsn_1___5 == 1 ~ "Class",
+      awb8_2_shop_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_shop_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_shop_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'hassled_staff answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have you ever been called insulting names ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_names_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    insulting_names_reason = case_when(
+      
+      # If the main question 'insulting_names' is 0 ('No'), the reason is not applicable.
+      insulting_names == 0 ~ 'insulting_names answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      insulting_names == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_names_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_names_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_names_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_names_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_names_rsn_1___5 == 1 ~ "Class",
+      awb8_2_names_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_names_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_names_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'insulting_names answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have you ever received poor service in a shop/restaurant ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_service_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    poor_service_reason = case_when(
+      
+      # If the main question 'poor_service' is 0 ('No'), the reason is not applicable.
+      poor_service == 0 ~ 'poor_service answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      poor_service == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_service_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_service_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_service_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_service_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_service_rsn_1___5 == 1 ~ "Class",
+      awb8_2_service_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_service_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_service_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'poor_service answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have people ever acted as though you were not intelligent ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_int_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    act_intelligent_reason = case_when(
+      
+      # If the main question 'act_intelligent' is 0 ('No'), the reason is not applicable.
+      act_intelligent == 0 ~ 'act_intelligent answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      act_intelligent == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_int_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_int_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_int_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_int_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_int_rsn_1___5 == 1 ~ "Class",
+      awb8_2_int_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_int_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_int_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'act_intelligent answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have people ever acted like they're afraid of you ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_afraid_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    act_afraid_reason = case_when(
+      
+      # If the main question 'act_afraid' is 0 ('No'), the reason is not applicable.
+      act_afraid == 0 ~ 'act_afraid answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      act_afraid == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_afraid_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_afraid_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_afraid_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_afraid_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_afraid_rsn_1___5 == 1 ~ "Class",
+      awb8_2_afraid_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_afraid_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_afraid_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'act_afraid answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
+
+## Have you ever been threatened ####
+
+# Define the names of your eight follow-up reason variables
+reason_vars <- paste0("awb8_2_threat_rsn_1___", 1:8)
+
+# process the data frame
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary helper column to count how many reasons were checked per row
+    reason_count = rowSums(across(all_of(reason_vars))),
+    
+    # Create the new categorical variable using conditional logic
+    been_threatened_reason = case_when(
+      
+      # If the main question 'been_threatened' is 0 ('No'), the reason is not applicable.
+      been_threatened == 0 ~ 'been_threatened answer == 0',
+      
+      # If the main question was 'Yes' but no reason was checked.
+      been_threatened == 1 & reason_count == 0 ~ "No reason given",
+      
+      # If more than one reason was checked.
+      reason_count == 2 ~ "Two reasons given",
+      reason_count > 2 ~ "Three or more reasons given",
+      
+      # If exactly one reason was checked, assign the category based on which box was ticked.
+      # NOTE: Replace "Reason 1", "Reason 2", etc., with the actual meanings if you know them.
+      awb8_2_threat_rsn_1___1 == 1 ~ "Ethnicity",
+      awb8_2_threat_rsn_1___2 == 1 ~ "Sex/Gender",
+      awb8_2_threat_rsn_1___3 == 1 ~ "Disability",
+      awb8_2_threat_rsn_1___4 == 1 ~ "Religion",
+      awb8_2_threat_rsn_1___5 == 1 ~ "Class",
+      awb8_2_threat_rsn_1___6 == 1 ~ "Neurodiversity",
+      awb8_2_threat_rsn_1___7 == 1 ~ "Sexuality",
+      awb8_2_threat_rsn_1___8 == 1 ~ "Other",
+      
+      # A fallback for any unexpected cases.
+      TRUE ~ 'been_threatened answer missing'
+    )
+  ) %>%
+  # Finally, remove the temporary helper column as it's no longer needed
+  select(-reason_count)
 
 ## Remove old and now redundant variables ####
 aow_curated <- aow_curated %>%
