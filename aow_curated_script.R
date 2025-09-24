@@ -1515,17 +1515,133 @@ aow_curated <- aow_curated %>%
 
 ## Remove old and now redundant variables ####
 aow_curated <- aow_curated %>%
-  select(-awb1_2_country_brth, # replaced by new binary birth_place variable
-         -awb1_2_language_hme___1, # replaced by lang_home and lang_number variables
-         -awb1_2_language_hme___2, # replaced by lang_home and lang_number variables
-         -awb1_2_language_hme___3, # replaced by lang_home and lang_number variables
-         -awb1_2_language_hme___4, # replaced by lang_home and lang_number variables
-         -awb1_2_language_hme___5, # replaced by lang_home and lang_number variables
-         -awb1_2_language_hme___6, # replaced by lang_home and lang_number variables
-         -awb1_2_language_hme___7, # replaced by lang_home and lang_number variables
-         -awb1_2_language_hme___8, # replaced by lang_home and lang_number variables
-         -awb1_2_language_hme___9, # replaced by lang_home and lang_number variables
-         -has_religion, # This information is in religion variable
+  select(
+    # replaced by new binary birth_place variable
+    -awb1_2_country_brth,
+    
+    # replaced by lang_home and lang_number variables
+    -awb1_2_language_hme___1,
+    -awb1_2_language_hme___2,
+    -awb1_2_language_hme___3,
+    -awb1_2_language_hme___4,
+    -awb1_2_language_hme___5,
+    -awb1_2_language_hme___6,
+    -awb1_2_language_hme___7,
+    -awb1_2_language_hme___8,
+    -awb1_2_language_hme___9, 
+    
+    # This information is in religion variable
+    -has_religion, 
+    
+    # replaced by categorical variable 'discouraged_club_reason'
+    -awb8_2_club_rsn_1___1, 
+    -awb8_2_club_rsn_1___2,
+    -awb8_2_club_rsn_1___3,
+    -awb8_2_club_rsn_1___4,
+    -awb8_2_club_rsn_1___5,
+    -awb8_2_club_rsn_1___6,
+    -awb8_2_club_rsn_1___7,
+    -awb8_2_club_rsn_1___8,
+    
+    # replaced by categorical variable 'excluded_activities_reason'
+    -awb8_2_excl_rsn_1___1,
+    -awb8_2_excl_rsn_1___2,
+    -awb8_2_excl_rsn_1___3,
+    -awb8_2_excl_rsn_1___4,
+    -awb8_2_excl_rsn_1___5,
+    -awb8_2_excl_rsn_1___6,
+    -awb8_2_excl_rsn_1___7,
+    -awb8_2_excl_rsn_1___8,
+    
+    # replaced by categorical variable 'expected_less_reason'
+    -awb8_2_age_rsn_1___1, 
+    -awb8_2_age_rsn_1___2,
+    -awb8_2_age_rsn_1___3,
+    -awb8_2_age_rsn_1___4,
+    -awb8_2_age_rsn_1___5,
+    -awb8_2_age_rsn_1___6,
+    -awb8_2_age_rsn_1___7,
+    -awb8_2_age_rsn_1___8,
+    
+    # replaced by categorical variable 'assumed_english_reason'
+    -awb8_2_lang_rsn_1___1, 
+    -awb8_2_lang_rsn_1___2,
+    -awb8_2_lang_rsn_1___3,
+    -awb8_2_lang_rsn_1___4,
+    -awb8_2_lang_rsn_1___5,
+    -awb8_2_lang_rsn_1___6,
+    -awb8_2_lang_rsn_1___7,
+    -awb8_2_lang_rsn_1___8,
+    
+    # replaced by categorical variable 'hassled_police_reason'
+    -awb8_2_police_rsn_1___1, 
+    -awb8_2_police_rsn_1___2,
+    -awb8_2_police_rsn_1___3,
+    -awb8_2_police_rsn_1___4,
+    -awb8_2_police_rsn_1___5,
+    -awb8_2_police_rsn_1___6,
+    -awb8_2_police_rsn_1___7,
+    -awb8_2_police_rsn_1___8, 
+    
+    # replaced by categorical variable 'hassled_police_reason'
+    -awb8_2_shop_rsn_1___1, 
+    -awb8_2_shop_rsn_1___2,
+    -awb8_2_shop_rsn_1___3,
+    -awb8_2_shop_rsn_1___4,
+    -awb8_2_shop_rsn_1___5,
+    -awb8_2_shop_rsn_1___6,
+    -awb8_2_shop_rsn_1___7,
+    -awb8_2_shop_rsn_1___8,
+    
+    # replaced by categorical variable 'insulting_names_reason'
+    -awb8_2_names_rsn_1___1,
+    -awb8_2_names_rsn_1___2,
+    -awb8_2_names_rsn_1___3,
+    -awb8_2_names_rsn_1___4,
+    -awb8_2_names_rsn_1___5,
+    -awb8_2_names_rsn_1___6,
+    -awb8_2_names_rsn_1___7,
+    -awb8_2_names_rsn_1___8,
+    
+    # replaced by categorical variable 'poor_service_reason'
+    -awb8_2_service_rsn_1___1,
+    -awb8_2_service_rsn_1___2,
+    -awb8_2_service_rsn_1___3,
+    -awb8_2_service_rsn_1___4,
+    -awb8_2_service_rsn_1___5,
+    -awb8_2_service_rsn_1___6,
+    -awb8_2_service_rsn_1___7,
+    -awb8_2_service_rsn_1___8,
+    
+    # replaced by categorical variable 'act_intelligent_reason'
+    -awb8_2_int_rsn_1___1,
+    -awb8_2_int_rsn_1___2,
+    -awb8_2_int_rsn_1___3,
+    -awb8_2_int_rsn_1___4,
+    -awb8_2_int_rsn_1___5,
+    -awb8_2_int_rsn_1___6,
+    -awb8_2_int_rsn_1___7,
+    -awb8_2_int_rsn_1___8,
+    
+    # replaced by categorical variable 'act_afraid_reason'
+    -awb8_2_afraid_rsn_1___1,
+    -awb8_2_afraid_rsn_1___2,
+    -awb8_2_afraid_rsn_1___3,
+    -awb8_2_afraid_rsn_1___4,
+    -awb8_2_afraid_rsn_1___5,
+    -awb8_2_afraid_rsn_1___6,
+    -awb8_2_afraid_rsn_1___7,
+    -awb8_2_afraid_rsn_1___8,
+    
+    # replaced by categorical variable 'been_threatened_reason'
+    -awb8_2_threat_rsn_1___1,
+    -awb8_2_threat_rsn_1___2,
+    -awb8_2_threat_rsn_1___3,
+    -awb8_2_threat_rsn_1___4,
+    -awb8_2_threat_rsn_1___5,
+    -awb8_2_threat_rsn_1___6,
+    -awb8_2_threat_rsn_1___7,
+    -awb8_2_threat_rsn_1___8     
   )
 
 
