@@ -836,6 +836,182 @@ aow_curated <- aow_curated %>%
     assets_warmth   = awb3_1_warm_engh_a5,
     assets_save     = awb3_1_save_mny_a5,
     
+    # Who do you live with?
+    live_where         = awb3_2_live_where_a10,  
+    lives_mother       = awb3_2_homes_1_ppl_r10___1,
+    lives_father       = awb3_2_homes_1_ppl_r10___2,
+    lives_guardian     = awb3_2_homes_1_ppl_r10___3,
+    lives_foster       = awb3_2_homes_1_ppl_r10___4,
+    lives_step_m       = awb3_2_homes_1_ppl_r10___5,
+    lives_step_f       = awb3_2_homes_1_ppl_r10___6,
+    lives_m_partner    = awb3_2_homes_1_ppl_r10___7,
+    lives_f_partner    = awb3_2_homes_1_ppl_r10___8,
+    lives_siblings     = awb3_2_homes_1_ppl_r10___9,
+    lives_auntie       = awb3_2_homes_1_ppl_r10___10,
+    lives_uncle        = awb3_2_homes_1_ppl_r10___11,
+    lives_grandmother  = awb3_2_homes_1_ppl_r10___12,
+    lives_grandfather  = awb3_2_homes_1_ppl_r10___13,
+    lives_cousins      = awb3_2_homes_1_ppl_r10___14,
+    lives_other        = awb3_2_homes_1_ppl_r10___15,
+    birth_order        = awb_2_6_family_brth_n_a5,
+    get_along_family   = awb2_6_family_rltnshp_1_a5,
+    get_along_siblings = awb2_6_family_rltnshp_2_a5,
+    
+    # Personal assets
+    assets_money_pocket   = awb3_4_personal_assts_1,
+    assets_money_chores   = awb3_4_personal_assts_2,
+    assets_money_business = awb3_4_personal_assts_3,
+    assets_money_job      = awb3_4_personal_assts_4,
+    assets_money_parents  = awb3_4_personal_assts_5,
+    
+    # Worries about food scarcity
+    food_worry_1 = aw3_5_food_1,
+    food_worry_2 = aw3_5_food_2,
+    food_worry_3 = aw3_5_food_3,
+    food_worry_4 = aw3_5_food_4,
+    food_worry_5 = aw3_5_food_5,
+    
+    # Neighbourhood
+    social_comparison  = aw3_6_comparison_2_r10,
+    nbhd_safety_night  = awb3_7_prsnl_sfty_1,
+    nbhd_safety_day    = awb3_7_prsnl_sfty_2,
+    nbhd_safety_school = awb3_7_prsnl_sfty_4,
+    victim_violence    = awb3_7_violence,
+    
+    # Activities
+    activities_music     = awb3_activities_3_r10,
+    activities_writing   = awb3_activities_15_r10,
+    activities_volunteer = awb3_activities_11_r10,
+    activities_art       = awb3_activities_17_r10,
+    activities_visual    = awb3_activities_18_r10,
+    activities_read      = awb3_activities_6_r10,
+    activities_poetry    = awb3_activities_14_r10,
+    activities_perform   = awb3_activities_16_r10,
+    activities_party     = awb3_activities_1_r10,
+    activities_museum    = awb3_activities_10_r10,
+    activities_political = awb3_activities_12_r10,
+    activities_religious = awb3_activities_13_r10,
+    activities_gaming    = awb3_activities_19_a10,
+    activities_spectate  = awb3_activities_2_r10,
+    activities_concert   = awb3_activities_4_r10,
+    activities_thatre    = awb3_activities_5_r10,
+    activities_club      = awb3_activities_7_r10,
+    activities_scouts    = awb3_activities_8_r10,
+    activities_library   = awb3_activities_9_r10,
+    
+    # Local area events/pride
+    area_proud           = awb3_pip_1_a10,
+    area_events_proud    = awb3_pip_2_a10,
+    area_events_interest = awb3_pip_3_a10,
+    
+    # General health, vision, hearing
+    health_general = awb5_1_general_hlth,
+    health_vision  = awb5_1_hearing_sght_1_r10,
+    health_hearing = awb5_1_hearing_sght_3,
+    
+    # Food consumption
+    food_breakfast        = awb5_1_food_dt_2,
+    food_fruit            = awb5_1_food_dt_3,
+    food_veg              = awb5_1_food_dt_4,
+    food_drinks_sugarfree = awb5_1_food_dt_5,
+    food_drinks_sugar     = awb5_1_food_dt_6_r7,
+    food_drinks_energy    = awb5_1_food_dt_10_a10,
+    food_fastfood         = awb5_1_food_dt_7,
+    
+    # Oral hygeine
+    teeth_brush   = awb5_1_oral_hlth_1,
+    teeth_dentist = awb5_1_oral_hlth_3,
+    
+    # Puerty
+    puberty_changes     = awb4_4_puberty_a10,
+    puberty_periods     = awb4_4y_gendersex_f_2,
+    puberty_periods_age = awb4_4y_gendersex_y_f_2,
+    
+    # Drugs
+    drugs_cigarettes         = awb5_1_cigs_a5,
+    drugs_cigarettes_freq    = awb5_1_cigs2_r10,
+    drugs_vape               = awb5_2_evr_vaped_a5,
+    drugs_vape_behav         = awb5_2_vape_r10,
+    drugs_alcohol            = awb5_2_alcohol,
+    drugs_alcohol_age        = awb5_2y_alcohol_age,
+    drugs_alcohol_freq       = awb5_2y_alcohol_frqncy,
+    drugs_alcohol_binge      = awb5_2y_alcohol_qntty,
+    drugs_alcohol_binge_age  = awb5_2_yalcohol_y_qntty_age,
+    drugs_alcohol_binge_freq = awb5_2_yalcohol_y_qntty_frqncy,
+    drugs_any                = awb5_drugs,
+    drugs_cannibis           = awb5_2_drugs_1,
+    drugs_ketamine           = awb5_2_drugs_10,
+    drugs_spice              = awb5_2_drugs_12,
+    drugs_nos                = awb5_2_drugs_15,
+    drugs_presc              = awb5_2_drugs_17,
+    drugs_cannibis_freq      = awb5_2_cannabis_pstyr,
+    drugs_cocaine            = awb5_2_drugs_2,
+    drugs_cocaine_freq       = awb5_2_cocaine_pstyr,
+    drugs_ecstacy            = awb5_2_drugs_4,
+    drugs_ecstacy_freq       = awb5_2_ecstasy_pstyr,
+    drugs_ketamine_freq      = awb5_2_ket_pstyr,
+    drugs_spice_freq         = awb5_2_spice_pstyr,
+    drugs_nos_freq           = awb5_2_nitrous_pstyr,
+    drugs_presc_freq         = awb5_2_prescription_pstyr,
+    drugs_other              = awb5_2_drugs_othr_a10,
+    drugs_other_freq         = awb5_2_drugs_othr3_a10,
+    
+    # Gambling
+    gambling_lottery          = awb5_2_gambling_chk_a10___1,
+    gambling_slot             = awb5_2_gambling_chk_a10___2,
+    gambling_bet_private      = awb5_2_gambling_chk_a10___3,
+    gambling_cards            = awb5_2_gambling_chk_a10___4,
+    gambling_bingo_club       = awb5_2_gambling_chk_a10___5,
+    gambling_bingo_other      = awb5_2_gambling_chk_a10___6,
+    gambling_machine          = awb5_2_gambling_chk_a10___7,
+    gambling_bet_shop         = awb5_2_gambling_chk_a10___8,
+    gambling_casino           = awb5_2_gambling_chk_a10___9,
+    gambling_online           = awb5_2_gambling_chk_a10___10,
+    gambling_none             = awb5_2_gambling_chk_a10___0,
+    gambling_lottery_when     = awb5_2_gambling_2_r10,
+    gambling_slot_when        = awb5_2_gambling_6_r10,
+    gambling_bet_private_when = awb5_2_gambling_7_r10,
+    gambling_cards_when       = awb5_2_gambling_8_r10,
+    gambling_bingo_club_when  = awb5_2_gambling_9_r10,
+    gambling_bingo_other_when = awb5_2_gambling_10_r10,
+    gambling_machine_when     = awb5_2_gambling_11_r10,
+    gambling_bet_shop_when    = awb5_2_gambling_12_r10,
+    gambling_casino_when      = awb5_2_gambling_13_r10,
+    gambling_online_when      = awb5_2_gambling_14_r10,
+    gambling_family           = awb5_2_gambling_fam_a10,
+    
+    # In-game purchases
+    gaming_purchase_item   = awb5_2_online_gamb3_a5___1,
+    gaming_purchase_unlock = awb5_2_online_gamb3_a5___2,
+    gaming_purchase_bet    = awb5_2_online_gamb3_a5___3,
+    gaming_purchase_none   = awb5_2_online_gamb3_a5___4,
+    
+    # Carried a knife or other weapon
+    carried_weapon = awb5_2y_knife,
+    
+    # Encounters with police
+    police_stop    = awb5_2_contactpolice_1,
+    police_caution = awb5_2_contactpolice_2,
+    
+    # Physical activity (based on PAQ-A)
+    pa_to_school    = awb4_1_physical_actvty_1_a5,
+    pa_pe           = awb4_1_physical_actvty_2_a5,
+    pa_lunch        = awb4_1_physical_actvty_3_a5,
+    pa_break        = awb4_1_physical_actvty_4_a5,
+    pa_from_school  = awb4_1_physical_actvty_5_a5,
+    pa_after_school = awb4_1_physical_actvty_6_a5,
+    pa_evening      = awb4_1_physical_actvty_7_a5,
+    pa_weekend      = awb4_1_physical_actvty_8_a5,
+    pa_sick         = awb4_1_sick_a5,
+    
+    # Sleep
+    sleep_time_school = awb4_3_times2_a5,
+    sleep_wake_school = awb4_3_times3_a5,
+    sleep_time        = awb4_3_times4_a5,
+    sleep_wake        = awb4_3_times5_a5,
+    sleep_well        = awb4_3_sleep_well_nght_a5,
+    sleepy_day        = awb4_3_sleep_drngday_a5,
+
     # Self Efficacy
     self_efficacy = awb2_3_self_effccy,
     
@@ -1032,24 +1208,6 @@ aow_curated$disability_time <- case_match(aow_curated$disability_time,
                                     NA ~ NA)
 table(as_factor(aow_curated$disability_time))
 
-
-## Who else lives in your home? ####
-
-# One/both parents
-table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___1), as_factor(aow_curated$awb3_2_homes_1_ppl_r10___2))
-# 5350 live with both parents, 1678 with one parent, 527 with neither
-
-table(as_factor(aow_curated$live_where))
-
-table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___1), as_factor(aow_curated$awb3_2_homes_1_ppl_r10___7))
-table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___1), as_factor(aow_curated$awb3_2_homes_1_ppl_r10___3))
-
-
-# Siblings
-table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___9)) 
-# Binary yes/no, 6189 have siblings
-
-table(as_factor(aow_curated$awb3_2_homes_1_ppl_r10___15)) 
 
 ## discouraged from joining a club ####
 
