@@ -1697,3 +1697,4 @@ aow_year_9 <- aow_curated %>%
 
 aow_year_10 <- aow_curated %>% 
   filter(year_group == 10)
+
