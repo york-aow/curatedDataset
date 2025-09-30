@@ -895,7 +895,7 @@ aow_curated <- aow_curated %>%
     activities_gaming    = awb3_activities_19_a10,
     activities_spectate  = awb3_activities_2_r10,
     activities_concert   = awb3_activities_4_r10,
-    activities_thatre    = awb3_activities_5_r10,
+    activities_theatre    = awb3_activities_5_r10,
     activities_club      = awb3_activities_7_r10,
     activities_scouts    = awb3_activities_8_r10,
     activities_library   = awb3_activities_9_r10,
