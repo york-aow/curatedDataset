@@ -813,13 +813,14 @@ aow_curated <- aow_curated %>%
     pliks_special_powers_frequency = awb2_11_pst_yr_9_a4,
     
     # Demographics
-    age_m_survey = age_survey231_m, # Rename age at survey to same format as age at measurement variables
-    age_y_survey = age_survey_y, # Rename age at survey to same format as age at measurement variables
-    survey_mode  = survey231_mode, # No need to specify module, both modules same mode for all participants
-    sex          = awb1_2_sex,
-    gender       = awb1_2_gender_r4,
-    years_in_uk  = aw1_2_years_lvd_a4,
-    live_where   = awb3_2_live_where_a10,
+    age_m_survey    = age_survey231_m, # Rename age at survey to same format as age at measurement variables
+    age_y_survey    = age_survey_y, # Rename age at survey to same format as age at measurement variables
+    survey_mode     = survey231_mode, # No need to specify module, both modules same mode for all participants
+    sex             = awb1_2_sex,
+    gender          = awb1_2_gender_r4,
+    years_in_uk     = aw1_2_years_lvd_a4,
+    live_where      = awb3_2_live_where_a10,
+    imd_2019_decile = IMD_2019_decile,
     
     # Disability
     disability       = awb1_2_disability,
@@ -838,25 +839,25 @@ aow_curated <- aow_curated %>%
     assets_save     = awb3_1_save_mny_a5,
     
     # Who do you live with?
-    live_where         = awb3_2_live_where_a10,  
-    lives_mother       = awb3_2_homes_1_ppl_r10___1,
-    lives_father       = awb3_2_homes_1_ppl_r10___2,
-    lives_guardian     = awb3_2_homes_1_ppl_r10___3,
-    lives_foster       = awb3_2_homes_1_ppl_r10___4,
-    lives_step_m       = awb3_2_homes_1_ppl_r10___5,
-    lives_step_f       = awb3_2_homes_1_ppl_r10___6,
-    lives_m_partner    = awb3_2_homes_1_ppl_r10___7,
-    lives_f_partner    = awb3_2_homes_1_ppl_r10___8,
-    lives_siblings     = awb3_2_homes_1_ppl_r10___9,
-    lives_auntie       = awb3_2_homes_1_ppl_r10___10,
-    lives_uncle        = awb3_2_homes_1_ppl_r10___11,
-    lives_grandmother  = awb3_2_homes_1_ppl_r10___12,
-    lives_grandfather  = awb3_2_homes_1_ppl_r10___13,
-    lives_cousins      = awb3_2_homes_1_ppl_r10___14,
-    lives_other        = awb3_2_homes_1_ppl_r10___15,
-    birth_order        = awb_2_6_family_brth_n_a5,
-    get_along_family   = awb2_6_family_rltnshp_1_a5,
-    get_along_siblings = awb2_6_family_rltnshp_2_a5,
+    fam_live_where         = awb3_2_live_where_a10,  
+    fam_lives_mother       = awb3_2_homes_1_ppl_r10___1,
+    fam_lives_father       = awb3_2_homes_1_ppl_r10___2,
+    fam_lives_guardian     = awb3_2_homes_1_ppl_r10___3,
+    fam_lives_foster       = awb3_2_homes_1_ppl_r10___4,
+    fam_lives_step_m       = awb3_2_homes_1_ppl_r10___5,
+    fam_lives_step_f       = awb3_2_homes_1_ppl_r10___6,
+    fam_lives_m_partner    = awb3_2_homes_1_ppl_r10___7,
+    fam_lives_f_partner    = awb3_2_homes_1_ppl_r10___8,
+    fam_lives_siblings     = awb3_2_homes_1_ppl_r10___9,
+    fam_lives_auntie       = awb3_2_homes_1_ppl_r10___10,
+    fam_lives_uncle        = awb3_2_homes_1_ppl_r10___11,
+    fam_lives_grandmother  = awb3_2_homes_1_ppl_r10___12,
+    fam_lives_grandfather  = awb3_2_homes_1_ppl_r10___13,
+    fam_lives_cousins      = awb3_2_homes_1_ppl_r10___14,
+    fam_lives_other        = awb3_2_homes_1_ppl_r10___15,
+    fam_birth_order        = awb_2_6_family_brth_n_a5,
+    fam_getalong_family    = awb2_6_family_rltnshp_1_a5,
+    fam_getalong_siblings  = awb2_6_family_rltnshp_2_a5,
     
     # Personal assets
     assets_money_pocket   = awb3_4_personal_assts_1,
@@ -877,7 +878,7 @@ aow_curated <- aow_curated %>%
     nbhd_safety_night  = awb3_7_prsnl_sfty_1,
     nbhd_safety_day    = awb3_7_prsnl_sfty_2,
     nbhd_safety_school = awb3_7_prsnl_sfty_4,
-    victim_violence    = awb3_7_violence,
+    nbhd_violence      = awb3_7_violence,
     
     # Activities
     activities_music     = awb3_activities_3_r10,
@@ -895,7 +896,7 @@ aow_curated <- aow_curated %>%
     activities_gaming    = awb3_activities_19_a10,
     activities_spectate  = awb3_activities_2_r10,
     activities_concert   = awb3_activities_4_r10,
-    activities_thatre    = awb3_activities_5_r10,
+    activities_theatre   = awb3_activities_5_r10,
     activities_club      = awb3_activities_7_r10,
     activities_scouts    = awb3_activities_8_r10,
     activities_library   = awb3_activities_9_r10,
@@ -1023,10 +1024,10 @@ aow_curated <- aow_curated %>%
     self_harm = awb2_9_seek_hurt_self_a5,
     
     # Natural Environment
-    greenspace_winter = awb7_1_wntr_mnths,
-    greenspace_summer = awb7_1_smmr_mnths,
-    air_quality       = awb7_2_pollution,
-    environment       = awb7_3_clmte_chnge_feelng,
+    env_greenspace_w = awb7_1_wntr_mnths,
+    env_greenspace_s = awb7_1_smmr_mnths,
+    env_air_quality  = awb7_2_pollution,
+    env_future       = awb7_3_clmte_chnge_feelng,
     
     # School
     school_enjoy     = awb7_1_like,
@@ -1059,17 +1060,17 @@ aow_curated <- aow_curated %>%
     bullying4 = awb8_2_bully_onlne,
     
     # Discrimination
-    discouraged_club    = awb8_2_club_1,
-    excluded_activities = awb8_2_excl_2,
-    expected_less       = awb8_2_age_3,
-    assumed_english     = awb8_2_lang_4,
-    hassled_police      = awb8_2_police_5,
-    hassled_staff       = awb8_2_shop_6,
-    insulting_names     = awb8_2_names_7,
-    poor_service        = awb8_2_service_8,
-    act_intelligent     = awb8_2_int_9,
-    act_afraid          = awb8_2_afraid_10,
-    been_threatened     = awb8_2_threat_11,
+    discrim_discourage  = awb8_2_club_1,
+    discrim_excluded    = awb8_2_excl_2,
+    discrim_expected    = awb8_2_age_3,
+    discrim_english     = awb8_2_lang_4,
+    discrim_police      = awb8_2_police_5,
+    discrim_staff       = awb8_2_shop_6,
+    discrim_insults     = awb8_2_names_7,
+    discrim_service     = awb8_2_service_8,
+    discrim_intelligent = awb8_2_int_9,
+    discrim_afraid      = awb8_2_afraid_10,
+    discrim_threatened  = awb8_2_threat_11,
     
     #Social Media Use
     sm_use_Facebook  = awb6_1_social_media_r10___1,
@@ -1097,7 +1098,10 @@ aow_curated <- aow_curated %>%
     
     # Internet
     internet_access  = awb6_6_int_hme,
-    internet_quality = awb6_6_int_hme_gd
+    internet_quality = awb6_6_int_hme_gd,
+    
+    # Bioimpedance
+    clothes_weight = clothes
   )
     
 
@@ -1114,11 +1118,11 @@ aow_curated$awb1_2_country_brth[aow_curated$awb1_2_country_brth == 202] <- NA
 # Drop unused value labels
 aow_curated$awb1_2_country_brth <- drop_unused_value_labels(aow_curated$awb1_2_country_brth)
 
-aow_curated$birth_place <- case_match(aow_curated$awb1_2_country_brth,
+aow_curated$fam_birth_place <- case_match(aow_curated$awb1_2_country_brth,
                                      c(1:4, 190) ~ "UK",
                                      NA ~ NA,
                                      .default = "Other")
-table(aow_curated$birth_place, useNA = "ifany")
+table(aow_curated$fam_birth_place, useNA = "ifany")
 
 
 ## Ethnicity ####
@@ -1222,13 +1226,13 @@ aow_curated <- aow_curated %>%
     reason_count = rowSums(across(all_of(reason_vars))),
     
     # Create the new categorical variable using conditional logic
-    discouraged_club_reason = case_when(
+    discrim_discourage_reason = case_when(
       
-      # If the main question 'discouraged_club' is 0 ('No'), the reason is not applicable.
-      discouraged_club == 0 ~ 'discouraged_club answer == 0',
+      # If the main question 'discrim_discourage' is 0 ('No'), the reason is not applicable.
+      discrim_discourage == 0 ~ 'discrim_discourage answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      discouraged_club == 1 & reason_count == 0 ~ "No reason given",
+      discrim_discourage == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1246,7 +1250,7 @@ aow_curated <- aow_curated %>%
       awb8_2_club_rsn_1___8 == 1 ~ "Other",
       
       # A fallback for any unexpected cases.
-      TRUE ~ 'discouraged_club answer missing'
+      TRUE ~ 'discrim_discourage answer missing'
     )
   ) %>%
   # Finally, remove the temporary helper column as it's no longer needed
@@ -1264,13 +1268,13 @@ aow_curated <- aow_curated %>%
     reason_count = rowSums(across(all_of(reason_vars))),
     
     # Create the new categorical variable using conditional logic
-    excluded_activities_reason = case_when(
+    discrim_excluded_reason = case_when(
       
-      # If the main question 'excluded_activities' is 0 ('No'), the reason is not applicable.
-      excluded_activities == 0 ~ 'excluded_activities answer == 0',
+      # If the main question 'discrim_excluded' is 0 ('No'), the reason is not applicable.
+      discrim_excluded == 0 ~ 'discrim_excluded answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      excluded_activities == 1 & reason_count == 0 ~ "No reason given",
+      discrim_excluded == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1288,7 +1292,7 @@ aow_curated <- aow_curated %>%
       awb8_2_excl_rsn_1___8 == 1 ~ "Other",
       
       # A fallback for any unexpected cases.
-      TRUE ~ 'excluded_activities answer missing'
+      TRUE ~ 'discrim_excluded answer missing'
     )
   ) %>%
   # Finally, remove the temporary helper column as it's no longer needed
@@ -1306,13 +1310,13 @@ aow_curated <- aow_curated %>%
     reason_count = rowSums(across(all_of(reason_vars))),
     
     # Create the new categorical variable using conditional logic
-    expected_less_reason = case_when(
+    discrim_expected_reason = case_when(
       
-      # If the main question 'expected_less' is 0 ('No'), the reason is not applicable.
-      expected_less == 0 ~ 'expected_less answer == 0',
+      # If the main question 'discrim_expected' is 0 ('No'), the reason is not applicable.
+      discrim_expected == 0 ~ 'discrim_expected answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      expected_less == 1 & reason_count == 0 ~ "No reason given",
+      discrim_expected == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1330,7 +1334,7 @@ aow_curated <- aow_curated %>%
       awb8_2_age_rsn_1___8 == 1 ~ "Other",
       
       # A fallback for any unexpected cases.
-      TRUE ~ 'expected_less answer missing'
+      TRUE ~ 'discrim_expected answer missing'
     )
   ) %>%
   # Finally, remove the temporary helper column as it's no longer needed
@@ -1348,13 +1352,13 @@ aow_curated <- aow_curated %>%
     reason_count = rowSums(across(all_of(reason_vars))),
     
     # Create the new categorical variable using conditional logic
-    assumed_english_reason = case_when(
+    discrim_english_reason = case_when(
       
-      # If the main question 'assumed_english' is 0 ('No'), the reason is not applicable.
-      assumed_english == 0 ~ 'assumed_english answer == 0',
+      # If the main question 'discrim_english' is 0 ('No'), the reason is not applicable.
+      discrim_english == 0 ~ 'discrim_english answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      assumed_english == 1 & reason_count == 0 ~ "No reason given",
+      discrim_english == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1372,7 +1376,7 @@ aow_curated <- aow_curated %>%
       awb8_2_lang_rsn_1___8 == 1 ~ "Other",
       
       # A fallback for any unexpected cases.
-      TRUE ~ 'assumed_english answer missing'
+      TRUE ~ 'discrim_english answer missing'
     )
   ) %>%
   # Finally, remove the temporary helper column as it's no longer needed
@@ -1390,13 +1394,13 @@ aow_curated <- aow_curated %>%
     reason_count = rowSums(across(all_of(reason_vars))),
     
     # Create the new categorical variable using conditional logic
-    hassled_police_reason = case_when(
+    discrim_police_reason = case_when(
       
-      # If the main question 'hassled_police' is 0 ('No'), the reason is not applicable.
-      hassled_police == 0 ~ 'hassled_police answer == 0',
+      # If the main question 'discrim_police' is 0 ('No'), the reason is not applicable.
+      discrim_police == 0 ~ 'discrim_police answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      hassled_police == 1 & reason_count == 0 ~ "No reason given",
+      discrim_police == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1414,7 +1418,7 @@ aow_curated <- aow_curated %>%
       awb8_2_police_rsn_1___8 == 1 ~ "Other",
       
       # A fallback for any unexpected cases.
-      TRUE ~ 'hassled_police answer missing'
+      TRUE ~ 'discrim_police answer missing'
     )
   ) %>%
   # Finally, remove the temporary helper column as it's no longer needed
@@ -1432,13 +1436,13 @@ aow_curated <- aow_curated %>%
     reason_count = rowSums(across(all_of(reason_vars))),
     
     # Create the new categorical variable using conditional logic
-    hassled_staff_reason = case_when(
+    discrim_staff_reason = case_when(
       
-      # If the main question 'hassled_staff' is 0 ('No'), the reason is not applicable.
-      hassled_staff == 0 ~ 'hassled_staff answer == 0',
+      # If the main question 'discrim_staff' is 0 ('No'), the reason is not applicable.
+      discrim_staff == 0 ~ 'discrim_staff answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      hassled_staff == 1 & reason_count == 0 ~ "No reason given",
+      discrim_staff == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1456,7 +1460,7 @@ aow_curated <- aow_curated %>%
       awb8_2_shop_rsn_1___8 == 1 ~ "Other",
       
       # A fallback for any unexpected cases.
-      TRUE ~ 'hassled_staff answer missing'
+      TRUE ~ 'discrim_staff answer missing'
     )
   ) %>%
   # Finally, remove the temporary helper column as it's no longer needed
@@ -1474,13 +1478,13 @@ aow_curated <- aow_curated %>%
     reason_count = rowSums(across(all_of(reason_vars))),
     
     # Create the new categorical variable using conditional logic
-    insulting_names_reason = case_when(
+    discrim_insults_reason = case_when(
       
-      # If the main question 'insulting_names' is 0 ('No'), the reason is not applicable.
-      insulting_names == 0 ~ 'insulting_names answer == 0',
+      # If the main question 'discrim_insults' is 0 ('No'), the reason is not applicable.
+      discrim_insults == 0 ~ 'discrim_insults answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      insulting_names == 1 & reason_count == 0 ~ "No reason given",
+      discrim_insults == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1498,7 +1502,7 @@ aow_curated <- aow_curated %>%
       awb8_2_names_rsn_1___8 == 1 ~ "Other",
       
       # A fallback for any unexpected cases.
-      TRUE ~ 'insulting_names answer missing'
+      TRUE ~ 'discrim_insults answer missing'
     )
   ) %>%
   # Finally, remove the temporary helper column as it's no longer needed
@@ -1516,13 +1520,13 @@ aow_curated <- aow_curated %>%
     reason_count = rowSums(across(all_of(reason_vars))),
     
     # Create the new categorical variable using conditional logic
-    poor_service_reason = case_when(
+    discrim_service_reason = case_when(
       
-      # If the main question 'poor_service' is 0 ('No'), the reason is not applicable.
-      poor_service == 0 ~ 'poor_service answer == 0',
+      # If the main question 'discrim_service' is 0 ('No'), the reason is not applicable.
+      discrim_service == 0 ~ 'discrim_service answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      poor_service == 1 & reason_count == 0 ~ "No reason given",
+      discrim_service == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1540,7 +1544,7 @@ aow_curated <- aow_curated %>%
       awb8_2_service_rsn_1___8 == 1 ~ "Other",
       
       # A fallback for any unexpected cases.
-      TRUE ~ 'poor_service answer missing'
+      TRUE ~ 'discrim_service answer missing'
     )
   ) %>%
   # Finally, remove the temporary helper column as it's no longer needed
@@ -1558,13 +1562,13 @@ aow_curated <- aow_curated %>%
     reason_count = rowSums(across(all_of(reason_vars))),
     
     # Create the new categorical variable using conditional logic
-    act_intelligent_reason = case_when(
+    discrim_intelligent_reason = case_when(
       
-      # If the main question 'act_intelligent' is 0 ('No'), the reason is not applicable.
-      act_intelligent == 0 ~ 'act_intelligent answer == 0',
+      # If the main question 'discrim_intelligent' is 0 ('No'), the reason is not applicable.
+      discrim_intelligent == 0 ~ 'discrim_intelligent answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      act_intelligent == 1 & reason_count == 0 ~ "No reason given",
+      discrim_intelligent == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1582,7 +1586,7 @@ aow_curated <- aow_curated %>%
       awb8_2_int_rsn_1___8 == 1 ~ "Other",
       
       # A fallback for any unexpected cases.
-      TRUE ~ 'act_intelligent answer missing'
+      TRUE ~ 'discrim_intelligent answer missing'
     )
   ) %>%
   # Finally, remove the temporary helper column as it's no longer needed
@@ -1600,13 +1604,13 @@ aow_curated <- aow_curated %>%
     reason_count = rowSums(across(all_of(reason_vars))),
     
     # Create the new categorical variable using conditional logic
-    act_afraid_reason = case_when(
+    discrim_afraid_reason = case_when(
       
-      # If the main question 'act_afraid' is 0 ('No'), the reason is not applicable.
-      act_afraid == 0 ~ 'act_afraid answer == 0',
+      # If the main question 'discrim_afraid' is 0 ('No'), the reason is not applicable.
+      discrim_afraid == 0 ~ 'discrim_afraid answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      act_afraid == 1 & reason_count == 0 ~ "No reason given",
+      discrim_afraid == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1624,7 +1628,7 @@ aow_curated <- aow_curated %>%
       awb8_2_afraid_rsn_1___8 == 1 ~ "Other",
       
       # A fallback for any unexpected cases.
-      TRUE ~ 'act_afraid answer missing'
+      TRUE ~ 'discrim_afraid answer missing'
     )
   ) %>%
   # Finally, remove the temporary helper column as it's no longer needed
@@ -1642,13 +1646,13 @@ aow_curated <- aow_curated %>%
     reason_count = rowSums(across(all_of(reason_vars))),
     
     # Create the new categorical variable using conditional logic
-    been_threatened_reason = case_when(
+    discrim_threatened_reason = case_when(
       
-      # If the main question 'been_threatened' is 0 ('No'), the reason is not applicable.
-      been_threatened == 0 ~ 'been_threatened answer == 0',
+      # If the main question 'discrim_threatened' is 0 ('No'), the reason is not applicable.
+      discrim_threatened == 0 ~ 'discrim_threatened answer == 0',
       
       # If the main question was 'Yes' but no reason was checked.
-      been_threatened == 1 & reason_count == 0 ~ "No reason given",
+      discrim_threatened == 1 & reason_count == 0 ~ "No reason given",
       
       # If more than one reason was checked.
       reason_count == 2 ~ "Two reasons given",
@@ -1666,7 +1670,7 @@ aow_curated <- aow_curated %>%
       awb8_2_threat_rsn_1___8 == 1 ~ "Other",
       
       # A fallback for any unexpected cases.
-      TRUE ~ 'been_threatened answer missing'
+      TRUE ~ 'discrim_threatened answer missing'
     )
   ) %>%
   # Finally, remove the temporary helper column as it's no longer needed
@@ -1675,7 +1679,10 @@ aow_curated <- aow_curated %>%
 ## Remove old and now redundant variables ####
 aow_curated <- aow_curated %>%
   select(
-    # replaced by new binary birth_place variable
+    # replaced by ethnicity variable
+    -awb1_2_ethnicity_r4,
+    
+    # replaced by new binary fam_birth_place variable
     -awb1_2_country_brth,
     
     # replaced by lang_home and lang_number variables
