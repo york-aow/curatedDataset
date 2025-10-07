@@ -444,7 +444,8 @@ aow_curated <- aow_curated %>%
 # For those that responded 0 for item 9, impute 0 for item 10
 
 aow_curated <- aow_curated %>%
-  mutate(awb2_12_eat_hbt_10_a5 = ifelse(awb2_12_eat_hbt_9_a5 == 0, 0, awb2_12_eat_hbt_10_a5))
+  mutate(awb2_12_eat_hbt_10_a5 = ifelse(awb2_12_eat_hbt_9_a5 == 0 & is.na(awb2_12_eat_hbt_10_a5),
+                                        0, awb2_12_eat_hbt_10_a5))
 
 # Identify complete EDE-QS responses
 aow_curated <- aow_curated %>%
@@ -1858,3 +1859,4 @@ aow_year_9 <- aow_curated %>%
 
 aow_year_10 <- aow_curated %>% 
   filter(year_group == 10)
+
