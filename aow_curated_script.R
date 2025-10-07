@@ -6,13 +6,16 @@
 # 1. An RStudio Project file (.Rproj).
 # 2. A 'data' folder.
 #
-# Inside the 'data' folder, you must have another folder named 'source'
-# that contains the raw data files.
+# The 'data' folder must contain two sub-folders:
+#   - 'derived': This is where the script will output processed data.
+#   - 'source': contains the raw data files.
 #
 # The correct path should look like this:
 # "your-project-folder"/
 #  ├── "your-project".Rproj
 #  └── data/
+#      ├── derived/
+#          └── (output files will be saved here)
 #      └── source/
 #          ├── BiB_AgeOfWonder__bioimpedance_dr23.rds
 #          └── BiB_AgeOfWonder__bioimpedance_dr24.rds
@@ -1809,3 +1812,25 @@ aow_year_9 <- aow_curated %>%
 aow_year_10 <- aow_curated %>% 
   filter(year_group == 10)
 
+# 8. Save the processed data
+
+# 1. Save as a CSV file (Comma-Separated Values)
+# Best for universal access with any spreadsheet or coding software.
+write_csv(aow_curated, here("data", "derived", "aow_curated.csv"))
+
+# 2. Save as an R Data file (.rds)
+# Best for saving and reloading into R. Perfectly preserves data types.
+saveRDS(aow_curated, here("data", "derived", "aow_curated.rds"))
+
+# 3. Save as a Stata file (.dta)
+# For users of the Stata statistical software.
+write_dta(aow_curated, here("data", "derived", "aow_curated.dta"))
+
+# 4. Save as an SPSS file (.sav)
+# For users of the SPSS statistical software.
+write_sav(aow_curated, here("data", "derived", "aow_curated.sav"))
+
+# Confirmation message
+print(
+  "The script has finished processing the raw data. Processed data saved in CSV, RDS, Stata, and SPSS formats can be found in the 'data/derived' folder."
+)
