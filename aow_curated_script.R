@@ -1,3 +1,41 @@
+# File Setup Instructions ####
+#
+# To run this script, your files need to be in a specific structure.
+# This project's main folder (the "root") should contain:
+#
+# 1. An RStudio Project file (.Rproj).
+# 2. A 'data' folder.
+#
+# Inside the 'data' folder, you must have another folder named 'source'
+# that contains the raw data files.
+#
+# The correct path should look like this:
+# "your-project-folder"/
+#  ├── "your-project".Rproj
+#  └── data/
+#      └── source/
+#          ├── BiB_AgeOfWonder__bioimpedance_dr23.rds
+#          └── BiB_AgeOfWonder__bioimpedance_dr24.rds
+#          └── BiB_AgeOfWonder__bloodpressure_dr23.rds
+#          └── BiB_AgeOfWonder__bloodpressure_dr24.rds
+#          └── BiB_AgeOfWonder__heightweight_dr23.rds
+#          └── BiB_AgeOfWonder__heightweight_dr24.rds
+#          └── BiB_AgeOfWonder__recruitment_dr23.rds
+#          └── BiB_AgeOfWonder__recruitment_dr24.rds
+#          └── BiB_AgeOfWonder__skinfold_dr23.rds
+#          └── BiB_AgeOfWonder__skinfold_dr24.rds
+#          └── BiB_AgeOfWonder__survey_mod01_dr23.rds
+#          └── BiB_AgeOfWonder__survey_mod02_dr23.rds
+#          └── BiB_AgeOfWonder__survey_mod03_dr23.rds
+#          └── BiB_AgeOfWonder__survey_mod04_dr23.rds
+#          └── BiB_AgeOfWonder__survey_mod231_derived_dr24.rds
+#          └── BiB_AgeOfWonder__survey_mod231_main_dr24.rds
+#          └── BiB_AgeOfWonder__survey_mod232_derived_dr24.rds
+#          └── BiB_AgeOfWonder__survey_mod232_main_dr24.rds
+#
+# The 'here()' command automatically finds your main project folder
+# and builds the path to 'data/source'.
+
 # 0. Install and load required packages ####
 
 # install tidyverse if not installed yet
