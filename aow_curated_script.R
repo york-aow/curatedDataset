@@ -1800,8 +1800,40 @@ aow_curated <- aow_curated %>%
     -awb8_2_threat_rsn_1___8     
   )
 
+# 7. Find missing responses from checked vs un-checked variable responses ####
 
-# 7. Divide data into year groups ####
+# Gambling questions
+
+# Define the variable names
+gambling_vars <- c(
+  "gambling_lottery",
+  "gambling_slot",
+  "gambling_bet_private",
+  "gambling_cards",
+  "gambling_bingo_club",
+  "gambling_bingo_other",
+  "gambling_machine",
+  "gambling_bet_shop",
+  "gambling_casino",
+  "gambling_online",
+  "gambling_none"
+)
+
+# Reclassify the variables 
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary logical condition for each row
+    all_are_zeros = rowSums(select(., all_of(gambling_vars))) == 0,
+    
+    # Apply the change across all specified variables
+    across(all_of(gambling_vars), 
+           ~ if_else(all_are_zeros, NA, .))
+  ) %>%
+  
+  # Remove the temporary column
+  select(-all_are_zeros)
+
+# 8. Divide data into year groups ####
 
 aow_year_8 <- aow_curated %>% 
   filter(year_group == 8)
@@ -1812,21 +1844,21 @@ aow_year_9 <- aow_curated %>%
 aow_year_10 <- aow_curated %>% 
   filter(year_group == 10)
 
-# 8. Save the processed data
+# 9. Save the processed data ####
 
-# 1. Save as a CSV file (Comma-Separated Values)
+# Save as a CSV file (Comma-Separated Values)
 # Best for universal access with any spreadsheet or coding software.
 write_csv(aow_curated, here("data", "derived", "aow_curated.csv"))
 
-# 2. Save as an R Data file (.rds)
+# Save as an R Data file (.rds)
 # Best for saving and reloading into R. Perfectly preserves data types.
 saveRDS(aow_curated, here("data", "derived", "aow_curated.rds"))
 
-# 3. Save as a Stata file (.dta)
+# Save as a Stata file (.dta)
 # For users of the Stata statistical software.
 write_dta(aow_curated, here("data", "derived", "aow_curated.dta"))
 
-# 4. Save as an SPSS file (.sav)
+# Save as an SPSS file (.sav)
 # For users of the SPSS statistical software.
 write_sav(aow_curated, here("data", "derived", "aow_curated.sav"))
 
