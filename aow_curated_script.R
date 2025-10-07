@@ -214,11 +214,7 @@ aow_curated <- aow_curated %>%
     by = "aow_recruitment_id")
 
 # Note: Data were not all collected at the same time, see differences in age (months)
-# between measurements
-table(aow_curated$age_survey231_m, aow_curated$age_m_heightweight)
-table(aow_curated$age_survey231_m, aow_curated$age_m_skinfold)
-table(aow_curated$age_survey231_m, aow_curated$age_m_bloodpressure)
-table(aow_curated$age_survey231_m, aow_curated$age_m_bioimpedance)
+# between measurements (see 'Useful commands.R')
 
 # 3. Remove redundant variables ####
 
@@ -442,7 +438,6 @@ aow_curated <- aow_curated %>%
   mutate(across(all_of(edeqs_items), recode14_03))
 
 # For those that responded 0 for item 9, impute 0 for item 10
-
 aow_curated <- aow_curated %>%
   mutate(awb2_12_eat_hbt_10_a5 = ifelse(awb2_12_eat_hbt_9_a5 == 0 & is.na(awb2_12_eat_hbt_10_a5),
                                         0, awb2_12_eat_hbt_10_a5))
@@ -750,28 +745,6 @@ aow_curated <- aow_curated %>%
 # Compute total scores for those with complete YAP-S, and assign NA to those without
 aow_curated <- aow_curated %>%
   mutate(yaps_total = ifelse(yaps_complete, rowSums(select(., !!!yaps_items), na.rm = TRUE), NA))
-
-
-## Summary ####
-
-summary(aow_curated$edeqs_total)
-summary(aow_curated$rcads_anx_total)
-summary(aow_curated$rcads_dep_total)
-summary(aow_curated$rcads_total)
-summary(aow_curated$swemwbs_total)
-summary(aow_curated$sdq_con_total)
-summary(aow_curated$sdq_emo_total)
-summary(aow_curated$sdq_hyp_total)
-summary(aow_curated$sdq_pee_total)
-summary(aow_curated$sdq_pro_total)
-summary(aow_curated$sdq_int_total)
-summary(aow_curated$sdq_ext_total)
-summary(aow_curated$sdq_dif_total)
-summary(aow_curated$ucla3_total)
-summary(aow_curated$ucla4_total)
-summary(aow_curated$brs_total)
-summary(aow_curated$yaps_total)
-
 
 # 5. Rename variables ####
 
@@ -1146,9 +1119,6 @@ aow_curated <- aow_curated %>%
 # 6. Reduce categorical variables ####
 
 ## Birth place ####
-print_labels(aow_curated$awb1_2_country_brth)
-table(aow_curated$awb1_2_country_brth)
-table(as_factor(aow_curated$awb1_2_country_brth), useNA = "ifany")
 
 # Replace "----------------" with NA
 aow_curated$awb1_2_country_brth[aow_curated$awb1_2_country_brth == 202] <- NA
@@ -1160,19 +1130,13 @@ aow_curated$fam_birth_place <- case_match(aow_curated$awb1_2_country_brth,
                                      c(1:4, 190) ~ "UK",
                                      NA ~ NA,
                                      .default = "Other")
-table(aow_curated$fam_birth_place, useNA = "ifany")
-
 
 ## Ethnicity ####
-print_labels(aow_curated$awb1_2_ethnicity_r4)
-table(as_factor(aow_curated$awb1_2_ethnicity_r4), useNA = "ifany")
 aow_curated$ethnicity <- case_match(aow_curated$awb1_2_ethnicity_r4,
                                     3 ~ "Asian or Asian British",
                                     1 ~ "White",
                                     c(2,4:6) ~ "Other",
                                     NA ~ NA)
-table(as_factor(aow_curated$ethnicity), useNA = "ifany")
-
 
 ## Language spoken at home ####
 
@@ -1188,7 +1152,6 @@ aow_curated <- aow_curated %>%
             TRUE ~ NA_character_ # default case for any other scenario
           )) %>%
    select(-other_languages) # Remove the temporary variable
-table(aow_curated$lang_home, useNA = "ifany")
 
 # How many languages are spoken at home?
 
@@ -1201,8 +1164,6 @@ aow_curated$lang_number <- case_match(aow_curated$lang_number,
                                       2 ~ "2",
                                       c(3:9) ~ "3 or more",
                                       NA ~ NA)
-table(aow_curated$lang_number, useNA = "ifany")
-
 
 ## Religion ####
 
@@ -1210,9 +1171,6 @@ table(aow_curated$lang_number, useNA = "ifany")
 aow_curated <- aow_curated %>%
   rename(has_religion = awb1_2_religion) %>%
   rename(religion = awb1_2y_religion_r4)
-table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
-print_labels(aow_curated$has_religion) # 1 = Yes, 2 = No
-print_labels(aow_curated$religion)
 
 # Reduce religion categories
 aow_curated$religion <- case_match(aow_curated$religion,
@@ -1220,7 +1178,6 @@ aow_curated$religion <- case_match(aow_curated$religion,
                                    5 ~ "Islam",
                                    c(2:4, 6:7) ~ "Other/Not specified",
                                    NA ~ NA)
-table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
 
 # For those who responded "Yes" to has_religion, but NA for religion, set religion to "Other/Not specified"
 aow_curated <- aow_curated %>%
@@ -1228,29 +1185,21 @@ aow_curated <- aow_curated %>%
     has_religion == 1 & is.na(religion) ~ "Other/Not specified",
     TRUE ~ religion
   ))
-table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
 
 # For those who responded "No" to has_religion, set religion to "None"
-table(as_factor(aow_curated$has_religion), useNA = "ifany")
 aow_curated <- aow_curated %>%
   mutate(religion = case_when(
     has_religion == 2 ~ "None",
     TRUE ~ religion
   ))
-table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
-table(as_factor(aow_curated$religion), useNA = "ifany")
-
 
 ## Disability ####
 
 # Re-label disability_time values for transparency
-print_labels(aow_curated$disability_time)
 aow_curated$disability_time <- case_match(aow_curated$disability_time,
                                     1 ~ "One year or more",
                                     2 ~ "Less than a year",
                                     NA ~ NA)
-table(as_factor(aow_curated$disability_time))
-
 
 ## discouraged from joining a club ####
 
@@ -1849,7 +1798,7 @@ aow_curated <- aow_curated %>%
   )
 
 
-# X. Divide data into year groups ####
+# 7. Divide data into year groups ####
 
 aow_year_8 <- aow_curated %>% 
   filter(year_group == 8)

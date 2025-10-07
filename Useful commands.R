@@ -56,3 +56,59 @@ library(dplyr)
 merge2 <- full_join(survey_mod231_main_dr24, survey_mod232_main_dr24, 
                     by = "aow_recruitment_id",
                     keep = TRUE)
+
+# re: "Note: Data were not all collected at the same time, see differences in age
+# (months) between measurements
+table(aow_curated$age_survey231_m, aow_curated$age_m_heightweight)
+table(aow_curated$age_survey231_m, aow_curated$age_m_skinfold)
+table(aow_curated$age_survey231_m, aow_curated$age_m_bloodpressure)
+table(aow_curated$age_survey231_m, aow_curated$age_m_bioimpedance)
+
+## Summary of scale total scores ####
+
+summary(aow_curated$edeqs_total)
+summary(aow_curated$rcads_anx_total)
+summary(aow_curated$rcads_dep_total)
+summary(aow_curated$rcads_total)
+summary(aow_curated$swemwbs_total)
+summary(aow_curated$sdq_con_total)
+summary(aow_curated$sdq_emo_total)
+summary(aow_curated$sdq_hyp_total)
+summary(aow_curated$sdq_pee_total)
+summary(aow_curated$sdq_pro_total)
+summary(aow_curated$sdq_int_total)
+summary(aow_curated$sdq_ext_total)
+summary(aow_curated$sdq_dif_total)
+summary(aow_curated$ucla3_total)
+summary(aow_curated$ucla4_total)
+summary(aow_curated$brs_total)
+summary(aow_curated$yaps_total)
+
+# birth place labels/tables
+print_labels(aow_curated$awb1_2_country_brth)
+table(aow_curated$awb1_2_country_brth)
+table(as_factor(aow_curated$awb1_2_country_brth), useNA = "ifany")
+table(aow_curated$fam_birth_place, useNA = "ifany")
+
+# ethnicity labels/tables
+print_labels(aow_curated$awb1_2_ethnicity_r4)
+table(as_factor(aow_curated$awb1_2_ethnicity_r4), useNA = "ifany")
+table(as_factor(aow_curated$ethnicity), useNA = "ifany")
+
+#languages labels/tables
+table(aow_curated$lang_home, useNA = "ifany")
+table(aow_curated$lang_number, useNA = "ifany")
+
+#religion labels/tables
+table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
+print_labels(aow_curated$has_religion) # 1 = Yes, 2 = No
+print_labels(aow_curated$religion)
+table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
+table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
+table(as_factor(aow_curated$has_religion), useNA = "ifany")
+table(as_factor(aow_curated$religion),as_factor(aow_curated$has_religion), useNA = "ifany")
+table(as_factor(aow_curated$religion), useNA = "ifany")
+
+#disability labels/tables
+print_labels(aow_curated$disability_time)
+table(as_factor(aow_curated$disability_time))
