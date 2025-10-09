@@ -1833,6 +1833,30 @@ aow_curated <- aow_curated %>%
   # Remove the temporary column
   select(-all_are_zeros)
 
+# Online games questions
+
+# Define the variable names
+online_gaming_vars <- c(
+  'gaming_purchase_item',
+  'gaming_purchase_unlock',
+  'gaming_purchase_bet',
+  'gaming_purchase_none'
+)
+
+# Reclassify the variables 
+aow_curated <- aow_curated %>%
+  mutate(
+    # Create a temporary logical condition for each row
+    all_are_zeros = rowSums(select(., all_of(online_gaming_vars))) == 0,
+    
+    # Apply the change across all specified variables
+    across(all_of(online_gaming_vars), 
+           ~ if_else(all_are_zeros, NA, .))
+  ) %>%
+  
+  # Remove the temporary column
+  select(-all_are_zeros)
+
 # 8. Divide data into year groups ####
 
 aow_year_8 <- aow_curated %>% 
