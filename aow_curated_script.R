@@ -833,7 +833,6 @@ aow_curated <- aow_curated %>%
     sex             = awb1_2_sex,
     gender          = awb1_2_gender_r4,
     years_in_uk     = aw1_2_years_lvd_a4,
-    live_where      = awb3_2_live_where_a10,
     imd_2019_decile = IMD_2019_decile,
     
     # Disability
