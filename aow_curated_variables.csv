@@ -1,5 +1,5 @@
 "Variable_name","Variable_type","Variable_label"
-"aow_recruitment_id","character","Age of Wonder year group recruitment ID"
+"aow_recruitment_id","factor",""
 "school_id","factor",""
 "year_group","haven_labelled","Year group at recruitment"
 "form_tutor_id","factor",""

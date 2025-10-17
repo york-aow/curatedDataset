@@ -1862,6 +1862,7 @@ aow_curated <- aow_curated %>%
   mutate(
     school_id = as.factor(school_id),
     form_tutor_id = as.factor(form_tutor_id),
+    aow_recruitment_id = as.factor(aow_recruitment_id),
     religion = as.factor(religion),
     disability_time = as_factor(disability_time),
     model = as.factor(model),
