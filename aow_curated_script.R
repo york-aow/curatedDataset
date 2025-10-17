@@ -1856,7 +1856,33 @@ aow_curated <- aow_curated %>%
   # Remove the temporary column
   select(-all_are_zeros)
 
-# 8. Divide data into year groups ####
+# 8. Correct data types ####
+
+aow_curated <- aow_curated %>% 
+  mutate(
+    school_id = as.factor(school_id),
+    form_tutor_id = as.factor(form_tutor_id),
+    religion = as.factor(religion),
+    disability_time = as_factor(disability_time),
+    model = as.factor(model),
+    fam_birth_place = as.factor(fam_birth_place),
+    ethnicity = as.factor(ethnicity),
+    lang_home = as.factor(lang_home),
+    lang_number = as_factor(lang_number),
+    discrim_discourage_reason = as.factor(discrim_discourage_reason),
+    discrim_excluded_reason = as.factor(discrim_excluded_reason),
+    discrim_expected_reason = as.factor(discrim_expected_reason),
+    discrim_english_reason = as.factor(discrim_english_reason),
+    discrim_police_reason = as.factor(discrim_police_reason),
+    discrim_staff_reason = as.factor(discrim_staff_reason),
+    discrim_insults_reason = as.factor(discrim_insults_reason),
+    discrim_service_reason = as.factor(discrim_service_reason),
+    discrim_intelligent_reason = as.factor(discrim_intelligent_reason),
+    discrim_afraid_reason = as.factor(discrim_afraid_reason),
+    discrim_threatened_reason = as.factor(discrim_threatened_reason)
+  )
+
+# 9. Divide data into year groups ####
 
 aow_year_8 <- aow_curated %>% 
   filter(year_group == 8)
@@ -1867,7 +1893,7 @@ aow_year_9 <- aow_curated %>%
 aow_year_10 <- aow_curated %>% 
   filter(year_group == 10)
 
-# 9. Save the processed data ####
+# 10. Save the processed data ####
 
 # Save as a CSV file (Comma-Separated Values)
 # Best for universal access with any spreadsheet or coding software.
