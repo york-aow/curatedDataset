@@ -1,418 +1,418 @@
-"Curated_variable_name","Curated_variable_type","Curated_variable_label","BiBAgeOfWonder_survey","BiBAgeOfWonder_variable_name","BiBAgeOfWonder_variable_label"
-"aow_recruitment_id","factor","","recruitment_dr24","aow_recruitment_id","Age of Wonder person ID"
-"school_id","factor","","recruitment_dr24","school_id","Pseudo school ID"
-"year_group","haven_labelled","Year group at recruitment","recruitment_dr24","year_group","Year group at recruitment"
-"form_tutor_id","factor","","recruitment_dr24","form_tutor_id","Pseudo recruitment form tutor ID"
-"fsm","haven_labelled","Free school meals","recruitment_dr24","fsm","Free school meals"
-"sen","haven_labelled","Special educational needs provision","recruitment_dr24","sen","Special educational needs provision"
-"imd_2019_decile","integer","Home IMD 2019 decile, national scale","recruitment_dr24","imd_2019_decile","Home IMD 2019 decile, national scale"
-"age_y_survey","numeric","Age (years) at survey date","survey_mod231_main_dr24","age_survey_y","Age (years) at survey date"
-"age_m_survey","numeric","Age (months) at survey date","survey_mod231_main_dr24","age_survey_m","Age (months) at survey date"
-"survey_mode","haven_labelled","Survey taken online or offline?","survey_mod231_main_dr24","survey_mode","Survey taken online or offline?"
-"years_in_uk","haven_labelled","How many years have you lived in the UK?","survey_mod231_main_dr24","aw1_2_years_lvd_a4","How many years have you lived in the UK?"
-"religion","factor","","survey_mod231_main_dr24","awb1_2y_religion_r4","What is your religion?"
-"sex","haven_labelled","What is your sex? (The biological sex on your birth certificate)","survey_mod231_main_dr24","awb1_2_sex","What is your sex? (The biological sex on your birth certificate)"
-"gender","haven_labelled","What is your gender? (How you would describe yourself)","survey_mod231_main_dr24","awb1_2_gender_r4","What is your gender? (How you would describe yourself)"
-"disability","haven_labelled","Do you have any physical/mental health conditions/illnesses?","survey_mod231_main_dr24","awb1_2_disability","Do you have any physical/mental health conditions/illnesses?"
-"disability_time","factor","","survey_mod231_main_dr24","awb1_2_disability_tme_a4","Has your condition lasted/expected to last >=1 year?"
-"disability_limit","haven_labelled","Does your condition limit your activities?","survey_mod231_main_dr24","awb1_2_disability_impct_a4","Does your condition limit your activities?"
-"assets_phone","haven_labelled","Possessions: Your own mobile phone","survey_mod231_main_dr24","awb3_1_assets_4","Possessions: Your own mobile phone"
-"assets_computer","haven_labelled","Possessions: A computer, laptop or tablet with internet at home","survey_mod231_main_dr24","awb3_1_assets_5","Possessions: A computer, laptop or tablet with internet at home"
-"assets_holiday","haven_labelled","Possessions: At least one family holiday away from home in a typical year","survey_mod231_main_dr24","awb3_1_assets_6","Possessions: At least one family holiday away from home in a typical year"
-"assets_car","haven_labelled","Possessions: A family car, van, or truck","survey_mod231_main_dr24","awb3_1_assets_7","Possessions: A family car, van, or truck"
-"assets_bedroom","haven_labelled","Possessions: A bedroom for yourself","survey_mod231_main_dr24","awb3_1_assets_8","Possessions: A bedroom for yourself"
-"assets_compare","haven_labelled","Would you say your family is richer compared to your friends?","survey_mod231_main_dr24","awb3_1_compare_frnds","Would you say your family is richer compared to your friends?"
-"assets_worry","haven_labelled","How often do you worry about how much money your family has?","survey_mod231_main_dr24","awb3_1_money_wrry","How often do you worry about how much money your family has?"
-"assets_warmth","haven_labelled","Are you warm enough at home during winter?","survey_mod231_main_dr24","awb3_1_warm_engh_a5","Are you warm enough at home during winter?"
-"assets_save","haven_labelled","Parents have talked about cutting back to save money","survey_mod231_main_dr24","awb3_1_save_mny_a5","Parents have talked about cutting back to save money"
-"fam_live_where","haven_labelled","Where do you live most of the time?","survey_mod231_main_dr24","awb3_2_live_where_a10","Where do you live most of the time?"
-"fam_lives_mother","haven_labelled","Who else lives in your home? (mother)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___1","Who else lives in your home? (mother)"
-"fam_lives_father","haven_labelled","Who else lives in your home? (father)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___2","Who else lives in your home? (father)"
-"fam_lives_guardian","haven_labelled","Who else lives in your home? (guardian)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___3","Who else lives in your home? (guardian)"
-"fam_lives_foster","haven_labelled","Who else lives in your home? (foster carer)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___4","Who else lives in your home? (foster carer)"
-"fam_lives_step_m","haven_labelled","Who else lives in your home? (step mother)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___5","Who else lives in your home? (step mother)"
-"fam_lives_step_f","haven_labelled","Who else lives in your home? (step father)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___6","Who else lives in your home? (step father)"
-"fam_lives_m_partner","haven_labelled","Who else lives in your home? (mother's partner)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___7","Who else lives in your home? (mother's partner)"
-"fam_lives_f_partner","haven_labelled","Who else lives in your home? (father's partner)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___8","Who else lives in your home? (father's partner)"
-"fam_lives_siblings","haven_labelled","Who else lives in your home? (siblings)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___9","Who else lives in your home? (siblings)"
-"fam_lives_auntie","haven_labelled","Who else lives in your home? (auntie)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___10","Who else lives in your home? (auntie)"
-"fam_lives_uncle","haven_labelled","Who else lives in your home? (uncle)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___11","Who else lives in your home? (uncle)"
-"fam_lives_grandmother","haven_labelled","Who else lives in your home? (grandmother)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___12","Who else lives in your home? (grandmother)"
-"fam_lives_grandfather","haven_labelled","Who else lives in your home? (grandfather)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___13","Who else lives in your home? (grandfather)"
-"fam_lives_cousins","haven_labelled","Who else lives in your home? (cousins)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___14","Who else lives in your home? (cousins)"
-"fam_lives_other","haven_labelled","Who else lives in your home? (other)","survey_mod231_main_dr24","awb3_2_homes_1_ppl_r10___15","Who else lives in your home? (other)"
-"fam_birth_order","haven_labelled","Select your birth order. I am...","survey_mod231_main_dr24","awb_2_6_family_brth_n_a5","Select your birth order. I am..."
-"fam_getalong_family","haven_labelled","How often does your family get along together?","survey_mod231_main_dr24","awb2_6_family_rltnshp_1_a5","How often does your family get along together?"
-"fam_getalong_siblings","haven_labelled","How often do you get along siblings and other young people you live with","survey_mod231_main_dr24","awb2_6_family_rltnshp_2_a5","How often do you get along siblings and other young people you live with"
-"assets_money_pocket","haven_labelled","Financial assets: Regular pocket money or allowance","survey_mod231_main_dr24","awb3_4_personal_assts_1","Financial assets: Regular pocket money or allowance"
-"assets_money_chores","haven_labelled","Financial assets: Money from doing chores/babysitting for family/relatives","survey_mod231_main_dr24","awb3_4_personal_assts_2","Financial assets: Money from doing chores/babysitting for family/relatives"
-"assets_money_business","haven_labelled","Financial assets: Money from working in the family business","survey_mod231_main_dr24","awb3_4_personal_assts_3","Financial assets: Money from working in the family business"
-"assets_money_job","haven_labelled","Financial assets: Money from a paid job","survey_mod231_main_dr24","awb3_4_personal_assts_4","Financial assets: Money from a paid job"
-"assets_money_parents","haven_labelled","Financial assets: Given money by parents when I need it","survey_mod231_main_dr24","awb3_4_personal_assts_5","Financial assets: Given money by parents when I need it"
-"food_worry_1","haven_labelled","We cant get the food we want because there is not enough money","survey_mod231_main_dr24","aw3_5_food_1","We cant get the food we want because there is not enough money"
-"food_worry_2","haven_labelled","I worry about not having enough to eat","survey_mod231_main_dr24","aw3_5_food_2","I worry about not having enough to eat"
-"food_worry_3","haven_labelled","I worry about how hard it is for my parents to get enough food for us","survey_mod231_main_dr24","aw3_5_food_3","I worry about how hard it is for my parents to get enough food for us"
-"food_worry_4","haven_labelled","I feel hungry because there is not enough food to eat","survey_mod231_main_dr24","aw3_5_food_4","I feel hungry because there is not enough food to eat"
-"food_worry_5","haven_labelled","I try not to eat a lot so that our food will last","survey_mod231_main_dr24","aw3_5_food_5","I try not to eat a lot so that our food will last"
-"social_comparison","haven_labelled","How often do you think that people compare you to others to see if you match up","survey_mod231_main_dr24","aw3_6_comparison_2_r10","How often do you think that people compare you to others to see if you match up"
-"nbhd_safety_night","haven_labelled","Rate your neighbourhood: Your safety when going out after dark","survey_mod231_main_dr24","awb3_7_prsnl_sfty_1","Rate your neighbourhood: Your safety when going out after dark"
-"nbhd_safety_day","haven_labelled","Rate your neighbourhood: Your safety when going out during the day","survey_mod231_main_dr24","awb3_7_prsnl_sfty_2","Rate your neighbourhood: Your safety when going out during the day"
-"nbhd_safety_school","haven_labelled","Rate your neighbourhood: Your safety when going to and from school","survey_mod231_main_dr24","awb3_7_prsnl_sfty_4","Rate your neighbourhood: Your safety when going to and from school"
-"nbhd_violence","haven_labelled","Have you been victim of violence in past 1yr?","survey_mod231_main_dr24","awb3_7_violence","Have you been victim of violence in past 1yr?"
-"activities_music","haven_labelled","Activities in last 1mo: Sing, play an instrument, or make music","survey_mod231_main_dr24","awb3_activities_3_r10","Activities in last 1mo: Sing, play an instrument, or make music"
-"activities_writing","haven_labelled","Activities in last 1mo: Creative writing (outside of school or work)","survey_mod231_main_dr24","awb3_activities_15_r10","Activities in last 1mo: Creative writing (outside of school or work)"
-"activities_volunteer","haven_labelled","Activities in last 1mo: Voluntary, charity or community work","survey_mod231_main_dr24","awb3_activities_11_r10","Activities in last 1mo: Voluntary, charity or community work"
-"activities_art","haven_labelled","Activities in last 1mo: Drawing, painting, sculpture, or other artwork","survey_mod231_main_dr24","awb3_activities_17_r10","Activities in last 1mo: Drawing, painting, sculpture, or other artwork"
-"activities_visual","haven_labelled","Activities in last 1mo: Graphic designs, photographs, or films/videos","survey_mod231_main_dr24","awb3_activities_18_r10","Activities in last 1mo: Graphic designs, photographs, or films/videos"
-"activities_read","haven_labelled","Activities in last 1mo: Read for enjoyment","survey_mod231_main_dr24","awb3_activities_6_r10","Activities in last 1mo: Read for enjoyment"
-"activities_poetry","haven_labelled","Activities in last 1mo: Participate in a poetry/spoken word session","survey_mod231_main_dr24","awb3_activities_14_r10","Activities in last 1mo: Participate in a poetry/spoken word session"
-"activities_perform","haven_labelled","Activities in last 1mo: Performed in theatre, dance, circus etc","survey_mod231_main_dr24","awb3_activities_16_r10","Activities in last 1mo: Performed in theatre, dance, circus etc"
-"activities_party","haven_labelled","Activities in last 1mo: A party, dance, house party or nightclub","survey_mod231_main_dr24","awb3_activities_1_r10","Activities in last 1mo: A party, dance, house party or nightclub"
-"activities_museum","haven_labelled","Activities in last 1mo: Museums, galleries, historic place, stately home","survey_mod231_main_dr24","awb3_activities_10_r10","Activities in last 1mo: Museums, galleries, historic place, stately home"
-"activities_political","haven_labelled","Activities in last 1mo: Political meeting, march, rally or demonstration","survey_mod231_main_dr24","awb3_activities_12_r10","Activities in last 1mo: Political meeting, march, rally or demonstration"
-"activities_religious","haven_labelled","Activities in last 1mo: Religious service or event","survey_mod231_main_dr24","awb3_activities_13_r10","Activities in last 1mo: Religious service or event"
-"activities_gaming","haven_labelled","Activities in last 1mo: Video gaming event or festival","survey_mod231_main_dr24","awb3_activities_19_a10","Activities in last 1mo: Video gaming event or festival"
-"activities_spectate","haven_labelled","Activities in last 1mo: Live sport (for example at a stadium)","survey_mod231_main_dr24","awb3_activities_2_r10","Activities in last 1mo: Live sport (for example at a stadium)"
-"activities_concert","haven_labelled","Activities in last 1mo: A live music concert or gig","survey_mod231_main_dr24","awb3_activities_4_r10","Activities in last 1mo: A live music concert or gig"
-"activities_theatre","haven_labelled","Activities in last 1mo: Attended play, pantomime, opera, dance, circus","survey_mod231_main_dr24","awb3_activities_5_r10","Activities in last 1mo: Attended play, pantomime, opera, dance, circus"
-"activities_club","haven_labelled","Activities in last 1mo: Attended youth clubs","survey_mod231_main_dr24","awb3_activities_7_r10","Activities in last 1mo: Attended youth clubs"
-"activities_scouts","haven_labelled","Activities in last 1mo: Scouts/Guides/Explorer scouts/Rangers","survey_mod231_main_dr24","awb3_activities_8_r10","Activities in last 1mo: Scouts/Guides/Explorer scouts/Rangers"
-"activities_library","haven_labelled","Activities in last 1mo: A library","survey_mod231_main_dr24","awb3_activities_9_r10","Activities in last 1mo: A library"
-"area_proud","haven_labelled","I am proud to live in my local area","survey_mod231_main_dr24","awb3_pip_1_a10","I am proud to live in my local area"
-"area_events_proud","haven_labelled","Arts and cultural events in my local area make me feel proud","survey_mod231_main_dr24","awb3_pip_2_a10","Arts and cultural events in my local area make me feel proud"
-"area_events_interest","haven_labelled","Arts and cultural events in my local area are of interest to me","survey_mod231_main_dr24","awb3_pip_3_a10","Arts and cultural events in my local area are of interest to me"
-"health_general","haven_labelled","How good is your health in general?","survey_mod231_main_dr24","awb5_1_general_hlth","How good is your health in general?"
-"health_vision","haven_labelled","Have you been told to, or do you need to wear glasses in order to see clearly?","survey_mod231_main_dr24","awb5_1_hearing_sght_1_r10","Have you been told to, or do you need to wear glasses in order to see clearly?"
-"health_hearing","haven_labelled","Do you have any difficulty hearing or use a hearing aid","survey_mod231_main_dr24","awb5_1_hearing_sght_3","Do you have any difficulty hearing or use a hearing aid"
-"food_breakfast","haven_labelled","How often do you eat breakfast over a week?","survey_mod231_main_dr24","awb5_1_food_dt_2","How often do you eat breakfast over a week?"
-"food_fruit","haven_labelled","How often do you eat at least 2 portions of fruit per day?","survey_mod231_main_dr24","awb5_1_food_dt_3","How often do you eat at least 2 portions of fruit per day?"
-"food_veg","haven_labelled","How often do you eat at least 2 portions of vegetables per day?","survey_mod231_main_dr24","awb5_1_food_dt_4","How often do you eat at least 2 portions of vegetables per day?"
-"food_drinks_sugarfree","haven_labelled","How often drink diet drinks/sugar free drinks eg diet cola, sugar-free squash","survey_mod231_main_dr24","awb5_1_food_dt_5","How often drink diet drinks/sugar free drinks eg diet cola, sugar-free squash"
-"food_drinks_sugar","haven_labelled","How often do you drink sugary drinks like regular cola or squash","survey_mod231_main_dr24","awb5_1_food_dt_6_r7","How often do you drink sugary drinks like regular cola or squash"
-"food_drinks_energy","haven_labelled","How often do you drink energy drinks or high caffeine drinks","survey_mod231_main_dr24","awb5_1_food_dt_10_a10","How often do you drink energy drinks or high caffeine drinks"
-"food_fastfood","haven_labelled","How often do you eat fast food","survey_mod231_main_dr24","awb5_1_food_dt_7","How often do you eat fast food"
-"edeqs_item_1","numeric",""
-"edeqs_item_10","numeric",""
-"edeqs_item_2","numeric",""
-"edeqs_item_3","numeric",""
-"edeqs_item_4","numeric",""
-"edeqs_item_5","numeric",""
-"edeqs_item_6","numeric",""
-"edeqs_item_7","numeric",""
-"edeqs_item_8","numeric",""
-"edeqs_item_9","numeric",""
-"edeqs_item_11","numeric",""
-"edeqs_item_12","numeric",""
-"teeth_brush","haven_labelled","How often do you brush your teeth?"
-"teeth_dentist","haven_labelled","Do you have a dentist you see every 6 months or so?"
-"puberty_changes","haven_labelled","Puberty: Has your body started changing"
-"puberty_periods","haven_labelled","Puberty: Have you started your periods"
-"puberty_periods_age","numeric","Puberty: Age at first period"
-"drugs_cigarettes","haven_labelled","Have you ever smoked cigarettes? (not including vape/e-cigarettes)"
-"drugs_cigarettes_freq","haven_labelled","If yes, how often do you smoke cigarettes?"
-"drugs_vape","haven_labelled","Have you ever vaped/used an e-cigerette?"
-"drugs_vape_behav","haven_labelled","Vaping: which statement best describes you"
-"drugs_alcohol","haven_labelled","Have you ever had an alcoholic drink that is more than a few sips?"
-"drugs_alcohol_age","numeric","How old were you when you first had an alcoholic drink?"
-"drugs_alcohol_freq","haven_labelled","How many times have you had an alcoholic drink in the last 12 months?"
-"drugs_alcohol_binge","haven_labelled","Have you ever had 5+ alcoholic drinks at a time?"
-"drugs_alcohol_binge_age","numeric","How old were you when you first had 5+ alcoholic drinks at a time?"
-"drugs_alcohol_binge_freq","haven_labelled","How many times have you had 5+ alcoholic drinks in the last 12 months?"
-"drugs_any","haven_labelled","Have you ever taken drugs?"
-"drugs_cannibis","haven_labelled","Have you ever taken cannibis?"
-"drugs_ketamine","haven_labelled","Have you ever taken ketamine?"
-"drugs_spice","haven_labelled","Have you ever taken spice?"
-"drugs_nos","haven_labelled","Have you ever taken nitrous oxide?"
-"drugs_presc","haven_labelled","Have you ever taken prescription drugs not prescribed to you?"
-"drugs_cannibis_freq","haven_labelled","In the past year how many times have you taken cannabis?"
-"drugs_cocaine","haven_labelled","Have you ever taken cocaine?"
-"drugs_cocaine_freq","haven_labelled","In the past year how many times have you taken cocaine?"
-"drugs_ecstacy","haven_labelled","Have you ever taken ecstasy?"
-"drugs_ecstacy_freq","haven_labelled","In the past year how many times have you taken ecstasy?"
-"drugs_ketamine_freq","haven_labelled","In the past year how many times have you taken Ketamine?"
-"drugs_spice_freq","haven_labelled","In the past year how many times have you taken spice?"
-"drugs_nos_freq","haven_labelled","In the past year how many times have you taken nitrous oxide?"
-"drugs_presc_freq","haven_labelled","In the past year how many times have you taken prescription drugs for recreation"
-"drugs_other","haven_labelled","Have you ever taken any of the following? Any other drug not listed above"
-"drugs_other_freq","haven_labelled","In the past year how many times have you taken this other drug?"
-"gambling_lottery","haven_labelled","Gambling: Ever spent money (National Lottery games)"
-"gambling_slot","haven_labelled","Gambling: Ever spent money (Slot machines)"
-"gambling_bet_private","haven_labelled","Gambling: Ever spent money (Private bets for money)"
-"gambling_cards","haven_labelled","Gambling: Ever spent money (Playing cards for money)"
-"gambling_bingo_club","haven_labelled","Gambling: Ever spent money (Bingo at bingo club)"
-"gambling_bingo_other","haven_labelled","Gambling: Ever spent money (Bingo not at a bingo club)"
-"gambling_machine","haven_labelled","Gambling: Ever spent money (Gaming machines in betting shop)"
-"gambling_bet_shop","haven_labelled","Gambling: Ever spent money (Placing a bet at a betting shop)"
-"gambling_casino","haven_labelled","Gambling: Ever spent money (Visiting a casino to play casino games)"
-"gambling_online","haven_labelled","Gambling: Ever spent money (Gambling websites/apps with cash prizes)"
-"gambling_none","haven_labelled","Gambling: Ever spent money (None of the above)"
-"gambling_lottery_when","haven_labelled","Gambling: Last spent money (National Lottery games)"
-"gambling_slot_when","haven_labelled","Gambling: Last spent money (Slot machines)"
-"gambling_bet_private_when","haven_labelled","Gambling: Last spent money (Private bets for money)"
-"gambling_cards_when","haven_labelled","Gambling: Last spent money (Playing cards for money)"
-"gambling_bingo_club_when","haven_labelled","Gambling: Last spent money (Bingo at bingo club)"
-"gambling_bingo_other_when","haven_labelled","Gambling: Last spent money (Bingo not at a bingo club)"
-"gambling_machine_when","haven_labelled","Gambling: Last spent money (Gaming machines in betting shop)"
-"gambling_bet_shop_when","haven_labelled","Gambling: Last spent money (Placing a bet at a betting shop)"
-"gambling_casino_when","haven_labelled","Gambling: Last spent money (Visiting a casino to play casino games)"
-"gambling_online_when","haven_labelled","Gambling: Last spent money (Gambling websites/apps with cash prizes)"
-"gambling_family","haven_labelled","Has anyone in your immediate family spent money on gambling"
-"gaming_purchase_item","haven_labelled","Online games: Have you ever paid money to buy in-game items?"
-"gaming_purchase_unlock","haven_labelled","Online games: Have you ever paid money to unlock in-game items?"
-"gaming_purchase_bet","haven_labelled","Online games: Have you ever bet with in-game items outside of the game?"
-"gaming_purchase_none","haven_labelled","Online games: None of the above"
-"carried_weapon","haven_labelled","Have you carried a knife/other weapon in past year?"
-"police_stop","haven_labelled","Have you ever been stopped and questioned by the police?"
-"police_caution","haven_labelled","Have you ever been given a formal warning or caution by a police officer?"
-"pa_to_school","haven_labelled","How many mornings actively travel to school in past week?"
-"pa_pe","haven_labelled","How often were you active in PE in past week?"
-"pa_lunch","haven_labelled","What did you normally do at lunch in past week?"
-"pa_break","haven_labelled","What did you normally do at break time in past week?"
-"pa_from_school","haven_labelled","How many afternoons did you actively travel from school in past week?"
-"pa_after_school","haven_labelled","How many days did you do sports after school in past week?"
-"pa_evening","haven_labelled","How many evenings did you do sports in past week?"
-"pa_weekend","haven_labelled","How many times were you active last weekend?"
-"pa_sick","haven_labelled","Were you sick last week, or did anything prevent your normal physical activities?"
-"yaps_item_1","haven_labelled","How long did you watch TV outside of school?"
-"yaps_item_2","haven_labelled","How long did you play video games outside of school?"
-"yaps_item_3","haven_labelled","How long did you use computers/tablets outside of school?"
-"yaps_item_4","haven_labelled","How long did you use a mobile outside of school?"
-"yaps_item_5","haven_labelled","What are your typical sedentary habits at home: typical week"
-"sleep_time_school","haven_labelled","On school nights, what time do you typically fall asleep"
-"sleep_wake_school","haven_labelled","On school days, what time do you typically wake up for the day"
-"sleep_time","haven_labelled","On non-school nights, what time do you typically fall asleep"
-"sleep_wake","haven_labelled","On non-school days, what time do you typically wake up for the day"
-"sleep_well","haven_labelled","Do you sleep well at night?"
-"sleepy_day","haven_labelled","How likely are you to feel sleepy during the day?"
-"rcads_item_1","numeric",""
-"rcads_item_10","numeric",""
-"rcads_item_11","numeric",""
-"rcads_item_12","numeric",""
-"rcads_item_13","numeric",""
-"rcads_item_14","numeric",""
-"rcads_item_15","numeric",""
-"rcads_item_16","numeric",""
-"rcads_item_17","numeric",""
-"rcads_item_18","numeric",""
-"rcads_item_19","numeric",""
-"rcads_item_2","numeric",""
-"rcads_item_20","numeric",""
-"rcads_item_21","numeric",""
-"rcads_item_22","numeric",""
-"rcads_item_23","numeric",""
-"rcads_item_24","numeric",""
-"rcads_item_25","numeric",""
-"rcads_item_3","numeric",""
-"rcads_item_4","numeric",""
-"rcads_item_5","numeric",""
-"rcads_item_6","numeric",""
-"rcads_item_7","numeric",""
-"rcads_item_8","numeric",""
-"rcads_item_9","numeric",""
-"sdq_item_21","haven_labelled","SDQ: last 6mo: I try to be nice to other people. I care about their feelings"
-"sdq_item_17","haven_labelled","SDQ: last 6mo: I am constantly fidgeting or squirming"
-"sdq_item_7","numeric",""
-"sdq_item_13","haven_labelled","SDQ: last 6mo: I fight a lot.  I can make other people do what I want"
-"sdq_item_3","haven_labelled","SDQ: last 6mo: I am often unhappy, down-hearted, or tearful"
-"sdq_item_8","numeric",""
-"sdq_item_18","haven_labelled","SDQ: last 6mo: I am easily distracted, I find it difficult to concentrate"
-"sdq_item_4","haven_labelled","SDQ: last 6mo: I am nervous in new situations. I easily lose confidence"
-"sdq_item_24","haven_labelled","SDQ: last 6mo: I am kind to younger children"
-"sdq_item_14","haven_labelled","SDQ: last 6mo: I am often accused of lying or cheating"
-"sdq_item_9","haven_labelled","SDQ: last 6mo: Other children or young people pick on me or bully me"
-"sdq_item_16","haven_labelled","SDQ: last 6mo: I am restless, I cannot stay still for long"
-"sdq_item_25","haven_labelled","SDQ: last 6mo: I often volunteer to help others (parents, teachers, children)"
-"sdq_item_19","numeric",""
-"sdq_item_15","haven_labelled","SDQ: last 6mo: I take things that are not mine from home, school or elsewhere"
-"sdq_item_10","haven_labelled","SDQ: last 6mo: I get on better with adults than with people my own age"
-"sdq_item_5","haven_labelled","SDQ: last 6mo: I have many fears, I am easily scared"
-"sdq_item_20","numeric",""
-"sdq_item_1","haven_labelled","SDQ: last 6mo: I get a lot of headaches, stomach-aches, or sickness"
-"sdq_item_22","haven_labelled","SDQ: last 6mo: I usually share with others (food, games, pens etc.)"
-"sdq_item_11","haven_labelled","SDQ: last 6mo: I get very angry and often lose my temper"
-"sdq_item_6","haven_labelled","SDQ: last 6mo: I am usually on my own. I generally play alone or keep to myself"
-"sdq_item_12","numeric",""
-"sdq_item_2","haven_labelled","SDQ: last 6mo: I worry a lot"
-"sdq_item_23","haven_labelled","SDQ: last 6mo: I am helpful if someone is hurt, upset, or feeling ill"
-"swemwbs_item_1","haven_labelled","Have you felt optimistic about the future over past 2 weeks?"
-"swemwbs_item_2","haven_labelled","Have you felt useful over past 2 weeks?"
-"swemwbs_item_3","haven_labelled","Have you felt relaxed over the past 2 weeks?"
-"swemwbs_item_4","haven_labelled","Have you dealt with problems well over the past 2 weeks?"
-"swemwbs_item_5","haven_labelled","Have you been thinking clearly over the past 2 weeks?"
-"swemwbs_item_6","haven_labelled","Have you felt close to others over the past 2 weeks?"
-"swemwbs_item_7","haven_labelled","Have you made your own mind up about things over past 2 weeks?"
-"self_efficacy","haven_labelled","When you find something hard can you work out what to do?"
-"loneliness_ucla3_item_1","haven_labelled","How often do you feel that you lack friendship?"
-"loneliness_ucla3_item_2","haven_labelled","How often do you feel left out?"
-"loneliness_ucla3_item_3","haven_labelled","How often do you feel isolated from others?"
-"loneliness_ons_item","haven_labelled","How often do you feel alone?"
-"trust","haven_labelled","Would you say most people can be trusted/you can't be too careful?"
-"helpseek_ghsq_item_1a","haven_labelled","How likely would you seek help from partner?"
-"helpseek_ghsq_item_1i","haven_labelled","How likely is it you would not seek help from anyone?"
-"helpseek_ghsq_item_1b","haven_labelled","How likely would you seek help from a friend?"
-"helpseek_ghsq_item_1c","haven_labelled","How likely would you seek help from a parent/carer?"
-"helpseek_ghsq_item_1d","haven_labelled","How likely would you seek help from another relative/family member?"
-"helpseek_ghsq_item_1e","haven_labelled","How likely would you seek help from a mental health professional?"
-"helpseek_ghsq_item_1f","haven_labelled","How likely would you seek help from a phone helpline?"
-"helpseek_ghsq_item_1g","haven_labelled","How likely would you seek help from a doctor/GP?"
-"helpseek_ghsq_item_1h","haven_labelled","How likely would you seek help from a religious leader?"
-"helpseek_teacher","haven_labelled","How likely would you seek help from a teacher/other school staff?"
-"helpseek_ghsq_item_1j_binary","haven_labelled","Would you seek help from another not listed above?"
-"self_harm","haven_labelled","In the past year, have you hurt yourself on purpose in any way?"
-"brs_item_1","haven_labelled","I tend to bounce back quickly after hard times"
-"brs_item_2","numeric",""
-"brs_item_3","haven_labelled","It does not take me long to recover from a stressful event"
-"brs_item_4","numeric",""
-"brs_item_5","haven_labelled","I usually come through difficult times with little trouble"
-"brs_item_6","numeric",""
-"pliks_heard_voices","haven_labelled","Have you ever heard voices that others cannot hear?"
-"pliks_heard_voices_distress","haven_labelled","How upsetting if you heard voices others couldn't hear?"
-"pliks_heard_voices_frequency","haven_labelled","How often have you heard voices that other people couldnt hear in the last year?"
-"pliks_seen_things","haven_labelled","Have you ever seen something others cannot see?"
-"pliks_seen_things_distress","haven_labelled","How upsetting if you have seen something other couldn't see?"
-"pliks_seen_things_frequency","haven_labelled","How often have you seen something others couldn't see in past year?"
-"pliks_spied_on","haven_labelled","Have you ever thought you was being followed/spied on?"
-"pliks_spied_on_distress","haven_labelled","How upsetting if you thought you were being followed/spied on?"
-"pliks_spied_on_frequency","haven_labelled","How often have you thought you were being followed or spied on in the past year?"
-"pliks_spied_on_plot","haven_labelled","Ever believed people following you/spying on you as part of a plot"
-"pliks_thoughts_read","haven_labelled","Have other people ever read your thoughts?"
-"pliks_thoughts_read_distress","haven_labelled","At its worst, how upsetting did you find people reading your thoughts?"
-"pliks_thoughts_read_frequency","haven_labelled","How often have you believed that other people can read your thoughts in the past"
-"pliks_thoughts_read_powers","haven_labelled","Do you think people use special powers to read your thoughts?"
-"pliks_tv_messages","haven_labelled","Have you thought you were being sent messages through TV arranged just for you?"
-"pliks_tv_messages_distress","haven_labelled","How upsetting if you believed you were being sent special messages through TV"
-"pliks_tv_messages_frequency","haven_labelled","How often have you been sent special messages through TV in the past year?"
-"pliks_under_control","haven_labelled","Have you ever felt under control of a special power?"
-"pliks_under_control_distress","haven_labelled","How upsetting if you felt under control of a special power?"
-"pliks_under_control_frequency","haven_labelled","How often you thought you were under control of a special power in past year"
-"pliks_under_control_who","haven_labelled","Who did you think was controlling you (at any time in the past)?"
-"pliks_under_control_no_will","haven_labelled","Did it control what you were doing or thinking, no will of your own"
-"pliks_special_powers","haven_labelled","Have you ever felt like you have special powers?"
-"pliks_special_powers_frequency","haven_labelled","How often thought you were very special/have special powers past year"
-"env_greenspace_w","haven_labelled","How often do you visit parks and green spaces? During the winter months"
-"env_greenspace_s","haven_labelled","How often do you visit parks and green spaces? During the spring/summer months"
-"env_air_quality","haven_labelled","What do you think about the air quality in Bradford?"
-"env_future","haven_labelled","How pos/neg do you feel about the future of the environment?"
-"school_enjoy","haven_labelled","School: I enjoy school"
-"school_trust","haven_labelled","School: There is an adult at school I can talk to if something is worrying me"
-"school_bullying","haven_labelled","Is bullying a problem at your school?"
-"school_safe","haven_labelled","I feel safe when I am at school"
-"school_pressure_1","haven_labelled","School pressure: Competition with other people for grades is intense"
-"school_pressure_2","haven_labelled","School pressure: If I dont do well in school my family will be disappointed"
-"school_pressure_3","haven_labelled","School pressure: My teachers put too much pressure on me to do well in school"
-"school_pressure_4","haven_labelled","School pressure: Im worried about progressing in the future"
-"school_pressure_5","haven_labelled","School pressure: If I dont do well in school, Ill be a failure"
-"school_pressure_6","haven_labelled","School pressure: Often feel stressed because of pressure to do well in school"
-"school_pressure_7","haven_labelled","School pressure: I worry about doing well in tests, exams and assessments"
-"friends_offline","haven_labelled","How many in-person friends do you have?"
-"friends_online","haven_labelled","How many online friends do you have?"
-"friends_close","haven_labelled","Do you have any close friends?"
-"morality_1","haven_labelled","Do people your age: Start a fight with someone?"
-"morality_2","haven_labelled","Do people your age: Write things/spray paint on a building, fence, train"
-"morality_3","haven_labelled","Do people your age: Take something from a shop without paying for it"
-"morality_4","haven_labelled","Do people your age: Copy/download music/games/films without paying"
-"bullying_1","haven_labelled","How often have you taken part in bullying somebody at school?"
-"bullying_2","haven_labelled","How often have you been bullied at school in the past couple of months?"
-"bullying_3","haven_labelled","How often have you been bullied online?"
-"bullying_4","haven_labelled","In the past couple of months, how often have you taken part in online bullying?"
-"discrim_discourage","haven_labelled","Have you ever been discouraged from joining a club/group?"
-"discrim_excluded","haven_labelled","Have others your age not included you in their activities?"
-"discrim_expected","haven_labelled","Have people expected less of you than others your age?"
-"discrim_english","haven_labelled","Have people assumed your English was poor?"
-"discrim_police","haven_labelled","Have you ever been hassled by police?"
-"discrim_staff","haven_labelled","Have you ever been hassled by staff in a shop?"
-"discrim_insults","haven_labelled","Have you ever been called insulting names?"
-"discrim_service","haven_labelled","Have you ever received poor service in a shop/restaurant?"
-"discrim_intelligent","haven_labelled","Have people ever acted as though you were not intelligent?"
-"discrim_afraid","haven_labelled","Have people ever acted like they're afraid of you?"
-"discrim_threatened","haven_labelled","Have you ever been threatened?"
-"sm_use_Facebook","haven_labelled","Which social media platforms do you use? Tick all that apply (choice=Facebook)"
-"sm_use_Instagram","haven_labelled","Which social media platforms do you use? Tick all that apply (choice=Instagram)"
-"sm_use_X","haven_labelled","Which social media platforms do you use? Tick all that apply (choice=X (formerly"
-"sm_use_TikTok","haven_labelled","Which social media platforms do you use? Tick all that apply (choice=TikTok)"
-"sm_use_Snapchat","haven_labelled","Which social media platforms do you use? Tick all that apply (choice=Snapchat)"
-"sm_use_other","haven_labelled","Which social media platforms do you use? Tick all that apply (choice=Other)"
-"sm_time_weekday","haven_labelled","How many hours spent using social media during term time?"
-"sm_time_weekend","haven_labelled","How many hrs do you spend using social media at weekend in term time?"
-"sm_positive_1","haven_labelled","Has connecting with friends been a positive experience of social media?"
-"sm_positive_2","haven_labelled","Has viewing enjoyable content been a positive experience of social media?"
-"sm_positive_3","haven_labelled","Has learning new things  been a positive experience of social media?"
-"sm_positive_4","haven_labelled","Has accessing support been a positive experience of social media?"
-"sm_positive_5","haven_labelled","Has engaging positively with issues been a positive experience of social media?"
-"sm_positive_6","haven_labelled","Has there been any other positive experience of social media?"
-"sm_negative_1","haven_labelled","Has people being unpleasant about you been negative experience of social media?"
-"sm_negative_2","haven_labelled","Has people bullying you been a negative experience of social media?"
-"sm_negative_3","haven_labelled","Has upsetting content been a negative experience of social media?"
-"sm_negative_4","haven_labelled","Has sexually explicit images been a negative experience of social media?"
-"sm_negative_5","haven_labelled","Has regrettably posting something online been a negative experience of social media?"
-"sm_negative_6","haven_labelled","You havent experience any negative experience of social media"
-"sm_negative_7","haven_labelled","You've had a negative experience of social media for another reason"
-"sm_experience","haven_labelled","Has your experience of using social media been mostly positive or negative?"
-"internet_access","haven_labelled","Do you have access to the internet at home?"
-"internet_quality","haven_labelled","How good is your internet at home?"
-"age_m_heightweight","numeric","Age in months at measurement"
-"height","numeric","Height (cm)"
-"weight","numeric","Weight (kg)"
-"bmi","numeric","BMI (kg/m2)"
-"age_m_skinfold","numeric","Age in months at measurement"
-"sk_tricep","numeric","Triceps skinfold (mm)"
-"sk_subscap","numeric","Subscapular skinfold (mm)"
-"age_m_bloodpressure","numeric","Age in months at measurement"
-"bp_sys_1","numeric","Systolic reading 1 (mm Hg)"
-"bp_dia_1","numeric","Diastolic reading 1 (mm Hg)"
-"bp_sys_2","numeric","Systolic reading 2 (mm Hg)"
-"bp_dia_2","numeric","Diastolic reading 2 (mm Hg)"
-"age_m_bioimpedance","numeric","Age (months) at measurement"
-"model","factor",""
-"clothes_weight","numeric","Estimated weight of clothes (kg)"
-"fatp","numeric","Total fat %"
-"fatm","numeric","Fat mass (kg)"
-"pmm","numeric","Predicted muscle mass (kg)"
-"ffm","numeric","Fat free mass (kg)"
-"tbw","numeric","Total body water (%)"
-"imp","numeric","Impedance (ohms)"
-"edeqs_complete","logical",""
-"edeqs_total","numeric",""
-"rcads_dep_complete","logical",""
-"rcads_anx_complete","logical",""
-"rcads_dep_total","numeric",""
-"rcads_anx_total","numeric",""
-"rcads_total","numeric",""
-"swemwbs_complete","logical",""
-"swemwbs_total","numeric",""
-"sdq_con_complete","logical",""
-"sdq_emo_complete","logical",""
-"sdq_hyp_complete","logical",""
-"sdq_pee_complete","logical",""
-"sdq_pro_complete","logical",""
-"sdq_con_total","numeric",""
-"sdq_emo_total","numeric",""
-"sdq_hyp_total","numeric",""
-"sdq_pee_total","numeric",""
-"sdq_pro_total","numeric",""
-"sdq_ext_total","numeric",""
-"sdq_int_total","numeric",""
-"sdq_dif_total","numeric",""
-"ucla3_complete","logical",""
-"ucla3_total","numeric",""
-"ucla4_complete","logical",""
-"ucla4_total","numeric",""
-"brs_complete","logical",""
-"brs_total","numeric",""
-"yaps_complete","logical",""
-"yaps_total","numeric",""
-"fam_birth_place","factor",""
-"ethnicity","factor",""
-"lang_home","factor",""
-"lang_number","factor",""
-"discrim_discourage_reason","factor",""
-"discrim_excluded_reason","factor",""
-"discrim_expected_reason","factor",""
-"discrim_english_reason","factor",""
-"discrim_police_reason","factor",""
-"discrim_staff_reason","factor",""
-"discrim_insults_reason","factor",""
-"discrim_service_reason","factor",""
-"discrim_intelligent_reason","factor",""
-"discrim_afraid_reason","factor",""
-"discrim_threatened_reason","factor",""
+Curated_variable_name,Curated_variable_type,Curated_variable_label,BiBAgeOfWonder_survey,BiBAgeOfWonder_variable_name,BiBAgeOfWonder_variable_label,Theme
+aow_recruitment_id,factor,,recruitment_dr24,aow_recruitment_id,Age of Wonder person ID,id
+school_id,factor,,recruitment_dr24,school_id,Pseudo school ID,recruitment
+year_group,haven_labelled,Year group at recruitment,recruitment_dr24,year_group,Year group at recruitment,recruitment
+form_tutor_id,factor,,recruitment_dr24,form_tutor_id,Pseudo recruitment form tutor ID,recruitment
+fsm,haven_labelled,Free school meals,recruitment_dr24,fsm,Free school meals,recruitment
+sen,haven_labelled,Special educational needs provision,recruitment_dr24,sen,Special educational needs provision,recruitment
+imd_2019_decile,integer,"Home IMD 2019 decile, national scale",recruitment_dr24,imd_2019_decile,"Home IMD 2019 decile, national scale",recruitment
+age_y_survey,numeric,Age (years) at survey date,survey_mod231_main_dr24,age_survey_y,Age (years) at survey date,demographics
+age_m_survey,numeric,Age (months) at survey date,survey_mod231_main_dr24,age_survey_m,Age (months) at survey date,demographics
+survey_mode,haven_labelled,Survey taken online or offline?,survey_mod231_main_dr24,survey_mode,Survey taken online or offline?,demographics
+years_in_uk,haven_labelled,How many years have you lived in the UK?,survey_mod231_main_dr24,aw1_2_years_lvd_a4,How many years have you lived in the UK?,demographics
+religion,factor,,survey_mod231_main_dr24,awb1_2y_religion_r4,What is your religion?,demographics
+sex,haven_labelled,What is your sex? (The biological sex on your birth certificate),survey_mod231_main_dr24,awb1_2_sex,What is your sex? (The biological sex on your birth certificate),demographics
+gender,haven_labelled,What is your gender? (How you would describe yourself),survey_mod231_main_dr24,awb1_2_gender_r4,What is your gender? (How you would describe yourself),demographics
+disability,haven_labelled,Do you have any physical/mental health conditions/illnesses?,survey_mod231_main_dr24,awb1_2_disability,Do you have any physical/mental health conditions/illnesses?,demographics
+disability_time,factor,,survey_mod231_main_dr24,awb1_2_disability_tme_a4,Has your condition lasted/expected to last >=1 year?,demographics
+disability_limit,haven_labelled,Does your condition limit your activities?,survey_mod231_main_dr24,awb1_2_disability_impct_a4,Does your condition limit your activities?,demographics
+assets_phone,haven_labelled,Possessions: Your own mobile phone,survey_mod231_main_dr24,awb3_1_assets_4,Possessions: Your own mobile phone,socioeconomics
+assets_computer,haven_labelled,"Possessions: A computer, laptop or tablet with internet at home",survey_mod231_main_dr24,awb3_1_assets_5,"Possessions: A computer, laptop or tablet with internet at home",socioeconomics
+assets_holiday,haven_labelled,Possessions: At least one family holiday away from home in a typical year,survey_mod231_main_dr24,awb3_1_assets_6,Possessions: At least one family holiday away from home in a typical year,socioeconomics
+assets_car,haven_labelled,"Possessions: A family car, van, or truck",survey_mod231_main_dr24,awb3_1_assets_7,"Possessions: A family car, van, or truck",socioeconomics
+assets_bedroom,haven_labelled,Possessions: A bedroom for yourself,survey_mod231_main_dr24,awb3_1_assets_8,Possessions: A bedroom for yourself,socioeconomics
+assets_compare,haven_labelled,Would you say your family is richer compared to your friends?,survey_mod231_main_dr24,awb3_1_compare_frnds,Would you say your family is richer compared to your friends?,socioeconomics
+assets_worry,haven_labelled,How often do you worry about how much money your family has?,survey_mod231_main_dr24,awb3_1_money_wrry,How often do you worry about how much money your family has?,socioeconomics
+assets_warmth,haven_labelled,Are you warm enough at home during winter?,survey_mod231_main_dr24,awb3_1_warm_engh_a5,Are you warm enough at home during winter?,socioeconomics
+assets_save,haven_labelled,Parents have talked about cutting back to save money,survey_mod231_main_dr24,awb3_1_save_mny_a5,Parents have talked about cutting back to save money,socioeconomics
+fam_live_where,haven_labelled,Where do you live most of the time?,survey_mod231_main_dr24,awb3_2_live_where_a10,Where do you live most of the time?,socioeconomics
+fam_lives_mother,haven_labelled,Who else lives in your home? (mother),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___1,Who else lives in your home? (mother),socioeconomics
+fam_lives_father,haven_labelled,Who else lives in your home? (father),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___2,Who else lives in your home? (father),socioeconomics
+fam_lives_guardian,haven_labelled,Who else lives in your home? (guardian),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___3,Who else lives in your home? (guardian),socioeconomics
+fam_lives_foster,haven_labelled,Who else lives in your home? (foster carer),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___4,Who else lives in your home? (foster carer),socioeconomics
+fam_lives_step_m,haven_labelled,Who else lives in your home? (step mother),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___5,Who else lives in your home? (step mother),socioeconomics
+fam_lives_step_f,haven_labelled,Who else lives in your home? (step father),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___6,Who else lives in your home? (step father),socioeconomics
+fam_lives_m_partner,haven_labelled,Who else lives in your home? (mother's partner),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___7,Who else lives in your home? (mother's partner),socioeconomics
+fam_lives_f_partner,haven_labelled,Who else lives in your home? (father's partner),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___8,Who else lives in your home? (father's partner),socioeconomics
+fam_lives_siblings,haven_labelled,Who else lives in your home? (siblings),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___9,Who else lives in your home? (siblings),socioeconomics
+fam_lives_auntie,haven_labelled,Who else lives in your home? (auntie),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___10,Who else lives in your home? (auntie),socioeconomics
+fam_lives_uncle,haven_labelled,Who else lives in your home? (uncle),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___11,Who else lives in your home? (uncle),socioeconomics
+fam_lives_grandmother,haven_labelled,Who else lives in your home? (grandmother),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___12,Who else lives in your home? (grandmother),socioeconomics
+fam_lives_grandfather,haven_labelled,Who else lives in your home? (grandfather),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___13,Who else lives in your home? (grandfather),socioeconomics
+fam_lives_cousins,haven_labelled,Who else lives in your home? (cousins),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___14,Who else lives in your home? (cousins),socioeconomics
+fam_lives_other,haven_labelled,Who else lives in your home? (other),survey_mod231_main_dr24,awb3_2_homes_1_ppl_r10___15,Who else lives in your home? (other),socioeconomics
+fam_birth_order,haven_labelled,Select your birth order. I am...,survey_mod231_main_dr24,awb_2_6_family_brth_n_a5,Select your birth order. I am...,socioeconomics
+fam_getalong_family,haven_labelled,How often does your family get along together?,survey_mod231_main_dr24,awb2_6_family_rltnshp_1_a5,How often does your family get along together?,socioeconomics
+fam_getalong_siblings,haven_labelled,How often do you get along siblings and other young people you live with,survey_mod231_main_dr24,awb2_6_family_rltnshp_2_a5,How often do you get along siblings and other young people you live with,socioeconomics
+assets_money_pocket,haven_labelled,Financial assets: Regular pocket money or allowance,survey_mod231_main_dr24,awb3_4_personal_assts_1,Financial assets: Regular pocket money or allowance,socioeconomics
+assets_money_chores,haven_labelled,Financial assets: Money from doing chores/babysitting for family/relatives,survey_mod231_main_dr24,awb3_4_personal_assts_2,Financial assets: Money from doing chores/babysitting for family/relatives,socioeconomics
+assets_money_business,haven_labelled,Financial assets: Money from working in the family business,survey_mod231_main_dr24,awb3_4_personal_assts_3,Financial assets: Money from working in the family business,socioeconomics
+assets_money_job,haven_labelled,Financial assets: Money from a paid job,survey_mod231_main_dr24,awb3_4_personal_assts_4,Financial assets: Money from a paid job,socioeconomics
+assets_money_parents,haven_labelled,Financial assets: Given money by parents when I need it,survey_mod231_main_dr24,awb3_4_personal_assts_5,Financial assets: Given money by parents when I need it,socioeconomics
+food_worry_1,haven_labelled,We cant get the food we want because there is not enough money,survey_mod231_main_dr24,aw3_5_food_1,We cant get the food we want because there is not enough money,socioeconomics
+food_worry_2,haven_labelled,I worry about not having enough to eat,survey_mod231_main_dr24,aw3_5_food_2,I worry about not having enough to eat,socioeconomics
+food_worry_3,haven_labelled,I worry about how hard it is for my parents to get enough food for us,survey_mod231_main_dr24,aw3_5_food_3,I worry about how hard it is for my parents to get enough food for us,socioeconomics
+food_worry_4,haven_labelled,I feel hungry because there is not enough food to eat,survey_mod231_main_dr24,aw3_5_food_4,I feel hungry because there is not enough food to eat,socioeconomics
+food_worry_5,haven_labelled,I try not to eat a lot so that our food will last,survey_mod231_main_dr24,aw3_5_food_5,I try not to eat a lot so that our food will last,socioeconomics
+social_comparison,haven_labelled,How often do you think that people compare you to others to see if you match up,survey_mod231_main_dr24,aw3_6_comparison_2_r10,How often do you think that people compare you to others to see if you match up,socioeconomics
+nbhd_safety_night,haven_labelled,Rate your neighbourhood: Your safety when going out after dark,survey_mod231_main_dr24,awb3_7_prsnl_sfty_1,Rate your neighbourhood: Your safety when going out after dark,socioeconomics
+nbhd_safety_day,haven_labelled,Rate your neighbourhood: Your safety when going out during the day,survey_mod231_main_dr24,awb3_7_prsnl_sfty_2,Rate your neighbourhood: Your safety when going out during the day,socioeconomics
+nbhd_safety_school,haven_labelled,Rate your neighbourhood: Your safety when going to and from school,survey_mod231_main_dr24,awb3_7_prsnl_sfty_4,Rate your neighbourhood: Your safety when going to and from school,socioeconomics
+nbhd_violence,haven_labelled,Have you been victim of violence in past 1yr?,survey_mod231_main_dr24,awb3_7_violence,Have you been victim of violence in past 1yr?,socioeconomics
+activities_music,haven_labelled,"Activities in last 1mo: Sing, play an instrument, or make music",survey_mod231_main_dr24,awb3_activities_3_r10,"Activities in last 1mo: Sing, play an instrument, or make music",arts&culture
+activities_writing,haven_labelled,Activities in last 1mo: Creative writing (outside of school or work),survey_mod231_main_dr24,awb3_activities_15_r10,Activities in last 1mo: Creative writing (outside of school or work),arts&culture
+activities_volunteer,haven_labelled,"Activities in last 1mo: Voluntary, charity or community work",survey_mod231_main_dr24,awb3_activities_11_r10,"Activities in last 1mo: Voluntary, charity or community work",arts&culture
+activities_art,haven_labelled,"Activities in last 1mo: Drawing, painting, sculpture, or other artwork",survey_mod231_main_dr24,awb3_activities_17_r10,"Activities in last 1mo: Drawing, painting, sculpture, or other artwork",arts&culture
+activities_visual,haven_labelled,"Activities in last 1mo: Graphic designs, photographs, or films/videos",survey_mod231_main_dr24,awb3_activities_18_r10,"Activities in last 1mo: Graphic designs, photographs, or films/videos",arts&culture
+activities_read,haven_labelled,Activities in last 1mo: Read for enjoyment,survey_mod231_main_dr24,awb3_activities_6_r10,Activities in last 1mo: Read for enjoyment,arts&culture
+activities_poetry,haven_labelled,Activities in last 1mo: Participate in a poetry/spoken word session,survey_mod231_main_dr24,awb3_activities_14_r10,Activities in last 1mo: Participate in a poetry/spoken word session,arts&culture
+activities_perform,haven_labelled,"Activities in last 1mo: Performed in theatre, dance, circus etc",survey_mod231_main_dr24,awb3_activities_16_r10,"Activities in last 1mo: Performed in theatre, dance, circus etc",arts&culture
+activities_party,haven_labelled,"Activities in last 1mo: A party, dance, house party or nightclub",survey_mod231_main_dr24,awb3_activities_1_r10,"Activities in last 1mo: A party, dance, house party or nightclub",arts&culture
+activities_museum,haven_labelled,"Activities in last 1mo: Museums, galleries, historic place, stately home",survey_mod231_main_dr24,awb3_activities_10_r10,"Activities in last 1mo: Museums, galleries, historic place, stately home",arts&culture
+activities_political,haven_labelled,"Activities in last 1mo: Political meeting, march, rally or demonstration",survey_mod231_main_dr24,awb3_activities_12_r10,"Activities in last 1mo: Political meeting, march, rally or demonstration",arts&culture
+activities_religious,haven_labelled,Activities in last 1mo: Religious service or event,survey_mod231_main_dr24,awb3_activities_13_r10,Activities in last 1mo: Religious service or event,arts&culture
+activities_gaming,haven_labelled,Activities in last 1mo: Video gaming event or festival,survey_mod231_main_dr24,awb3_activities_19_a10,Activities in last 1mo: Video gaming event or festival,arts&culture
+activities_spectate,haven_labelled,Activities in last 1mo: Live sport (for example at a stadium),survey_mod231_main_dr24,awb3_activities_2_r10,Activities in last 1mo: Live sport (for example at a stadium),arts&culture
+activities_concert,haven_labelled,Activities in last 1mo: A live music concert or gig,survey_mod231_main_dr24,awb3_activities_4_r10,Activities in last 1mo: A live music concert or gig,arts&culture
+activities_theatre,haven_labelled,"Activities in last 1mo: Attended play, pantomime, opera, dance, circus",survey_mod231_main_dr24,awb3_activities_5_r10,"Activities in last 1mo: Attended play, pantomime, opera, dance, circus",arts&culture
+activities_club,haven_labelled,Activities in last 1mo: Attended youth clubs,survey_mod231_main_dr24,awb3_activities_7_r10,Activities in last 1mo: Attended youth clubs,arts&culture
+activities_scouts,haven_labelled,Activities in last 1mo: Scouts/Guides/Explorer scouts/Rangers,survey_mod231_main_dr24,awb3_activities_8_r10,Activities in last 1mo: Scouts/Guides/Explorer scouts/Rangers,arts&culture
+activities_library,haven_labelled,Activities in last 1mo: A library,survey_mod231_main_dr24,awb3_activities_9_r10,Activities in last 1mo: A library,arts&culture
+area_proud,haven_labelled,I am proud to live in my local area,survey_mod231_main_dr24,awb3_pip_1_a10,I am proud to live in my local area,arts&culture
+area_events_proud,haven_labelled,Arts and cultural events in my local area make me feel proud,survey_mod231_main_dr24,awb3_pip_2_a10,Arts and cultural events in my local area make me feel proud,arts&culture
+area_events_interest,haven_labelled,Arts and cultural events in my local area are of interest to me,survey_mod231_main_dr24,awb3_pip_3_a10,Arts and cultural events in my local area are of interest to me,arts&culture
+health_general,haven_labelled,How good is your health in general?,survey_mod231_main_dr24,awb5_1_general_hlth,How good is your health in general?,physicalhealth1
+health_vision,haven_labelled,"Have you been told to, or do you need to wear glasses in order to see clearly?",survey_mod231_main_dr24,awb5_1_hearing_sght_1_r10,"Have you been told to, or do you need to wear glasses in order to see clearly?",physicalhealth1
+health_hearing,haven_labelled,Do you have any difficulty hearing or use a hearing aid,survey_mod231_main_dr24,awb5_1_hearing_sght_3,Do you have any difficulty hearing or use a hearing aid,physicalhealth1
+food_breakfast,haven_labelled,How often do you eat breakfast over a week?,survey_mod231_main_dr24,awb5_1_food_dt_2,How often do you eat breakfast over a week?,physicalhealth1
+food_fruit,haven_labelled,How often do you eat at least 2 portions of fruit per day?,survey_mod231_main_dr24,awb5_1_food_dt_3,How often do you eat at least 2 portions of fruit per day?,physicalhealth1
+food_veg,haven_labelled,How often do you eat at least 2 portions of vegetables per day?,survey_mod231_main_dr24,awb5_1_food_dt_4,How often do you eat at least 2 portions of vegetables per day?,physicalhealth1
+food_drinks_sugarfree,haven_labelled,"How often drink diet drinks/sugar free drinks eg diet cola, sugar-free squash",survey_mod231_main_dr24,awb5_1_food_dt_5,"How often drink diet drinks/sugar free drinks eg diet cola, sugar-free squash",physicalhealth1
+food_drinks_sugar,haven_labelled,How often do you drink sugary drinks like regular cola or squash,survey_mod231_main_dr24,awb5_1_food_dt_6_r7,How often do you drink sugary drinks like regular cola or squash,physicalhealth1
+food_drinks_energy,haven_labelled,How often do you drink energy drinks or high caffeine drinks,survey_mod231_main_dr24,awb5_1_food_dt_10_a10,How often do you drink energy drinks or high caffeine drinks,physicalhealth1
+food_fastfood,haven_labelled,How often do you eat fast food,survey_mod231_main_dr24,awb5_1_food_dt_7,How often do you eat fast food,physicalhealth1
+edeqs_item_1,numeric,,survey_mod231_main_dr24,awb2_12_eat_hbt_1_a5,Past 7d: Limited food intake to influence weight,physicalhealth1
+edeqs_item_10,numeric,,survey_mod231_main_dr24,awb2_12_eat_hbt_10_a5,Past 7d: Ate an unusually large amount of food in one go,physicalhealth1
+edeqs_item_2,numeric,,survey_mod231_main_dr24,awb2_12_eat_hbt_2_a5,Past 7d: Gone long periods of time without food to influence weight,physicalhealth1
+edeqs_item_3,numeric,,survey_mod231_main_dr24,awb2_12_eat_hbt_3_a5,Past 7d: Thinking about food/calories made it hard to concentrate on interests,physicalhealth1
+edeqs_item_4,numeric,,survey_mod231_main_dr24,awb2_12_eat_hbt_4_a5,Past 7d: Thinking about your weight made it hard to concentrate on interests,physicalhealth1
+edeqs_item_5,numeric,,survey_mod231_main_dr24,awb2_12_eat_hbt_5_a5,Past 7d: Had a definite fear that you might gain weight,physicalhealth1
+edeqs_item_6,numeric,,survey_mod231_main_dr24,awb2_12_eat_hbt_6_a5,Past 7d: Had a strong desire to lose weight,physicalhealth1
+edeqs_item_7,numeric,,survey_mod231_main_dr24,awb2_12_eat_hbt_7_a5,Past 7d: Tried to control weight by making yourself sick/taking laxatives,physicalhealth1
+edeqs_item_8,numeric,,survey_mod231_main_dr24,awb2_12_eat_hbt_8_a5,Past 7d: Exercised compulsively to control weight,physicalhealth1
+edeqs_item_9,numeric,,survey_mod231_main_dr24,awb2_12_eat_hbt_9_a5,Past 7d: Felt like you've lost control over eating,physicalhealth1
+edeqs_item_11,numeric,,survey_mod231_main_dr24,awb2_12_wght_1_a5,Past 7d: Weight or shape influenced how you judge yourself,physicalhealth1
+edeqs_item_12,numeric,,survey_mod231_main_dr24,awb2_12_wght_2_a5,Past 7d: Been dissatisfied with your weight,physicalhealth1
+teeth_brush,haven_labelled,How often do you brush your teeth?,survey_mod231_main_dr24,awb5_1_oral_hlth_1,How often do you brush your teeth?,physicalhealth1
+teeth_dentist,haven_labelled,Do you have a dentist you see every 6 months or so?,survey_mod231_main_dr24,awb5_1_oral_hlth_3,Do you have a dentist you see every 6 months or so?,physicalhealth1
+puberty_changes,haven_labelled,Puberty: Has your body started changing,survey_mod231_main_dr24,awb4_4_puberty_a10,Puberty: Has your body started changing,physicalhealth1
+puberty_periods,haven_labelled,Puberty: Have you started your periods,survey_mod231_main_dr24,awb4_4y_gendersex_f_2,Puberty: Have you started your periods,physicalhealth1
+puberty_periods_age,numeric,Puberty: Age at first period,survey_mod231_main_dr24,awb4_4y_gendersex_y_f_2,Puberty: Age at first period,physicalhealth1
+drugs_cigarettes,haven_labelled,Have you ever smoked cigarettes? (not including vape/e-cigarettes),survey_mod231_main_dr24,awb5_1_cigs_a5,Have you ever smoked cigarettes? (not including vape/e-cigarettes),healthbehaviours
+drugs_cigarettes_freq,haven_labelled,"If yes, how often do you smoke cigarettes?",survey_mod231_main_dr24,awb5_1_cigs2_r10,"If yes, how often do you smoke cigarettes?",healthbehaviours
+drugs_vape,haven_labelled,Have you ever vaped/used an e-cigerette?,survey_mod231_main_dr24,awb5_2_evr_vaped_a5,Have you ever vaped/used an e-cigerette?,healthbehaviours
+drugs_vape_behav,haven_labelled,Vaping: which statement best describes you,survey_mod231_main_dr24,awb5_2_vape_r10,Vaping: which statement best describes you,healthbehaviours
+drugs_alcohol,haven_labelled,Have you ever had an alcoholic drink that is more than a few sips?,survey_mod231_main_dr24,awb5_2_alcohol,Have you ever had an alcoholic drink that is more than a few sips?,healthbehaviours
+drugs_alcohol_age,numeric,How old were you when you first had an alcoholic drink?,survey_mod231_main_dr24,awb5_2y_alcohol_age,How old were you when you first had an alcoholic drink?,healthbehaviours
+drugs_alcohol_freq,haven_labelled,How many times have you had an alcoholic drink in the last 12 months?,survey_mod231_main_dr24,awb5_2y_alcohol_frqncy,How many times have you had an alcoholic drink in the last 12 months?,healthbehaviours
+drugs_alcohol_binge,haven_labelled,Have you ever had 5+ alcoholic drinks at a time?,survey_mod231_main_dr24,awb5_2y_alcohol_qntty,Have you ever had 5+ alcoholic drinks at a time?,healthbehaviours
+drugs_alcohol_binge_age,numeric,How old were you when you first had 5+ alcoholic drinks at a time?,survey_mod231_main_dr24,awb5_2_yalcohol_y_qntty_age,How old were you when you first had 5+ alcoholic drinks at a time?,healthbehaviours
+drugs_alcohol_binge_freq,haven_labelled,How many times have you had 5+ alcoholic drinks in the last 12 months?,survey_mod231_main_dr24,awb5_2_yalcohol_y_qntty_frqncy,How many times have you had 5+ alcoholic drinks in the last 12 months?,healthbehaviours
+drugs_any,haven_labelled,Have you ever taken drugs?,survey_mod231_main_dr24,awb5_drugs,Have you ever taken drugs?,healthbehaviours
+drugs_cannibis,haven_labelled,Have you ever taken cannibis?,survey_mod231_main_dr24,awb5_2_drugs_1,Have you ever taken cannibis?,healthbehaviours
+drugs_ketamine,haven_labelled,Have you ever taken ketamine?,survey_mod231_main_dr24,awb5_2_drugs_10,Have you ever taken ketamine?,healthbehaviours
+drugs_spice,haven_labelled,Have you ever taken spice?,survey_mod231_main_dr24,awb5_2_drugs_12,Have you ever taken spice?,healthbehaviours
+drugs_nos,haven_labelled,Have you ever taken nitrous oxide?,survey_mod231_main_dr24,awb5_2_drugs_15,Have you ever taken nitrous oxide?,healthbehaviours
+drugs_presc,haven_labelled,Have you ever taken prescription drugs not prescribed to you?,survey_mod231_main_dr24,awb5_2_drugs_17,Have you ever taken prescription drugs not prescribed to you?,healthbehaviours
+drugs_cannibis_freq,haven_labelled,In the past year how many times have you taken cannabis?,survey_mod231_main_dr24,awb5_2_cannabis_pstyr,In the past year how many times have you taken cannabis?,healthbehaviours
+drugs_cocaine,haven_labelled,Have you ever taken cocaine?,survey_mod231_main_dr24,awb5_2_drugs_2,Have you ever taken cocaine?,healthbehaviours
+drugs_cocaine_freq,haven_labelled,In the past year how many times have you taken cocaine?,survey_mod231_main_dr24,awb5_2_cocaine_pstyr,In the past year how many times have you taken cocaine?,healthbehaviours
+drugs_ecstacy,haven_labelled,Have you ever taken ecstasy?,survey_mod231_main_dr24,awb5_2_drugs_4,Have you ever taken ecstasy?,healthbehaviours
+drugs_ecstacy_freq,haven_labelled,In the past year how many times have you taken ecstasy?,survey_mod231_main_dr24,awb5_2_ecstasy_pstyr,In the past year how many times have you taken ecstasy?,healthbehaviours
+drugs_ketamine_freq,haven_labelled,In the past year how many times have you taken Ketamine?,survey_mod231_main_dr24,awb5_2_ket_pstyr,In the past year how many times have you taken Ketamine?,healthbehaviours
+drugs_spice_freq,haven_labelled,In the past year how many times have you taken spice?,survey_mod231_main_dr24,awb5_2_spice_pstyr,In the past year how many times have you taken spice?,healthbehaviours
+drugs_nos_freq,haven_labelled,In the past year how many times have you taken nitrous oxide?,survey_mod231_main_dr24,awb5_2_nitrous_pstyr,In the past year how many times have you taken nitrous oxide?,healthbehaviours
+drugs_presc_freq,haven_labelled,In the past year how many times have you taken prescription drugs for recreation,survey_mod231_main_dr24,awb5_2_prescription_pstyr,In the past year how many times have you taken prescription drugs for recreation,healthbehaviours
+drugs_other,haven_labelled,Have you ever taken any of the following? Any other drug not listed above,survey_mod231_main_dr24,awb5_2_drugs_othr_a10,Have you ever taken any of the following? Any other drug not listed above,healthbehaviours
+drugs_other_freq,haven_labelled,In the past year how many times have you taken this other drug?,survey_mod231_main_dr24,awb5_2_drugs_othr3_a10,In the past year how many times have you taken this other drug?,healthbehaviours
+gambling_lottery,haven_labelled,Gambling: Ever spent money (National Lottery games),survey_mod231_main_dr24,awb5_2_gambling_chk_a10___1,Gambling: Ever spent money (National Lottery games),healthbehaviours
+gambling_slot,haven_labelled,Gambling: Ever spent money (Slot machines),survey_mod231_main_dr24,awb5_2_gambling_chk_a10___2,Gambling: Ever spent money (Slot machines),healthbehaviours
+gambling_bet_private,haven_labelled,Gambling: Ever spent money (Private bets for money),survey_mod231_main_dr24,awb5_2_gambling_chk_a10___3,Gambling: Ever spent money (Private bets for money),healthbehaviours
+gambling_cards,haven_labelled,Gambling: Ever spent money (Playing cards for money),survey_mod231_main_dr24,awb5_2_gambling_chk_a10___4,Gambling: Ever spent money (Playing cards for money),healthbehaviours
+gambling_bingo_club,haven_labelled,Gambling: Ever spent money (Bingo at bingo club),survey_mod231_main_dr24,awb5_2_gambling_chk_a10___5,Gambling: Ever spent money (Bingo at bingo club),healthbehaviours
+gambling_bingo_other,haven_labelled,Gambling: Ever spent money (Bingo not at a bingo club),survey_mod231_main_dr24,awb5_2_gambling_chk_a10___6,Gambling: Ever spent money (Bingo not at a bingo club),healthbehaviours
+gambling_machine,haven_labelled,Gambling: Ever spent money (Gaming machines in betting shop),survey_mod231_main_dr24,awb5_2_gambling_chk_a10___7,Gambling: Ever spent money (Gaming machines in betting shop),healthbehaviours
+gambling_bet_shop,haven_labelled,Gambling: Ever spent money (Placing a bet at a betting shop),survey_mod231_main_dr24,awb5_2_gambling_chk_a10___8,Gambling: Ever spent money (Placing a bet at a betting shop),healthbehaviours
+gambling_casino,haven_labelled,Gambling: Ever spent money (Visiting a casino to play casino games),survey_mod231_main_dr24,awb5_2_gambling_chk_a10___9,Gambling: Ever spent money (Visiting a casino to play casino games),healthbehaviours
+gambling_online,haven_labelled,Gambling: Ever spent money (Gambling websites/apps with cash prizes),survey_mod231_main_dr24,awb5_2_gambling_chk_a10___10,Gambling: Ever spent money (Gambling websites/apps with cash prizes),healthbehaviours
+gambling_none,haven_labelled,Gambling: Ever spent money (None of the above),survey_mod231_main_dr24,awb5_2_gambling_chk_a10___0,Gambling: Ever spent money (None of the above),healthbehaviours
+gambling_lottery_when,haven_labelled,Gambling: Last spent money (National Lottery games),survey_mod231_main_dr24,awb5_2_gambling_2_r10,Gambling: Last spent money (National Lottery games),healthbehaviours
+gambling_slot_when,haven_labelled,Gambling: Last spent money (Slot machines),survey_mod231_main_dr24,awb5_2_gambling_6_r10,Gambling: Last spent money (Slot machines),healthbehaviours
+gambling_bet_private_when,haven_labelled,Gambling: Last spent money (Private bets for money),survey_mod231_main_dr24,awb5_2_gambling_7_r10,Gambling: Last spent money (Private bets for money),healthbehaviours
+gambling_cards_when,haven_labelled,Gambling: Last spent money (Playing cards for money),survey_mod231_main_dr24,awb5_2_gambling_8_r10,Gambling: Last spent money (Playing cards for money),healthbehaviours
+gambling_bingo_club_when,haven_labelled,Gambling: Last spent money (Bingo at bingo club),survey_mod231_main_dr24,awb5_2_gambling_9_r10,Gambling: Last spent money (Bingo at bingo club),healthbehaviours
+gambling_bingo_other_when,haven_labelled,Gambling: Last spent money (Bingo not at a bingo club),survey_mod231_main_dr24,awb5_2_gambling_10_r10,Gambling: Last spent money (Bingo not at a bingo club),healthbehaviours
+gambling_machine_when,haven_labelled,Gambling: Last spent money (Gaming machines in betting shop),survey_mod231_main_dr24,awb5_2_gambling_11_r10,Gambling: Last spent money (Gaming machines in betting shop),healthbehaviours
+gambling_bet_shop_when,haven_labelled,Gambling: Last spent money (Placing a bet at a betting shop),survey_mod231_main_dr24,awb5_2_gambling_12_r10,Gambling: Last spent money (Placing a bet at a betting shop),healthbehaviours
+gambling_casino_when,haven_labelled,Gambling: Last spent money (Visiting a casino to play casino games),survey_mod231_main_dr24,awb5_2_gambling_13_r10,Gambling: Last spent money (Visiting a casino to play casino games),healthbehaviours
+gambling_online_when,haven_labelled,Gambling: Last spent money (Gambling websites/apps with cash prizes),survey_mod231_main_dr24,"awb5_2_gambling_14_r10,",Gambling: Last spent money (Gambling websites/apps with cash prizes),healthbehaviours
+gambling_family,haven_labelled,Has anyone in your immediate family spent money on gambling,survey_mod231_main_dr24,awb5_2_gambling_fam_a10,Has anyone in your immediate family spent money on gambling,healthbehaviours
+gaming_purchase_item,haven_labelled,Online games: Have you ever paid money to buy in-game items?,survey_mod231_main_dr24,awb5_2_online_gamb3_a5___1,Online games: Have you ever paid money to buy in-game items?,healthbehaviours
+gaming_purchase_unlock,haven_labelled,Online games: Have you ever paid money to unlock in-game items?,survey_mod231_main_dr24,awb5_2_online_gamb3_a5___2,Online games: Have you ever paid money to unlock in-game items?,healthbehaviours
+gaming_purchase_bet,haven_labelled,Online games: Have you ever bet with in-game items outside of the game?,survey_mod231_main_dr24,awb5_2_online_gamb3_a5___3,Online games: Have you ever bet with in-game items outside of the game?,healthbehaviours
+gaming_purchase_none,haven_labelled,Online games: None of the above,survey_mod231_main_dr24,awb5_2_online_gamb3_a5___4,Online games: None of the above,healthbehaviours
+carried_weapon,haven_labelled,Have you carried a knife/other weapon in past year?,survey_mod231_main_dr24,awb5_2y_knife,Have you carried a knife/other weapon in past year?,healthbehaviours
+police_stop,haven_labelled,Have you ever been stopped and questioned by the police?,survey_mod231_main_dr24,awb5_2_contactpolice_1,Have you ever been stopped and questioned by the police?,healthbehaviours
+police_caution,haven_labelled,Have you ever been given a formal warning or caution by a police officer?,survey_mod231_main_dr24,awb5_2_contactpolice_2,Have you ever been given a formal warning or caution by a police officer?,healthbehaviours
+pa_to_school,haven_labelled,How many mornings actively travel to school in past week?,survey_mod231_main_dr24,awb4_1_physical_actvty_1_a5,How many mornings actively travel to school in past week?,physicalhealth2
+pa_pe,haven_labelled,How often were you active in PE in past week?,survey_mod231_main_dr24,awb4_1_physical_actvty_2_a5,How often were you active in PE in past week?,physicalhealth2
+pa_lunch,haven_labelled,What did you normally do at lunch in past week?,survey_mod231_main_dr24,awb4_1_physical_actvty_3_a5,What did you normally do at lunch in past week?,physicalhealth2
+pa_break,haven_labelled,What did you normally do at break time in past week?,survey_mod231_main_dr24,awb4_1_physical_actvty_4_a5,What did you normally do at break time in past week?,physicalhealth2
+pa_from_school,haven_labelled,How many afternoons did you actively travel from school in past week?,survey_mod231_main_dr24,awb4_1_physical_actvty_5_a5,How many afternoons did you actively travel from school in past week?,physicalhealth2
+pa_after_school,haven_labelled,How many days did you do sports after school in past week?,survey_mod231_main_dr24,awb4_1_physical_actvty_6_a5,How many days did you do sports after school in past week?,physicalhealth2
+pa_evening,haven_labelled,How many evenings did you do sports in past week?,survey_mod231_main_dr24,awb4_1_physical_actvty_7_a5,How many evenings did you do sports in past week?,physicalhealth2
+pa_weekend,haven_labelled,How many times were you active last weekend?,survey_mod231_main_dr24,awb4_1_physical_actvty_8_a5,How many times were you active last weekend?,physicalhealth2
+pa_sick,haven_labelled,"Were you sick last week, or did anything prevent your normal physical activities?",survey_mod231_main_dr24,awb4_1_sick_a5,"Were you sick last week, or did anything prevent your normal physical activities?",physicalhealth2
+yaps_item_1,haven_labelled,How long did you watch TV outside of school?,survey_mod231_main_dr24,awb4_2_outside_schl_1_r7,How long did you watch TV outside of school?,physicalhealth2
+yaps_item_2,haven_labelled,How long did you play video games outside of school?,survey_mod231_main_dr24,awb4_2_outside_schl_2_r7,How long did you play video games outside of school?,physicalhealth2
+yaps_item_3,haven_labelled,How long did you use computers/tablets outside of school?,survey_mod231_main_dr24,awb4_2_outside_schl_3_r7,How long did you use computers/tablets outside of school?,physicalhealth2
+yaps_item_4,haven_labelled,How long did you use a mobile outside of school?,survey_mod231_main_dr24,awb4_2_outside_schl_4_r7,How long did you use a mobile outside of school?,physicalhealth2
+yaps_item_5,haven_labelled,What are your typical sedentary habits at home: typical week,survey_mod231_main_dr24,awb4_2_overall_a5,What are your typical sedentary habits at home: typical week,physicalhealth2
+sleep_time_school,haven_labelled,"On school nights, what time do you typically fall asleep",survey_mod231_main_dr24,awb4_3_times2_a5,"On school nights, what time do you typically fall asleep",physicalhealth2
+sleep_wake_school,haven_labelled,"On school days, what time do you typically wake up for the day",survey_mod231_main_dr24,awb4_3_times3_a5,"On school days, what time do you typically wake up for the day",physicalhealth2
+sleep_time,haven_labelled,"On non-school nights, what time do you typically fall asleep",survey_mod231_main_dr24,awb4_3_times4_a5,"On non-school nights, what time do you typically fall asleep",physicalhealth2
+sleep_wake,haven_labelled,"On non-school days, what time do you typically wake up for the day",survey_mod231_main_dr24,awb4_3_times5_a5,"On non-school days, what time do you typically wake up for the day",physicalhealth2
+sleep_well,haven_labelled,Do you sleep well at night?,survey_mod231_main_dr24,awb4_3_sleep_well_nght_a5,Do you sleep well at night?,physicalhealth2
+sleepy_day,haven_labelled,How likely are you to feel sleepy during the day?,survey_mod231_main_dr24,awb4_3_sleep_drngday_a5,How likely are you to feel sleepy during the day?,physicalhealth2
+rcads_item_1,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_1,How often do you feel sad or empty?,mentalhealth&wellbeing
+rcads_item_10,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_10,How often do you have problems with appetite?,mentalhealth&wellbeing
+rcads_item_11,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_11,How often do you suddenly become dizzy/faint for no reason?,mentalhealth&wellbeing
+rcads_item_12,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_12,How often do you have to do some things over and over again?,mentalhealth&wellbeing
+rcads_item_13,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_13,How often do you have no energy for things?,mentalhealth&wellbeing
+rcads_item_14,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_14,How often do you suddenly tremble/shake for no reason?,mentalhealth&wellbeing
+rcads_item_15,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_15,How often is it when you can't think clearly?,mentalhealth&wellbeing
+rcads_item_16,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_16,How often do you feel worthless?,mentalhealth&wellbeing
+rcads_item_17,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_17,How often do you think special thoughts to stop bad happening?,mentalhealth&wellbeing
+rcads_item_18,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_18,How often do you think about death?,mentalhealth&wellbeing
+rcads_item_19,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_19,How often do you feel like you don't want to move?,mentalhealth&wellbeing
+rcads_item_2,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_2,How often do you worry when you think you have done poorly at something?,mentalhealth&wellbeing
+rcads_item_20,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_20,How often do you worry about being scared for no reason?,mentalhealth&wellbeing
+rcads_item_21,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_21,How often do you feel you are tired alot?,mentalhealth&wellbeing
+rcads_item_22,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_22,How often do you feel afraid you will make a fool of yourself?,mentalhealth&wellbeing
+rcads_item_23,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_23,How often do you do something the right way to stop bad things happening?,mentalhealth&wellbeing
+rcads_item_24,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_24,How often do you feel restless?,mentalhealth&wellbeing
+rcads_item_25,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_25,How often do you worry something bad will happen to you?,mentalhealth&wellbeing
+rcads_item_3,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_3,How often do you feel afraid to be home alone?,mentalhealth&wellbeing
+rcads_item_4,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_4,How often do you feel nothing is much fun anymore?,mentalhealth&wellbeing
+rcads_item_5,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_5,How often do you worry that something awful will happen to someone in family?,mentalhealth&wellbeing
+rcads_item_6,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_6,How often do you feel afraid of being in crowded places?,mentalhealth&wellbeing
+rcads_item_7,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_7,How often do you worry what others think of you?,mentalhealth&wellbeing
+rcads_item_8,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_8,How often do you have trouble sleeping?,mentalhealth&wellbeing
+rcads_item_9,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_9,How often do you feel scared to sleep alone?,mentalhealth&wellbeing
+sdq_item_21,haven_labelled,SDQ: last 6mo: I try to be nice to other people. I care about their feelings,,,,
+sdq_item_17,haven_labelled,SDQ: last 6mo: I am constantly fidgeting or squirming,,,,
+sdq_item_7,numeric,,,,,
+sdq_item_13,haven_labelled,SDQ: last 6mo: I fight a lot.  I can make other people do what I want,,,,
+sdq_item_3,haven_labelled,"SDQ: last 6mo: I am often unhappy, down-hearted, or tearful",,,,
+sdq_item_8,numeric,,,,,
+sdq_item_18,haven_labelled,"SDQ: last 6mo: I am easily distracted, I find it difficult to concentrate",,,,
+sdq_item_4,haven_labelled,SDQ: last 6mo: I am nervous in new situations. I easily lose confidence,,,,
+sdq_item_24,haven_labelled,SDQ: last 6mo: I am kind to younger children,,,,
+sdq_item_14,haven_labelled,SDQ: last 6mo: I am often accused of lying or cheating,,,,
+sdq_item_9,haven_labelled,SDQ: last 6mo: Other children or young people pick on me or bully me,,,,
+sdq_item_16,haven_labelled,"SDQ: last 6mo: I am restless, I cannot stay still for long",,,,
+sdq_item_25,haven_labelled,"SDQ: last 6mo: I often volunteer to help others (parents, teachers, children)",,,,
+sdq_item_19,numeric,,,,,
+sdq_item_15,haven_labelled,"SDQ: last 6mo: I take things that are not mine from home, school or elsewhere",,,,
+sdq_item_10,haven_labelled,SDQ: last 6mo: I get on better with adults than with people my own age,,,,
+sdq_item_5,haven_labelled,"SDQ: last 6mo: I have many fears, I am easily scared",,,,
+sdq_item_20,numeric,,,,,
+sdq_item_1,haven_labelled,"SDQ: last 6mo: I get a lot of headaches, stomach-aches, or sickness",,,,
+sdq_item_22,haven_labelled,"SDQ: last 6mo: I usually share with others (food, games, pens etc.)",,,,
+sdq_item_11,haven_labelled,SDQ: last 6mo: I get very angry and often lose my temper,,,,
+sdq_item_6,haven_labelled,SDQ: last 6mo: I am usually on my own. I generally play alone or keep to myself,,,,
+sdq_item_12,numeric,,,,,
+sdq_item_2,haven_labelled,SDQ: last 6mo: I worry a lot,,,,
+sdq_item_23,haven_labelled,"SDQ: last 6mo: I am helpful if someone is hurt, upset, or feeling ill",,,,
+swemwbs_item_1,haven_labelled,Have you felt optimistic about the future over past 2 weeks?,,,,
+swemwbs_item_2,haven_labelled,Have you felt useful over past 2 weeks?,,,,
+swemwbs_item_3,haven_labelled,Have you felt relaxed over the past 2 weeks?,,,,
+swemwbs_item_4,haven_labelled,Have you dealt with problems well over the past 2 weeks?,,,,
+swemwbs_item_5,haven_labelled,Have you been thinking clearly over the past 2 weeks?,,,,
+swemwbs_item_6,haven_labelled,Have you felt close to others over the past 2 weeks?,,,,
+swemwbs_item_7,haven_labelled,Have you made your own mind up about things over past 2 weeks?,,,,
+self_efficacy,haven_labelled,When you find something hard can you work out what to do?,,,,
+loneliness_ucla3_item_1,haven_labelled,How often do you feel that you lack friendship?,,,,
+loneliness_ucla3_item_2,haven_labelled,How often do you feel left out?,,,,
+loneliness_ucla3_item_3,haven_labelled,How often do you feel isolated from others?,,,,
+loneliness_ons_item,haven_labelled,How often do you feel alone?,,,,
+trust,haven_labelled,Would you say most people can be trusted/you can't be too careful?,,,,
+helpseek_ghsq_item_1a,haven_labelled,How likely would you seek help from partner?,,,,
+helpseek_ghsq_item_1i,haven_labelled,How likely is it you would not seek help from anyone?,,,,
+helpseek_ghsq_item_1b,haven_labelled,How likely would you seek help from a friend?,,,,
+helpseek_ghsq_item_1c,haven_labelled,How likely would you seek help from a parent/carer?,,,,
+helpseek_ghsq_item_1d,haven_labelled,How likely would you seek help from another relative/family member?,,,,
+helpseek_ghsq_item_1e,haven_labelled,How likely would you seek help from a mental health professional?,,,,
+helpseek_ghsq_item_1f,haven_labelled,How likely would you seek help from a phone helpline?,,,,
+helpseek_ghsq_item_1g,haven_labelled,How likely would you seek help from a doctor/GP?,,,,
+helpseek_ghsq_item_1h,haven_labelled,How likely would you seek help from a religious leader?,,,,
+helpseek_teacher,haven_labelled,How likely would you seek help from a teacher/other school staff?,,,,
+helpseek_ghsq_item_1j_binary,haven_labelled,Would you seek help from another not listed above?,,,,
+self_harm,haven_labelled,"In the past year, have you hurt yourself on purpose in any way?",,,,
+brs_item_1,haven_labelled,I tend to bounce back quickly after hard times,,,,
+brs_item_2,numeric,,,,,
+brs_item_3,haven_labelled,It does not take me long to recover from a stressful event,,,,
+brs_item_4,numeric,,,,,
+brs_item_5,haven_labelled,I usually come through difficult times with little trouble,,,,
+brs_item_6,numeric,,,,,
+pliks_heard_voices,haven_labelled,Have you ever heard voices that others cannot hear?,,,,
+pliks_heard_voices_distress,haven_labelled,How upsetting if you heard voices others couldn't hear?,,,,
+pliks_heard_voices_frequency,haven_labelled,How often have you heard voices that other people couldnt hear in the last year?,,,,
+pliks_seen_things,haven_labelled,Have you ever seen something others cannot see?,,,,
+pliks_seen_things_distress,haven_labelled,How upsetting if you have seen something other couldn't see?,,,,
+pliks_seen_things_frequency,haven_labelled,How often have you seen something others couldn't see in past year?,,,,
+pliks_spied_on,haven_labelled,Have you ever thought you was being followed/spied on?,,,,
+pliks_spied_on_distress,haven_labelled,How upsetting if you thought you were being followed/spied on?,,,,
+pliks_spied_on_frequency,haven_labelled,How often have you thought you were being followed or spied on in the past year?,,,,
+pliks_spied_on_plot,haven_labelled,Ever believed people following you/spying on you as part of a plot,,,,
+pliks_thoughts_read,haven_labelled,Have other people ever read your thoughts?,,,,
+pliks_thoughts_read_distress,haven_labelled,"At its worst, how upsetting did you find people reading your thoughts?",,,,
+pliks_thoughts_read_frequency,haven_labelled,How often have you believed that other people can read your thoughts in the past,,,,
+pliks_thoughts_read_powers,haven_labelled,Do you think people use special powers to read your thoughts?,,,,
+pliks_tv_messages,haven_labelled,Have you thought you were being sent messages through TV arranged just for you?,,,,
+pliks_tv_messages_distress,haven_labelled,How upsetting if you believed you were being sent special messages through TV,,,,
+pliks_tv_messages_frequency,haven_labelled,How often have you been sent special messages through TV in the past year?,,,,
+pliks_under_control,haven_labelled,Have you ever felt under control of a special power?,,,,
+pliks_under_control_distress,haven_labelled,How upsetting if you felt under control of a special power?,,,,
+pliks_under_control_frequency,haven_labelled,How often you thought you were under control of a special power in past year,,,,
+pliks_under_control_who,haven_labelled,Who did you think was controlling you (at any time in the past)?,,,,
+pliks_under_control_no_will,haven_labelled,"Did it control what you were doing or thinking, no will of your own",,,,
+pliks_special_powers,haven_labelled,Have you ever felt like you have special powers?,,,,
+pliks_special_powers_frequency,haven_labelled,How often thought you were very special/have special powers past year,,,,
+env_greenspace_w,haven_labelled,How often do you visit parks and green spaces? During the winter months,,,,
+env_greenspace_s,haven_labelled,How often do you visit parks and green spaces? During the spring/summer months,,,,
+env_air_quality,haven_labelled,What do you think about the air quality in Bradford?,,,,
+env_future,haven_labelled,How pos/neg do you feel about the future of the environment?,,,,
+school_enjoy,haven_labelled,School: I enjoy school,,,,
+school_trust,haven_labelled,School: There is an adult at school I can talk to if something is worrying me,,,,
+school_bullying,haven_labelled,Is bullying a problem at your school?,,,,
+school_safe,haven_labelled,I feel safe when I am at school,,,,
+school_pressure_1,haven_labelled,School pressure: Competition with other people for grades is intense,,,,
+school_pressure_2,haven_labelled,School pressure: If I dont do well in school my family will be disappointed,,,,
+school_pressure_3,haven_labelled,School pressure: My teachers put too much pressure on me to do well in school,,,,
+school_pressure_4,haven_labelled,School pressure: Im worried about progressing in the future,,,,
+school_pressure_5,haven_labelled,"School pressure: If I dont do well in school, Ill be a failure",,,,
+school_pressure_6,haven_labelled,School pressure: Often feel stressed because of pressure to do well in school,,,,
+school_pressure_7,haven_labelled,"School pressure: I worry about doing well in tests, exams and assessments",,,,
+friends_offline,haven_labelled,How many in-person friends do you have?,,,,
+friends_online,haven_labelled,How many online friends do you have?,,,,
+friends_close,haven_labelled,Do you have any close friends?,,,,
+morality_1,haven_labelled,Do people your age: Start a fight with someone?,,,,
+morality_2,haven_labelled,"Do people your age: Write things/spray paint on a building, fence, train",,,,
+morality_3,haven_labelled,Do people your age: Take something from a shop without paying for it,,,,
+morality_4,haven_labelled,Do people your age: Copy/download music/games/films without paying,,,,
+bullying_1,haven_labelled,How often have you taken part in bullying somebody at school?,,,,
+bullying_2,haven_labelled,How often have you been bullied at school in the past couple of months?,,,,
+bullying_3,haven_labelled,How often have you been bullied online?,,,,
+bullying_4,haven_labelled,"In the past couple of months, how often have you taken part in online bullying?",,,,
+discrim_discourage,haven_labelled,Have you ever been discouraged from joining a club/group?,,,,
+discrim_excluded,haven_labelled,Have others your age not included you in their activities?,,,,
+discrim_expected,haven_labelled,Have people expected less of you than others your age?,,,,
+discrim_english,haven_labelled,Have people assumed your English was poor?,,,,
+discrim_police,haven_labelled,Have you ever been hassled by police?,,,,
+discrim_staff,haven_labelled,Have you ever been hassled by staff in a shop?,,,,
+discrim_insults,haven_labelled,Have you ever been called insulting names?,,,,
+discrim_service,haven_labelled,Have you ever received poor service in a shop/restaurant?,,,,
+discrim_intelligent,haven_labelled,Have people ever acted as though you were not intelligent?,,,,
+discrim_afraid,haven_labelled,Have people ever acted like they're afraid of you?,,,,
+discrim_threatened,haven_labelled,Have you ever been threatened?,,,,
+sm_use_Facebook,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Facebook),,,,
+sm_use_Instagram,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Instagram),,,,
+sm_use_X,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=X (formerly,,,,
+sm_use_TikTok,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=TikTok),,,,
+sm_use_Snapchat,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Snapchat),,,,
+sm_use_other,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Other),,,,
+sm_time_weekday,haven_labelled,How many hours spent using social media during term time?,,,,
+sm_time_weekend,haven_labelled,How many hrs do you spend using social media at weekend in term time?,,,,
+sm_positive_1,haven_labelled,Has connecting with friends been a positive experience of social media?,,,,
+sm_positive_2,haven_labelled,Has viewing enjoyable content been a positive experience of social media?,,,,
+sm_positive_3,haven_labelled,Has learning new things  been a positive experience of social media?,,,,
+sm_positive_4,haven_labelled,Has accessing support been a positive experience of social media?,,,,
+sm_positive_5,haven_labelled,Has engaging positively with issues been a positive experience of social media?,,,,
+sm_positive_6,haven_labelled,Has there been any other positive experience of social media?,,,,
+sm_negative_1,haven_labelled,Has people being unpleasant about you been negative experience of social media?,,,,
+sm_negative_2,haven_labelled,Has people bullying you been a negative experience of social media?,,,,
+sm_negative_3,haven_labelled,Has upsetting content been a negative experience of social media?,,,,
+sm_negative_4,haven_labelled,Has sexually explicit images been a negative experience of social media?,,,,
+sm_negative_5,haven_labelled,Has regrettably posting something online been a negative experience of social media?,,,,
+sm_negative_6,haven_labelled,You havent experience any negative experience of social media,,,,
+sm_negative_7,haven_labelled,You've had a negative experience of social media for another reason,,,,
+sm_experience,haven_labelled,Has your experience of using social media been mostly positive or negative?,,,,
+internet_access,haven_labelled,Do you have access to the internet at home?,,,,
+internet_quality,haven_labelled,How good is your internet at home?,,,,
+age_m_heightweight,numeric,Age in months at measurement,,,,
+height,numeric,Height (cm),,,,
+weight,numeric,Weight (kg),,,,
+bmi,numeric,BMI (kg/m2),,,,
+age_m_skinfold,numeric,Age in months at measurement,,,,
+sk_tricep,numeric,Triceps skinfold (mm),,,,
+sk_subscap,numeric,Subscapular skinfold (mm),,,,
+age_m_bloodpressure,numeric,Age in months at measurement,,,,
+bp_sys_1,numeric,Systolic reading 1 (mm Hg),,,,
+bp_dia_1,numeric,Diastolic reading 1 (mm Hg),,,,
+bp_sys_2,numeric,Systolic reading 2 (mm Hg),,,,
+bp_dia_2,numeric,Diastolic reading 2 (mm Hg),,,,
+age_m_bioimpedance,numeric,Age (months) at measurement,,,,
+model,factor,,,,,
+clothes_weight,numeric,Estimated weight of clothes (kg),,,,
+fatp,numeric,Total fat %,,,,
+fatm,numeric,Fat mass (kg),,,,
+pmm,numeric,Predicted muscle mass (kg),,,,
+ffm,numeric,Fat free mass (kg),,,,
+tbw,numeric,Total body water (%),,,,
+imp,numeric,Impedance (ohms),,,,
+edeqs_complete,logical,,,,,
+edeqs_total,numeric,,,,,
+rcads_dep_complete,logical,,,,,
+rcads_anx_complete,logical,,,,,
+rcads_dep_total,numeric,,,,,
+rcads_anx_total,numeric,,,,,
+rcads_total,numeric,,,,,
+swemwbs_complete,logical,,,,,
+swemwbs_total,numeric,,,,,
+sdq_con_complete,logical,,,,,
+sdq_emo_complete,logical,,,,,
+sdq_hyp_complete,logical,,,,,
+sdq_pee_complete,logical,,,,,
+sdq_pro_complete,logical,,,,,
+sdq_con_total,numeric,,,,,
+sdq_emo_total,numeric,,,,,
+sdq_hyp_total,numeric,,,,,
+sdq_pee_total,numeric,,,,,
+sdq_pro_total,numeric,,,,,
+sdq_ext_total,numeric,,,,,
+sdq_int_total,numeric,,,,,
+sdq_dif_total,numeric,,,,,
+ucla3_complete,logical,,,,,
+ucla3_total,numeric,,,,,
+ucla4_complete,logical,,,,,
+ucla4_total,numeric,,,,,
+brs_complete,logical,,,,,
+brs_total,numeric,,,,,
+yaps_complete,logical,,,,,
+yaps_total,numeric,,,,,
+fam_birth_place,factor,,,,,
+ethnicity,factor,,,,,demographics
+lang_home,factor,,,,,demographics
+lang_number,factor,,,,,demographics
+discrim_discourage_reason,factor,,,,,
+discrim_excluded_reason,factor,,,,,
+discrim_expected_reason,factor,,,,,
+discrim_english_reason,factor,,,,,
+discrim_police_reason,factor,,,,,
+discrim_staff_reason,factor,,,,,
+discrim_insults_reason,factor,,,,,
+discrim_service_reason,factor,,,,,
+discrim_intelligent_reason,factor,,,,,
+discrim_afraid_reason,factor,,,,,
+discrim_threatened_reason,factor,,,,,
