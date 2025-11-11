@@ -209,210 +209,210 @@ rcads_item_6,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_6,How often do yo
 rcads_item_7,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_7,How often do you worry what others think of you?,mentalhealth&wellbeing
 rcads_item_8,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_8,How often do you have trouble sleeping?,mentalhealth&wellbeing
 rcads_item_9,numeric,,survey_mod232_main_dr24,awb2_1_illhealth_9,How often do you feel scared to sleep alone?,mentalhealth&wellbeing
-sdq_item_21,haven_labelled,SDQ: last 6mo: I try to be nice to other people. I care about their feelings,,,,
-sdq_item_17,haven_labelled,SDQ: last 6mo: I am constantly fidgeting or squirming,,,,
-sdq_item_7,numeric,,,,,
-sdq_item_13,haven_labelled,SDQ: last 6mo: I fight a lot.  I can make other people do what I want,,,,
-sdq_item_3,haven_labelled,"SDQ: last 6mo: I am often unhappy, down-hearted, or tearful",,,,
-sdq_item_8,numeric,,,,,
-sdq_item_18,haven_labelled,"SDQ: last 6mo: I am easily distracted, I find it difficult to concentrate",,,,
-sdq_item_4,haven_labelled,SDQ: last 6mo: I am nervous in new situations. I easily lose confidence,,,,
-sdq_item_24,haven_labelled,SDQ: last 6mo: I am kind to younger children,,,,
-sdq_item_14,haven_labelled,SDQ: last 6mo: I am often accused of lying or cheating,,,,
-sdq_item_9,haven_labelled,SDQ: last 6mo: Other children or young people pick on me or bully me,,,,
-sdq_item_16,haven_labelled,"SDQ: last 6mo: I am restless, I cannot stay still for long",,,,
-sdq_item_25,haven_labelled,"SDQ: last 6mo: I often volunteer to help others (parents, teachers, children)",,,,
-sdq_item_19,numeric,,,,,
-sdq_item_15,haven_labelled,"SDQ: last 6mo: I take things that are not mine from home, school or elsewhere",,,,
-sdq_item_10,haven_labelled,SDQ: last 6mo: I get on better with adults than with people my own age,,,,
-sdq_item_5,haven_labelled,"SDQ: last 6mo: I have many fears, I am easily scared",,,,
-sdq_item_20,numeric,,,,,
-sdq_item_1,haven_labelled,"SDQ: last 6mo: I get a lot of headaches, stomach-aches, or sickness",,,,
-sdq_item_22,haven_labelled,"SDQ: last 6mo: I usually share with others (food, games, pens etc.)",,,,
-sdq_item_11,haven_labelled,SDQ: last 6mo: I get very angry and often lose my temper,,,,
-sdq_item_6,haven_labelled,SDQ: last 6mo: I am usually on my own. I generally play alone or keep to myself,,,,
-sdq_item_12,numeric,,,,,
-sdq_item_2,haven_labelled,SDQ: last 6mo: I worry a lot,,,,
-sdq_item_23,haven_labelled,"SDQ: last 6mo: I am helpful if someone is hurt, upset, or feeling ill",,,,
-swemwbs_item_1,haven_labelled,Have you felt optimistic about the future over past 2 weeks?,,,,
-swemwbs_item_2,haven_labelled,Have you felt useful over past 2 weeks?,,,,
-swemwbs_item_3,haven_labelled,Have you felt relaxed over the past 2 weeks?,,,,
-swemwbs_item_4,haven_labelled,Have you dealt with problems well over the past 2 weeks?,,,,
-swemwbs_item_5,haven_labelled,Have you been thinking clearly over the past 2 weeks?,,,,
-swemwbs_item_6,haven_labelled,Have you felt close to others over the past 2 weeks?,,,,
-swemwbs_item_7,haven_labelled,Have you made your own mind up about things over past 2 weeks?,,,,
-self_efficacy,haven_labelled,When you find something hard can you work out what to do?,,,,
-loneliness_ucla3_item_1,haven_labelled,How often do you feel that you lack friendship?,,,,
-loneliness_ucla3_item_2,haven_labelled,How often do you feel left out?,,,,
-loneliness_ucla3_item_3,haven_labelled,How often do you feel isolated from others?,,,,
-loneliness_ons_item,haven_labelled,How often do you feel alone?,,,,
-trust,haven_labelled,Would you say most people can be trusted/you can't be too careful?,,,,
-helpseek_ghsq_item_1a,haven_labelled,How likely would you seek help from partner?,,,,
-helpseek_ghsq_item_1i,haven_labelled,How likely is it you would not seek help from anyone?,,,,
-helpseek_ghsq_item_1b,haven_labelled,How likely would you seek help from a friend?,,,,
-helpseek_ghsq_item_1c,haven_labelled,How likely would you seek help from a parent/carer?,,,,
-helpseek_ghsq_item_1d,haven_labelled,How likely would you seek help from another relative/family member?,,,,
-helpseek_ghsq_item_1e,haven_labelled,How likely would you seek help from a mental health professional?,,,,
-helpseek_ghsq_item_1f,haven_labelled,How likely would you seek help from a phone helpline?,,,,
-helpseek_ghsq_item_1g,haven_labelled,How likely would you seek help from a doctor/GP?,,,,
-helpseek_ghsq_item_1h,haven_labelled,How likely would you seek help from a religious leader?,,,,
-helpseek_teacher,haven_labelled,How likely would you seek help from a teacher/other school staff?,,,,
-helpseek_ghsq_item_1j_binary,haven_labelled,Would you seek help from another not listed above?,,,,
-self_harm,haven_labelled,"In the past year, have you hurt yourself on purpose in any way?",,,,
-brs_item_1,haven_labelled,I tend to bounce back quickly after hard times,,,,
-brs_item_2,numeric,,,,,
-brs_item_3,haven_labelled,It does not take me long to recover from a stressful event,,,,
-brs_item_4,numeric,,,,,
-brs_item_5,haven_labelled,I usually come through difficult times with little trouble,,,,
-brs_item_6,numeric,,,,,
-pliks_heard_voices,haven_labelled,Have you ever heard voices that others cannot hear?,,,,
-pliks_heard_voices_distress,haven_labelled,How upsetting if you heard voices others couldn't hear?,,,,
-pliks_heard_voices_frequency,haven_labelled,How often have you heard voices that other people couldnt hear in the last year?,,,,
-pliks_seen_things,haven_labelled,Have you ever seen something others cannot see?,,,,
-pliks_seen_things_distress,haven_labelled,How upsetting if you have seen something other couldn't see?,,,,
-pliks_seen_things_frequency,haven_labelled,How often have you seen something others couldn't see in past year?,,,,
-pliks_spied_on,haven_labelled,Have you ever thought you was being followed/spied on?,,,,
-pliks_spied_on_distress,haven_labelled,How upsetting if you thought you were being followed/spied on?,,,,
-pliks_spied_on_frequency,haven_labelled,How often have you thought you were being followed or spied on in the past year?,,,,
-pliks_spied_on_plot,haven_labelled,Ever believed people following you/spying on you as part of a plot,,,,
-pliks_thoughts_read,haven_labelled,Have other people ever read your thoughts?,,,,
-pliks_thoughts_read_distress,haven_labelled,"At its worst, how upsetting did you find people reading your thoughts?",,,,
-pliks_thoughts_read_frequency,haven_labelled,How often have you believed that other people can read your thoughts in the past,,,,
-pliks_thoughts_read_powers,haven_labelled,Do you think people use special powers to read your thoughts?,,,,
-pliks_tv_messages,haven_labelled,Have you thought you were being sent messages through TV arranged just for you?,,,,
-pliks_tv_messages_distress,haven_labelled,How upsetting if you believed you were being sent special messages through TV,,,,
-pliks_tv_messages_frequency,haven_labelled,How often have you been sent special messages through TV in the past year?,,,,
-pliks_under_control,haven_labelled,Have you ever felt under control of a special power?,,,,
-pliks_under_control_distress,haven_labelled,How upsetting if you felt under control of a special power?,,,,
-pliks_under_control_frequency,haven_labelled,How often you thought you were under control of a special power in past year,,,,
-pliks_under_control_who,haven_labelled,Who did you think was controlling you (at any time in the past)?,,,,
-pliks_under_control_no_will,haven_labelled,"Did it control what you were doing or thinking, no will of your own",,,,
-pliks_special_powers,haven_labelled,Have you ever felt like you have special powers?,,,,
-pliks_special_powers_frequency,haven_labelled,How often thought you were very special/have special powers past year,,,,
-env_greenspace_w,haven_labelled,How often do you visit parks and green spaces? During the winter months,,,,
-env_greenspace_s,haven_labelled,How often do you visit parks and green spaces? During the spring/summer months,,,,
-env_air_quality,haven_labelled,What do you think about the air quality in Bradford?,,,,
-env_future,haven_labelled,How pos/neg do you feel about the future of the environment?,,,,
-school_enjoy,haven_labelled,School: I enjoy school,,,,
-school_trust,haven_labelled,School: There is an adult at school I can talk to if something is worrying me,,,,
-school_bullying,haven_labelled,Is bullying a problem at your school?,,,,
-school_safe,haven_labelled,I feel safe when I am at school,,,,
-school_pressure_1,haven_labelled,School pressure: Competition with other people for grades is intense,,,,
-school_pressure_2,haven_labelled,School pressure: If I dont do well in school my family will be disappointed,,,,
-school_pressure_3,haven_labelled,School pressure: My teachers put too much pressure on me to do well in school,,,,
-school_pressure_4,haven_labelled,School pressure: Im worried about progressing in the future,,,,
-school_pressure_5,haven_labelled,"School pressure: If I dont do well in school, Ill be a failure",,,,
-school_pressure_6,haven_labelled,School pressure: Often feel stressed because of pressure to do well in school,,,,
-school_pressure_7,haven_labelled,"School pressure: I worry about doing well in tests, exams and assessments",,,,
-friends_offline,haven_labelled,How many in-person friends do you have?,,,,
-friends_online,haven_labelled,How many online friends do you have?,,,,
-friends_close,haven_labelled,Do you have any close friends?,,,,
-morality_1,haven_labelled,Do people your age: Start a fight with someone?,,,,
-morality_2,haven_labelled,"Do people your age: Write things/spray paint on a building, fence, train",,,,
-morality_3,haven_labelled,Do people your age: Take something from a shop without paying for it,,,,
-morality_4,haven_labelled,Do people your age: Copy/download music/games/films without paying,,,,
-bullying_1,haven_labelled,How often have you taken part in bullying somebody at school?,,,,
-bullying_2,haven_labelled,How often have you been bullied at school in the past couple of months?,,,,
-bullying_3,haven_labelled,How often have you been bullied online?,,,,
-bullying_4,haven_labelled,"In the past couple of months, how often have you taken part in online bullying?",,,,
-discrim_discourage,haven_labelled,Have you ever been discouraged from joining a club/group?,,,,
-discrim_excluded,haven_labelled,Have others your age not included you in their activities?,,,,
-discrim_expected,haven_labelled,Have people expected less of you than others your age?,,,,
-discrim_english,haven_labelled,Have people assumed your English was poor?,,,,
-discrim_police,haven_labelled,Have you ever been hassled by police?,,,,
-discrim_staff,haven_labelled,Have you ever been hassled by staff in a shop?,,,,
-discrim_insults,haven_labelled,Have you ever been called insulting names?,,,,
-discrim_service,haven_labelled,Have you ever received poor service in a shop/restaurant?,,,,
-discrim_intelligent,haven_labelled,Have people ever acted as though you were not intelligent?,,,,
-discrim_afraid,haven_labelled,Have people ever acted like they're afraid of you?,,,,
-discrim_threatened,haven_labelled,Have you ever been threatened?,,,,
-sm_use_Facebook,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Facebook),,,,
-sm_use_Instagram,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Instagram),,,,
-sm_use_X,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=X (formerly,,,,
-sm_use_TikTok,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=TikTok),,,,
-sm_use_Snapchat,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Snapchat),,,,
-sm_use_other,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Other),,,,
-sm_time_weekday,haven_labelled,How many hours spent using social media during term time?,,,,
-sm_time_weekend,haven_labelled,How many hrs do you spend using social media at weekend in term time?,,,,
-sm_positive_1,haven_labelled,Has connecting with friends been a positive experience of social media?,,,,
-sm_positive_2,haven_labelled,Has viewing enjoyable content been a positive experience of social media?,,,,
-sm_positive_3,haven_labelled,Has learning new things  been a positive experience of social media?,,,,
-sm_positive_4,haven_labelled,Has accessing support been a positive experience of social media?,,,,
-sm_positive_5,haven_labelled,Has engaging positively with issues been a positive experience of social media?,,,,
-sm_positive_6,haven_labelled,Has there been any other positive experience of social media?,,,,
-sm_negative_1,haven_labelled,Has people being unpleasant about you been negative experience of social media?,,,,
-sm_negative_2,haven_labelled,Has people bullying you been a negative experience of social media?,,,,
-sm_negative_3,haven_labelled,Has upsetting content been a negative experience of social media?,,,,
-sm_negative_4,haven_labelled,Has sexually explicit images been a negative experience of social media?,,,,
-sm_negative_5,haven_labelled,Has regrettably posting something online been a negative experience of social media?,,,,
-sm_negative_6,haven_labelled,You havent experience any negative experience of social media,,,,
-sm_negative_7,haven_labelled,You've had a negative experience of social media for another reason,,,,
-sm_experience,haven_labelled,Has your experience of using social media been mostly positive or negative?,,,,
-internet_access,haven_labelled,Do you have access to the internet at home?,,,,
-internet_quality,haven_labelled,How good is your internet at home?,,,,
-age_m_heightweight,numeric,Age in months at measurement,,,,
-height,numeric,Height (cm),,,,
-weight,numeric,Weight (kg),,,,
-bmi,numeric,BMI (kg/m2),,,,
-age_m_skinfold,numeric,Age in months at measurement,,,,
-sk_tricep,numeric,Triceps skinfold (mm),,,,
-sk_subscap,numeric,Subscapular skinfold (mm),,,,
-age_m_bloodpressure,numeric,Age in months at measurement,,,,
-bp_sys_1,numeric,Systolic reading 1 (mm Hg),,,,
-bp_dia_1,numeric,Diastolic reading 1 (mm Hg),,,,
-bp_sys_2,numeric,Systolic reading 2 (mm Hg),,,,
-bp_dia_2,numeric,Diastolic reading 2 (mm Hg),,,,
-age_m_bioimpedance,numeric,Age (months) at measurement,,,,
-model,factor,,,,,
-clothes_weight,numeric,Estimated weight of clothes (kg),,,,
-fatp,numeric,Total fat %,,,,
-fatm,numeric,Fat mass (kg),,,,
-pmm,numeric,Predicted muscle mass (kg),,,,
-ffm,numeric,Fat free mass (kg),,,,
-tbw,numeric,Total body water (%),,,,
-imp,numeric,Impedance (ohms),,,,
-edeqs_complete,logical,,,,,
-edeqs_total,numeric,,,,,
-rcads_dep_complete,logical,,,,,
-rcads_anx_complete,logical,,,,,
-rcads_dep_total,numeric,,,,,
-rcads_anx_total,numeric,,,,,
-rcads_total,numeric,,,,,
-swemwbs_complete,logical,,,,,
-swemwbs_total,numeric,,,,,
-sdq_con_complete,logical,,,,,
-sdq_emo_complete,logical,,,,,
-sdq_hyp_complete,logical,,,,,
-sdq_pee_complete,logical,,,,,
-sdq_pro_complete,logical,,,,,
-sdq_con_total,numeric,,,,,
-sdq_emo_total,numeric,,,,,
-sdq_hyp_total,numeric,,,,,
-sdq_pee_total,numeric,,,,,
-sdq_pro_total,numeric,,,,,
-sdq_ext_total,numeric,,,,,
-sdq_int_total,numeric,,,,,
-sdq_dif_total,numeric,,,,,
-ucla3_complete,logical,,,,,
-ucla3_total,numeric,,,,,
-ucla4_complete,logical,,,,,
-ucla4_total,numeric,,,,,
-brs_complete,logical,,,,,
-brs_total,numeric,,,,,
-yaps_complete,logical,,,,,
-yaps_total,numeric,,,,,
-fam_birth_place,factor,,,,,
-ethnicity,factor,,,,,demographics
+sdq_item_21,haven_labelled,SDQ: last 6mo: I try to be nice to other people. I care about their feelings,survey_mod232_main_dr24,awb2_1_sdq_1_a10,SDQ: last 6mo: I try to be nice to other people. I care about their feelings,mentalhealth&wellbeing
+sdq_item_17,haven_labelled,SDQ: last 6mo: I am constantly fidgeting or squirming,survey_mod232_main_dr24,awb2_1_sdq_10_a10,SDQ: last 6mo: I am constantly fidgeting or squirming,mentalhealth&wellbeing
+sdq_item_7,numeric,,survey_mod232_main_dr24,awb2_1_sdq_11_a10,SDQ: last 6mo: I have one good friend or more,mentalhealth&wellbeing
+sdq_item_13,haven_labelled,SDQ: last 6mo: I fight a lot.  I can make other people do what I want,survey_mod232_main_dr24,awb2_1_sdq_12_a10,SDQ: last 6mo: I fight a lot. I can make other people do what I want,mentalhealth&wellbeing
+sdq_item_3,haven_labelled,"SDQ: last 6mo: I am often unhappy, down-hearted, or tearful",survey_mod232_main_dr24,awb2_1_sdq_13_a10,"SDQ: last 6mo: I am often unhappy, down-hearted, or tearful",mentalhealth&wellbeing
+sdq_item_8,numeric,,survey_mod232_main_dr24,awb2_1_sdq_14_a10,SDQ: last 6mo: Other people my age generally like me,mentalhealth&wellbeing
+sdq_item_18,haven_labelled,"SDQ: last 6mo: I am easily distracted, I find it difficult to concentrate",survey_mod232_main_dr24,awb2_1_sdq_15_a10,"SDQ: last 6mo: I am easily distracted, I find it difficult to concentrate",mentalhealth&wellbeing
+sdq_item_4,haven_labelled,SDQ: last 6mo: I am nervous in new situations. I easily lose confidence,survey_mod232_main_dr24,awb2_1_sdq_16_a10,SDQ: last 6mo: I am nervous in new situations. I easily lose confidence,mentalhealth&wellbeing
+sdq_item_24,haven_labelled,SDQ: last 6mo: I am kind to younger children,survey_mod232_main_dr24,awb2_1_sdq_17_a10,SDQ: last 6mo: I am kind to younger children,mentalhealth&wellbeing
+sdq_item_14,haven_labelled,SDQ: last 6mo: I am often accused of lying or cheating,survey_mod232_main_dr24,awb2_1_sdq_18_a10,SDQ: last 6mo: I am often accused of lying or cheating,mentalhealth&wellbeing
+sdq_item_9,haven_labelled,SDQ: last 6mo: Other children or young people pick on me or bully me,survey_mod232_main_dr24,awb2_1_sdq_19_a10,SDQ: last 6mo: Other children or young people pick on me or bully me,mentalhealth&wellbeing
+sdq_item_16,haven_labelled,"SDQ: last 6mo: I am restless, I cannot stay still for long",survey_mod232_main_dr24,awb2_1_sdq_2_a10,"SDQ: last 6mo: I am restless, I cannot stay still for long",mentalhealth&wellbeing
+sdq_item_25,haven_labelled,"SDQ: last 6mo: I often volunteer to help others (parents, teachers, children)",survey_mod232_main_dr24,awb2_1_sdq_20_a10,"SDQ: last 6mo: I often volunteer to help others (parents, teachers, children)",mentalhealth&wellbeing
+sdq_item_19,numeric,,survey_mod232_main_dr24,awb2_1_sdq_21_a10,SDQ: last 6mo: I think before I do things,mentalhealth&wellbeing
+sdq_item_15,haven_labelled,"SDQ: last 6mo: I take things that are not mine from home, school or elsewhere",survey_mod232_main_dr24,awb2_1_sdq_22_a10,"SDQ: last 6mo: I take things that are not mine from home, school or elsewhere",mentalhealth&wellbeing
+sdq_item_10,haven_labelled,SDQ: last 6mo: I get on better with adults than with people my own age,survey_mod232_main_dr24,awb2_1_sdq_23_a10,SDQ: last 6mo: I get on better with adults than with people my own age,mentalhealth&wellbeing
+sdq_item_5,haven_labelled,"SDQ: last 6mo: I have many fears, I am easily scared",survey_mod232_main_dr24,awb2_1_sdq_24_a10,"SDQ: last 6mo: I have many fears, I am easily scared",mentalhealth&wellbeing
+sdq_item_20,numeric,,survey_mod232_main_dr24,awb2_1_sdq_25_a10,SDQ: last 6mo: I finish the work I'm doing. My attention is good,mentalhealth&wellbeing
+sdq_item_1,haven_labelled,"SDQ: last 6mo: I get a lot of headaches, stomach-aches, or sickness",survey_mod232_main_dr24,awb2_1_sdq_3_a10,"SDQ: last 6mo: I get a lot of headaches, stomach-aches, or sickness",mentalhealth&wellbeing
+sdq_item_22,haven_labelled,"SDQ: last 6mo: I usually share with others (food, games, pens etc.)",survey_mod232_main_dr24,awb2_1_sdq_4_a10,"SDQ: last 6mo: I usually share with others (food, games, pens etc.)",mentalhealth&wellbeing
+sdq_item_11,haven_labelled,SDQ: last 6mo: I get very angry and often lose my temper,survey_mod232_main_dr24,awb2_1_sdq_5_a10,SDQ: last 6mo: I get very angry and often lose my temper,mentalhealth&wellbeing
+sdq_item_6,haven_labelled,SDQ: last 6mo: I am usually on my own. I generally play alone or keep to myself,survey_mod232_main_dr24,awb2_1_sdq_6_a10,SDQ: last 6mo: I am usually on my own. I generally play alone or keep to myself,mentalhealth&wellbeing
+sdq_item_12,numeric,,survey_mod232_main_dr24,awb2_1_sdq_7_a10,SDQ: last 6mo: I usually do as I am told,mentalhealth&wellbeing
+sdq_item_2,haven_labelled,SDQ: last 6mo: I worry a lot,survey_mod232_main_dr24,awb2_1_sdq_8_a10,SDQ: last 6mo: I worry a lot,mentalhealth&wellbeing
+sdq_item_23,haven_labelled,"SDQ: last 6mo: I am helpful if someone is hurt, upset, or feeling ill",survey_mod232_main_dr24,awb2_1_sdq_9_a10,"SDQ: last 6mo: I am helpful if someone is hurt, upset, or feeling ill",mentalhealth&wellbeing
+swemwbs_item_1,haven_labelled,Have you felt optimistic about the future over past 2 weeks?,survey_mod232_main_dr24,awb2_2_optmstc_1_a4,Have you felt optimistic about the future over past 2 weeks?,mentalhealth&wellbeing
+swemwbs_item_2,haven_labelled,Have you felt useful over past 2 weeks?,survey_mod232_main_dr24,awb2_2_useful_2_a4,Have you felt useful over past 2 weeks?,mentalhealth&wellbeing
+swemwbs_item_3,haven_labelled,Have you felt relaxed over the past 2 weeks?,survey_mod232_main_dr24,awb2_2_relxed_3_a4,Have you felt relaxed over the past 2 weeks?,mentalhealth&wellbeing
+swemwbs_item_4,haven_labelled,Have you dealt with problems well over the past 2 weeks?,survey_mod232_main_dr24,awb2_2_problems_4_a4,Have you dealt with problems well over the past 2 weeks?,mentalhealth&wellbeing
+swemwbs_item_5,haven_labelled,Have you been thinking clearly over the past 2 weeks?,survey_mod232_main_dr24,awb2_2_think_clr_5_a4,Have you been thinking clearly over the past 2 weeks?,mentalhealth&wellbeing
+swemwbs_item_6,haven_labelled,Have you felt close to others over the past 2 weeks?,survey_mod232_main_dr24,awb2_2_close_othrs_6_a4,Have you felt close to others over the past 2 weeks?,mentalhealth&wellbeing
+swemwbs_item_7,haven_labelled,Have you made your own mind up about things over past 2 weeks?,survey_mod232_main_dr24,awb2_2_own_mnd_7_a4,Have you made your own mind up about things over past 2 weeks?,mentalhealth&wellbeing
+self_efficacy,haven_labelled,When you find something hard can you work out what to do?,survey_mod232_main_dr24,awb2_3_self_effccy,When you find something hard can you work out what to do?,mentalhealth&wellbeing
+loneliness_ucla3_item_1,haven_labelled,How often do you feel that you lack friendship?,survey_mod232_main_dr24,awb2_4_loneliness_1,How often do you feel that you lack friendship?,mentalhealth&wellbeing
+loneliness_ucla3_item_2,haven_labelled,How often do you feel left out?,survey_mod232_main_dr24,awb2_4_loneliness_2,How often do you feel left out?,mentalhealth&wellbeing
+loneliness_ucla3_item_3,haven_labelled,How often do you feel isolated from others?,survey_mod232_main_dr24,awb2_4_loneliness_3,How often do you feel isolated from others?,mentalhealth&wellbeing
+loneliness_ons_item,haven_labelled,How often do you feel alone?,survey_mod232_main_dr24,awb2_4_loneliness_4,How often do you feel alone?,mentalhealth&wellbeing
+trust,haven_labelled,Would you say most people can be trusted/you can't be too careful?,survey_mod232_main_dr24,awb2_9_trust,Would you say most people can be trusted/you can't be too careful?,mentalhealth&wellbeing
+helpseek_ghsq_item_1a,haven_labelled,How likely would you seek help from partner?,survey_mod232_main_dr24,awb2_9_seek_hlp_ppl_1_r4,How likely would you seek help from partner?,mentalhealth&wellbeing
+helpseek_ghsq_item_1i,haven_labelled,How likely is it you would not seek help from anyone?,survey_mod232_main_dr24,awb2_9_seek_hlp_ppl_10,How likely is it you would not seek help from anyone?,mentalhealth&wellbeing
+helpseek_ghsq_item_1b,haven_labelled,How likely would you seek help from a friend?,survey_mod232_main_dr24,awb2_9_seek_hlp_ppl_2,How likely would you seek help from a friend?,mentalhealth&wellbeing
+helpseek_ghsq_item_1c,haven_labelled,How likely would you seek help from a parent/carer?,survey_mod232_main_dr24,awb2_9_seek_hlp_ppl_3,How likely would you seek help from a parent/carer?,mentalhealth&wellbeing
+helpseek_ghsq_item_1d,haven_labelled,How likely would you seek help from another relative/family member?,survey_mod232_main_dr24,awb2_9_seek_hlp_ppl_4,How likely would you seek help from another relative/family member?,mentalhealth&wellbeing
+helpseek_ghsq_item_1e,haven_labelled,How likely would you seek help from a mental health professional?,survey_mod232_main_dr24,awb2_9_seek_hlp_ppl_5,How likely would you seek help from a mental health professional?,mentalhealth&wellbeing
+helpseek_ghsq_item_1f,haven_labelled,How likely would you seek help from a phone helpline?,survey_mod232_main_dr24,awb2_9_seek_hlp_ppl_6,How likely would you seek help from a phone helpline?,mentalhealth&wellbeing
+helpseek_ghsq_item_1g,haven_labelled,How likely would you seek help from a doctor/GP?,survey_mod232_main_dr24,awb2_9_seek_hlp_ppl_7,How likely would you seek help from a doctor/GP?,mentalhealth&wellbeing
+helpseek_ghsq_item_1h,haven_labelled,How likely would you seek help from a religious leader?,survey_mod232_main_dr24,awb2_9_seek_hlp_ppl_8,How likely would you seek help from a religious leader?,mentalhealth&wellbeing
+helpseek_teacher,haven_labelled,How likely would you seek help from a teacher/other school staff?,survey_mod232_main_dr24,awb2_9_seek_hlp_ppl_9_a_4,How likely would you seek help from a teacher/other school staff?,mentalhealth&wellbeing
+helpseek_ghsq_item_1j_binary,haven_labelled,Would you seek help from another not listed above?,survey_mod232_main_dr24,awb2_9_seek_hlp_ppl_othr_a3,Would you seek help from another not listed above?,mentalhealth&wellbeing
+self_harm,haven_labelled,"In the past year, have you hurt yourself on purpose in any way?",survey_mod232_main_dr24,awb2_9_seek_hurt_self_a5,"In the past year, have you hurt yourself on purpose in any way?",mentalhealth&wellbeing
+brs_item_1,haven_labelled,I tend to bounce back quickly after hard times,survey_mod232_main_dr24,awb2_9_resil1_a5,I tend to bounce back quickly after hard times,mentalhealth&wellbeing
+brs_item_2,numeric,,survey_mod232_main_dr24,awb2_9_resil2_a5,I have a hard time making it through stressful events,mentalhealth&wellbeing
+brs_item_3,haven_labelled,It does not take me long to recover from a stressful event,survey_mod232_main_dr24,awb2_9_resil3_a5,It does not take me long to recover from a stressful event,mentalhealth&wellbeing
+brs_item_4,numeric,,survey_mod232_main_dr24,awb2_9_resil4_a5,It is hard for me to snap back when something bad happens,mentalhealth&wellbeing
+brs_item_5,haven_labelled,I usually come through difficult times with little trouble,survey_mod232_main_dr24,awb2_9_resil5_a5,I usually come through difficult times with little trouble,mentalhealth&wellbeing
+brs_item_6,numeric,,survey_mod232_main_dr24,awb2_9_resil6_a5,I tend to take a long time to get over set-backs in my life,mentalhealth&wellbeing
+pliks_heard_voices,haven_labelled,Have you ever heard voices that others cannot hear?,survey_mod232_main_dr24,awb2_11_psychosis_3_r4,Have you ever heard voices that others cannot hear?,mentalhealth&wellbeing
+pliks_heard_voices_distress,haven_labelled,How upsetting if you heard voices others couldn't hear?,survey_mod232_main_dr24,awb2_11_upsetting_3_a4,How upsetting if you heard voices others couldn't hear?,mentalhealth&wellbeing
+pliks_heard_voices_frequency,haven_labelled,How often have you heard voices that other people couldnt hear in the last year?,survey_mod232_main_dr24,awb2_11_pst_yr_3_a4,How often have you heard voices that other people couldnt hear in the last year?,mentalhealth&wellbeing
+pliks_seen_things,haven_labelled,Have you ever seen something others cannot see?,survey_mod232_main_dr24,awb2_11_psychosis_5_r4,Have you ever seen something others cannot see?,mentalhealth&wellbeing
+pliks_seen_things_distress,haven_labelled,How upsetting if you have seen something other couldn't see?,survey_mod232_main_dr24,awb2_11_upsetting_5_a4,How upsetting if you have seen something other couldn't see?,mentalhealth&wellbeing
+pliks_seen_things_frequency,haven_labelled,How often have you seen something others couldn't see in past year?,survey_mod232_main_dr24,awb2_11_pst_yr_5_a4,How often have you seen something others couldn't see in past year?,mentalhealth&wellbeing
+pliks_spied_on,haven_labelled,Have you ever thought you was being followed/spied on?,survey_mod232_main_dr24,awb2_11_psychosis_2_r4,Have you ever thought you was being followed/spied on?,mentalhealth&wellbeing
+pliks_spied_on_distress,haven_labelled,How upsetting if you thought you were being followed/spied on?,survey_mod232_main_dr24,awb2_11_upsetting_2_a4,How upsetting if you thought you were being followed/spied on?,mentalhealth&wellbeing
+pliks_spied_on_frequency,haven_labelled,How often have you thought you were being followed or spied on in the past year?,survey_mod232_main_dr24,awb2_11_pst_yr_2_a4,How often have you thought you were being followed or spied on in the past year?,mentalhealth&wellbeing
+pliks_spied_on_plot,haven_labelled,Ever believed people following you/spying on you as part of a plot,survey_mod232_main_dr24,awb2_11_plot_hrm_a4,Ever believed people following you/spying on you as part of a plot,mentalhealth&wellbeing
+pliks_thoughts_read,haven_labelled,Have other people ever read your thoughts?,survey_mod232_main_dr24,awb2_11_psychosis_10_r4,Have other people ever read your thoughts?,mentalhealth&wellbeing
+pliks_thoughts_read_distress,haven_labelled,"At its worst, how upsetting did you find people reading your thoughts?",survey_mod232_main_dr24,awb2_11_upsetting_10_a4,"At its worst, how upsetting did you find people reading your thoughts?",mentalhealth&wellbeing
+pliks_thoughts_read_frequency,haven_labelled,How often have you believed that other people can read your thoughts in the past,survey_mod232_main_dr24,awb2_11_pst_yr_10_a4,How often have you believed that other people can read your thoughts in the past,mentalhealth&wellbeing
+pliks_thoughts_read_powers,haven_labelled,Do you think people use special powers to read your thoughts?,survey_mod232_main_dr24,awb2_11_pwrs_read_a4,Do you think people use special powers to read your thoughts?,mentalhealth&wellbeing
+pliks_tv_messages,haven_labelled,Have you thought you were being sent messages through TV arranged just for you?,survey_mod232_main_dr24,awb2_11_psychosis_1_r4,Have you thought you were being sent messages through TV arranged just for you?,mentalhealth&wellbeing
+pliks_tv_messages_distress,haven_labelled,How upsetting if you believed you were being sent special messages through TV,survey_mod232_main_dr24,awb2_11_upsetting_1_a4,How upsetting if you believed you were being sent special messages through TV,mentalhealth&wellbeing
+pliks_tv_messages_frequency,haven_labelled,How often have you been sent special messages through TV in the past year?,survey_mod232_main_dr24,awb2_11_pst_yr_1_a4,How often have you been sent special messages through TV in the past year?,mentalhealth&wellbeing
+pliks_under_control,haven_labelled,Have you ever felt under control of a special power?,survey_mod232_main_dr24,awb2_11_psychosis_4_r4,Have you ever felt under control of a special power?,mentalhealth&wellbeing
+pliks_under_control_distress,haven_labelled,How upsetting if you felt under control of a special power?,survey_mod232_main_dr24,awb2_11_upsetting_4_a4,How upsetting if you felt under control of a special power?,mentalhealth&wellbeing
+pliks_under_control_frequency,haven_labelled,How often you thought you were under control of a special power in past year,survey_mod232_main_dr24,awb2_11_pst_yr_4_a4,How often you thought you were under control of a special power in past year,mentalhealth&wellbeing
+pliks_under_control_who,haven_labelled,Who did you think was controlling you (at any time in the past)?,survey_mod232_main_dr24,awb2_11_cntrl_who_a4,Who did you think was controlling you (at any time in the past)?,mentalhealth&wellbeing
+pliks_under_control_no_will,haven_labelled,"Did it control what you were doing or thinking, no will of your own",survey_mod232_main_dr24,awb2_11_cntrl_no_will_a4,"Did it control what you were doing or thinking, no will of your own",mentalhealth&wellbeing
+pliks_special_powers,haven_labelled,Have you ever felt like you have special powers?,survey_mod232_main_dr24,awb2_11_psychosis_9_r4,Have you ever felt like you have special powers?,mentalhealth&wellbeing
+pliks_special_powers_frequency,haven_labelled,How often thought you were very special/have special powers past year,survey_mod232_main_dr24,awb2_11_pst_yr_9_a4,How often thought you were very special/have special powers past year,mentalhealth&wellbeing
+env_greenspace_w,haven_labelled,How often do you visit parks and green spaces? During the winter months,survey_mod232_main_dr24,awb7_1_wntr_mnths,How often do you visit parks and green spaces? During the winter months,environment
+env_greenspace_s,haven_labelled,How often do you visit parks and green spaces? During the spring/summer months,survey_mod232_main_dr24,awb7_1_smmr_mnths,How often do you visit parks and green spaces? During the spring/summer months,environment
+env_air_quality,haven_labelled,What do you think about the air quality in Bradford?,survey_mod232_main_dr24,awb7_2_pollution,What do you think about the air quality in Bradford?,environment
+env_future,haven_labelled,How pos/neg do you feel about the future of the environment?,survey_mod232_main_dr24,awb7_3_clmte_chnge_feelng,How pos/neg do you feel about the future of the environment?,environment
+school_enjoy,haven_labelled,School: I enjoy school,survey_mod232_main_dr24,awb7_1_like,School: I enjoy school,school
+school_trust,haven_labelled,School: There is an adult at school I can talk to if something is worrying me,survey_mod232_main_dr24,awb7_1_trust,School: There is an adult at school I can talk to if something is worrying me,school
+school_bullying,haven_labelled,Is bullying a problem at your school?,survey_mod232_main_dr24,awb7_1_bullying_1,Is bullying a problem at your school?,school
+school_safe,haven_labelled,I feel safe when I am at school,survey_mod232_main_dr24,awb7_1_safe_r8,I feel safe when I am at school,school
+school_pressure_1,haven_labelled,School pressure: Competition with other people for grades is intense,survey_mod232_main_dr24,awb7_2_grades_a5,School pressure: Competition with other people for grades is intense,school
+school_pressure_2,haven_labelled,School pressure: If I dont do well in school my family will be disappointed,survey_mod232_main_dr24,awb7_2_fam_diss_a5,School pressure: If I dont do well in school my family will be disappointed,school
+school_pressure_3,haven_labelled,School pressure: My teachers put too much pressure on me to do well in school,survey_mod232_main_dr24,awb7_2_prnt_preshr_a5,School pressure: My teachers put too much pressure on me to do well in school,school
+school_pressure_4,haven_labelled,School pressure: Im worried about progressing in the future,survey_mod232_main_dr24,awb7_2_progrssng_a5,School pressure: Im worried about progressing in the future,school
+school_pressure_5,haven_labelled,"School pressure: If I dont do well in school, Ill be a failure",survey_mod232_main_dr24,awb7_2_dnt_do_well_a5,"School pressure: If I dont do well in school, Ill be a failure",school
+school_pressure_6,haven_labelled,School pressure: Often feel stressed because of pressure to do well in school,survey_mod232_main_dr24,awb7_2_acad_strss_r8,School pressure: Often feel stressed because of pressure to do well in school,school
+school_pressure_7,haven_labelled,"School pressure: I worry about doing well in tests, exams and assessments",survey_mod232_main_dr24,awb7_2_test_wrries_a5,"School pressure: I worry about doing well in tests, exams and assessments",school
+friends_offline,haven_labelled,How many in-person friends do you have?,survey_mod232_main_dr24,awb2_7_friends_physcl_r10,How many in-person friends do you have?,school
+friends_online,haven_labelled,How many online friends do you have?,survey_mod232_main_dr24,awb2_7_friends_onln_r10,How many online friends do you have?,school
+friends_close,haven_labelled,Do you have any close friends?,survey_mod232_main_dr24,awb2_7_friends_clse_a5,Do you have any close friends?,school
+morality_1,haven_labelled,Do people your age: Start a fight with someone?,survey_mod232_main_dr24,awb8_1_morality_1_r10,Do people your age: Start a fight with someone?,identity&discrimination
+morality_2,haven_labelled,"Do people your age: Write things/spray paint on a building, fence, train",survey_mod232_main_dr24,awb8_1_morality_2_r10,"Do people your age: Write things/spray paint on a building, fence, train",identity&discrimination
+morality_3,haven_labelled,Do people your age: Take something from a shop without paying for it,survey_mod232_main_dr24,awb8_1_morality_3_r10,Do people your age: Take something from a shop without paying for it,identity&discrimination
+morality_4,haven_labelled,Do people your age: Copy/download music/games/films without paying,survey_mod232_main_dr24,awb8_1_morality_4_r10,Do people your age: Copy/download music/games/films without paying,identity&discrimination
+bullying_1,haven_labelled,How often have you taken part in bullying somebody at school?,survey_mod232_main_dr24,awb8_3_bully,How often have you taken part in bullying somebody at school?,identity&discrimination
+bullying_2,haven_labelled,How often have you been bullied at school in the past couple of months?,survey_mod232_main_dr24,awb8_2_bullied,How often have you been bullied at school in the past couple of months?,identity&discrimination
+bullying_3,haven_labelled,How often have you been bullied online?,survey_mod232_main_dr24,awb8_2_bullied_onlne,How often have you been bullied online?,identity&discrimination
+bullying_4,haven_labelled,"In the past couple of months, how often have you taken part in online bullying?",survey_mod232_main_dr24,awb8_2_bully_onlne,"In the past couple of months, how often have you taken part in online bullying?",identity&discrimination
+discrim_discourage,haven_labelled,Have you ever been discouraged from joining a club/group?,survey_mod232_main_dr24,awb8_2_club_1,Have you ever been discouraged from joining a club/group?,identity&discrimination
+discrim_excluded,haven_labelled,Have others your age not included you in their activities?,survey_mod232_main_dr24,awb8_2_excl_2,Have others your age not included you in their activities?,identity&discrimination
+discrim_expected,haven_labelled,Have people expected less of you than others your age?,survey_mod232_main_dr24,awb8_2_age_3,Have people expected less of you than others your age?,identity&discrimination
+discrim_english,haven_labelled,Have people assumed your English was poor?,survey_mod232_main_dr24,awb8_2_lang_4,Have people assumed your English was poor?,identity&discrimination
+discrim_police,haven_labelled,Have you ever been hassled by police?,survey_mod232_main_dr24,awb8_2_police_5,Have you ever been hassled by police?,identity&discrimination
+discrim_staff,haven_labelled,Have you ever been hassled by staff in a shop?,survey_mod232_main_dr24,awb8_2_shop_6,Have you ever been hassled by staff in a shop?,identity&discrimination
+discrim_insults,haven_labelled,Have you ever been called insulting names?,survey_mod232_main_dr24,awb8_2_names_7,Have you ever been called insulting names?,identity&discrimination
+discrim_service,haven_labelled,Have you ever received poor service in a shop/restaurant?,survey_mod232_main_dr24,awb8_2_service_8,Have you ever received poor service in a shop/restaurant?,identity&discrimination
+discrim_intelligent,haven_labelled,Have people ever acted as though you were not intelligent?,survey_mod232_main_dr24,awb8_2_int_9,Have people ever acted as though you were not intelligent?,identity&discrimination
+discrim_afraid,haven_labelled,Have people ever acted like they're afraid of you?,survey_mod232_main_dr24,awb8_2_afraid_10,Have people ever acted like they're afraid of you?,identity&discrimination
+discrim_threatened,haven_labelled,Have you ever been threatened?,survey_mod232_main_dr24,awb8_2_threat_11,Have you ever been threatened?,identity&discrimination
+sm_use_Facebook,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Facebook),survey_mod232_main_dr24,awb6_1_social_media_r10___1,Which social media platforms do you use? Tick all that apply (choice=Facebook),digital&socialmedia
+sm_use_Instagram,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Instagram),survey_mod232_main_dr24,awb6_1_social_media_r10___2,Which social media platforms do you use? Tick all that apply (choice=Instagram),digital&socialmedia
+sm_use_X,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=X (formerly,survey_mod232_main_dr24,awb6_1_social_media_r10___3,Which social media platforms do you use? Tick all that apply (choice=X (formerly,digital&socialmedia
+sm_use_TikTok,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=TikTok),survey_mod232_main_dr24,awb6_1_social_media_r10___4,Which social media platforms do you use? Tick all that apply (choice=TikTok),digital&socialmedia
+sm_use_Snapchat,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Snapchat),survey_mod232_main_dr24,awb6_1_social_media_r10___5,Which social media platforms do you use? Tick all that apply (choice=Snapchat),digital&socialmedia
+sm_use_other,haven_labelled,Which social media platforms do you use? Tick all that apply (choice=Other),survey_mod232_main_dr24,awb6_1_social_media_r10___11,Which social media platforms do you use? Tick all that apply (choice=Other),digital&socialmedia
+sm_time_weekday,haven_labelled,How many hours spent using social media during term time?,survey_mod232_main_dr24,awb6_1_time_weekday,How many hours spent using social media during term time?,digital&socialmedia
+sm_time_weekend,haven_labelled,How many hrs do you spend using social media at weekend in term time?,survey_mod232_main_dr24,awb6_1_time_weekend,How many hrs do you spend using social media at weekend in term time?,digital&socialmedia
+sm_positive_1,haven_labelled,Has connecting with friends been a positive experience of social media?,survey_mod232_main_dr24,awb6_1_positive_exp___1,Has connecting with friends been a positive experience of social media?,digital&socialmedia
+sm_positive_2,haven_labelled,Has viewing enjoyable content been a positive experience of social media?,survey_mod232_main_dr24,awb6_1_positive_exp___2,Has viewing enjoyable content been a positive experience of social media?,digital&socialmedia
+sm_positive_3,haven_labelled,Has learning new things  been a positive experience of social media?,survey_mod232_main_dr24,awb6_1_positive_exp___3,Has learning new things been a positive experience of social media?,digital&socialmedia
+sm_positive_4,haven_labelled,Has accessing support been a positive experience of social media?,survey_mod232_main_dr24,awb6_1_positive_exp___4,Has accessing support been a positive experience of social media?,digital&socialmedia
+sm_positive_5,haven_labelled,Has engaging positively with issues been a positive experience of social media?,survey_mod232_main_dr24,awb6_1_positive_exp___5,Has engaging positively with issues been a positive experience of social media?,digital&socialmedia
+sm_positive_6,haven_labelled,Has there been any other positive experience of social media?,survey_mod232_main_dr24,awb6_1_positive_exp___6,Has there been any other positive experience of social media?,digital&socialmedia
+sm_negative_1,haven_labelled,Has people being unpleasant about you been negative experience of social media?,survey_mod232_main_dr24,awb6_1_negative_exp_r5___1,Has people being unpleasant about you been negative experience of social media?,digital&socialmedia
+sm_negative_2,haven_labelled,Has people bullying you been a negative experience of social media?,survey_mod232_main_dr24,awb6_1_negative_exp_r5___2,Has people bullying you been a negative experience of social media?,digital&socialmedia
+sm_negative_3,haven_labelled,Has upsetting content been a negative experience of social media?,survey_mod232_main_dr24,awb6_1_negative_exp_r5___3,Has upsetting content been a negative experience of social media?,digital&socialmedia
+sm_negative_4,haven_labelled,Has sexually explicit images been a negative experience of social media?,survey_mod232_main_dr24,awb6_1_negative_exp_r5___4,Has sexually explicit images been a negative experience of social media?,digital&socialmedia
+sm_negative_5,haven_labelled,Has regrettably posting something online been a negative experience of social media?,survey_mod232_main_dr24,awb6_1_negative_exp_r5___5,Has regrettably posting something online been a negative experience of social media?,digital&socialmedia
+sm_negative_6,haven_labelled,You havent experience any negative experience of social media,survey_mod232_main_dr24,awb6_1_negative_exp_r5___6,You havent experience any negative experience of social media,digital&socialmedia
+sm_negative_7,haven_labelled,You've had a negative experience of social media for another reason,survey_mod232_main_dr24,awb6_1_negative_exp_r5___7,You've had a negative experience of social media for another reason,digital&socialmedia
+sm_experience,haven_labelled,Has your experience of using social media been mostly positive or negative?,survey_mod232_main_dr24,awb6_1_pos_neg,Has your experience of using social media been mostly positive or negative?,digital&socialmedia
+internet_access,haven_labelled,Do you have access to the internet at home?,survey_mod232_main_dr24,awb6_6_int_hme,Do you have access to the internet at home?,digital&socialmedia
+internet_quality,haven_labelled,How good is your internet at home?,survey_mod232_main_dr24,awb6_6_int_hme_gd,How good is your internet at home?,digital&socialmedia
+age_m_heightweight,numeric,Age in months at measurement,heightweight_dr23,age_m,Age (months) at measurement,heightweight
+height,numeric,Height (cm),heightweight_dr23,height,Height (cm),heightweight
+weight,numeric,Weight (kg),heightweight_dr23,weight,Weight (kg),heightweight
+bmi,numeric,BMI (kg/m2),heightweight_dr23,bmi,BMI (kg/m2),heightweight
+age_m_skinfold,numeric,Age in months at measurement,skinfold_dr23,age_m,Age (months) at measurement,skinfold
+sk_tricep,numeric,Triceps skinfold (mm),skinfold_dr23,sk_tricep,Triceps fold (mm),skinfold
+sk_subscap,numeric,Subscapular skinfold (mm),skinfold_dr23,sk_subscap,Subscapular fold (mm),skinfold
+age_m_bloodpressure,numeric,Age in months at measurement,bloodpressure_dr23,age_m,Age (months) at measurement,bloodpressure
+bp_sys_1,numeric,Systolic reading 1 (mm Hg),bloodpressure_dr23,bp_sys_1,Systolic reading 1 (mm Hg),bloodpressure
+bp_dia_1,numeric,Diastolic reading 1 (mm Hg),bloodpressure_dr23,bp_dia_1,Diastolic reading 1 (mm Hg),bloodpressure
+bp_sys_2,numeric,Systolic reading 2 (mm Hg),bloodpressure_dr23,bp_sys_2,Systolic reading 2 (mm Hg),bloodpressure
+bp_dia_2,numeric,Diastolic reading 2 (mm Hg),bloodpressure_dr23,bp_dia_2,Diastolic reading 2 (mm Hg),bloodpressure
+age_m_bioimpedance,numeric,Age (months) at measurement,bioimpedance_dr23,age_m,Age (months) at measurement,bioimpedance
+model,factor,,bioimpedance_dr23,model,Bioimpedance scale model,bioimpedance
+clothes_weight,numeric,Estimated weight of clothes (kg),bioimpedance_dr23,clothes,Estimated weight of clothes (kg),bioimpedance
+fatp,numeric,Total fat %,bioimpedance_dr23,fatp,Total fat %,bioimpedance
+fatm,numeric,Fat mass (kg),bioimpedance_dr23,fatm,Fat mass (kg),bioimpedance
+pmm,numeric,Predicted muscle mass (kg),bioimpedance_dr23,pmm,Predicted muscle mass (kg),bioimpedance
+ffm,numeric,Fat free mass (kg),bioimpedance_dr23,ffm,Fat free mass (kg),bioimpedance
+tbw,numeric,Total body water (%),bioimpedance_dr23,tbw,Total body water (kg),bioimpedance
+imp,numeric,Impedance (ohms),bioimpedance_dr23,imp,Impedance (ohms),bioimpedance
+edeqs_complete,logical,,,,,mentalhealth&wellbeing
+edeqs_total,numeric,,,,,mentalhealth&wellbeing
+rcads_dep_complete,logical,,,,,mentalhealth&wellbeing
+rcads_anx_complete,logical,,,,,mentalhealth&wellbeing
+rcads_dep_total,numeric,,,,,mentalhealth&wellbeing
+rcads_anx_total,numeric,,,,,mentalhealth&wellbeing
+rcads_total,numeric,,,,,mentalhealth&wellbeing
+swemwbs_complete,logical,,,,,mentalhealth&wellbeing
+swemwbs_total,numeric,,,,,mentalhealth&wellbeing
+sdq_con_complete,logical,,,,,mentalhealth&wellbeing
+sdq_emo_complete,logical,,,,,mentalhealth&wellbeing
+sdq_hyp_complete,logical,,,,,mentalhealth&wellbeing
+sdq_pee_complete,logical,,,,,mentalhealth&wellbeing
+sdq_pro_complete,logical,,,,,mentalhealth&wellbeing
+sdq_con_total,numeric,,,,,mentalhealth&wellbeing
+sdq_emo_total,numeric,,,,,mentalhealth&wellbeing
+sdq_hyp_total,numeric,,,,,mentalhealth&wellbeing
+sdq_pee_total,numeric,,,,,mentalhealth&wellbeing
+sdq_pro_total,numeric,,,,,mentalhealth&wellbeing
+sdq_ext_total,numeric,,,,,mentalhealth&wellbeing
+sdq_int_total,numeric,,,,,mentalhealth&wellbeing
+sdq_dif_total,numeric,,,,,mentalhealth&wellbeing
+ucla3_complete,logical,,,,,mentalhealth&wellbeing
+ucla3_total,numeric,,,,,mentalhealth&wellbeing
+ucla4_complete,logical,,,,,mentalhealth&wellbeing
+ucla4_total,numeric,,,,,mentalhealth&wellbeing
+brs_complete,logical,,,,,mentalhealth&wellbeing
+brs_total,numeric,,,,,mentalhealth&wellbeing
+yaps_complete,logical,,,,,mentalhealth&wellbeing
+yaps_total,numeric,,,,,mentalhealth&wellbeing
+fam_birth_place,factor,,survey_mod231_main_dr24,awb1_2_country_brth,What is your country of birth?,demographics
+ethnicity,factor,,survey_mod231_main_dr24,awb1_2_ethnicity_r4,What is your ethnicity?,demographics
 lang_home,factor,,,,,demographics
 lang_number,factor,,,,,demographics
-discrim_discourage_reason,factor,,,,,
-discrim_excluded_reason,factor,,,,,
-discrim_expected_reason,factor,,,,,
-discrim_english_reason,factor,,,,,
-discrim_police_reason,factor,,,,,
-discrim_staff_reason,factor,,,,,
-discrim_insults_reason,factor,,,,,
-discrim_service_reason,factor,,,,,
-discrim_intelligent_reason,factor,,,,,
-discrim_afraid_reason,factor,,,,,
-discrim_threatened_reason,factor,,,,,
+discrim_discourage_reason,factor,,,,,identity&discrimination
+discrim_excluded_reason,factor,,,,,identity&discrimination
+discrim_expected_reason,factor,,,,,identity&discrimination
+discrim_english_reason,factor,,,,,identity&discrimination
+discrim_police_reason,factor,,,,,identity&discrimination
+discrim_staff_reason,factor,,,,,identity&discrimination
+discrim_insults_reason,factor,,,,,identity&discrimination
+discrim_service_reason,factor,,,,,identity&discrimination
+discrim_intelligent_reason,factor,,,,,identity&discrimination
+discrim_afraid_reason,factor,,,,,identity&discrimination
+discrim_threatened_reason,factor,,,,,identity&discrimination
