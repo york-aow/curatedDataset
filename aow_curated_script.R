@@ -1894,7 +1894,7 @@ aow_year_9 <- aow_curated %>%
 aow_year_10 <- aow_curated %>% 
   filter(year_group == 10)
 
-# 10. Save the processed data ####
+# 10. Save the complete processed data ####
 
 # Save as a CSV file (Comma-Separated Values)
 # Best for universal access with any spreadsheet or coding software.
@@ -1916,3 +1916,47 @@ write_sav(aow_curated, here("data", "derived", "aow_curated.sav"))
 print(
   "The script has finished processing the raw data. Processed data saved in CSV, RDS, Stata, and SPSS formats can be found in the 'data/derived' folder."
 )
+
+# 11. Save processed data by themes for greater curation ####
+
+# Create a codebook using the aow_curated_variables.csv
+codebook <- read.csv('aow_curated_variables.csv')
+
+# Create a list of unique themes from the codebook
+# first identify the id theme that will be present for all themed DFs
+id_var <- codebook %>% 
+  filter(
+    Theme == 'id'
+  ) %>% 
+  pull(
+    Curated_variable_name
+  )
+
+# then identify all themes and the themes to be saved excluding id
+all_themes <- unique(codebook$Theme)
+themes_to_save <- all_themes[all_themes != 'id']
+
+# Loop, subset, and save in all formats
+for (current_theme in themes_to_save) {
+  theme_vars <- codebook %>% 
+    filter(
+      Theme == current_theme
+    ) %>% 
+    pull(
+      Curated_variable_name
+    )
+  
+  vars_to_keep <- unique(c(id_var, theme_vars))
+  
+  theme_data <- aow_curated %>% 
+    select(
+      all_of(vars_to_keep)
+    )
+  
+  filename_base <- here('data','derived', paste0('aow_curated_', current_theme))
+  
+  write_csv(theme_data, paste0(filename_base, ".csv"))
+  write_rds(theme_data, paste0(filename_base, ".rds"))
+  write_dta(theme_data, paste0(filename_base, ".dta"))
+  write_sav(theme_data, paste0(filename_base, ".sav"))
+}
