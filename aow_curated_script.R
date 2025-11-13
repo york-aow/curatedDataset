@@ -1912,10 +1912,6 @@ write_dta(aow_curated, here("data", "derived", "aow_curated.dta"))
 # For users of the SPSS statistical software.
 write_sav(aow_curated, here("data", "derived", "aow_curated.sav"))
 
-# Confirmation message
-print(
-  "The script has finished processing the raw data. Processed data saved in CSV, RDS, Stata, and SPSS formats can be found in the 'data/derived' folder."
-)
 
 # 11. Save processed data by themes for greater curation ####
 
@@ -1960,3 +1956,8 @@ for (current_theme in themes_to_save) {
   write_dta(theme_data, paste0(filename_base, ".dta"))
   write_sav(theme_data, paste0(filename_base, ".sav"))
 }
+
+# Confirmation message
+print(
+  "The script has finished processing the raw data. Processed data saved in CSV, RDS, Stata, and SPSS formats can be found in the 'data/derived' folder."
+)
