@@ -16,7 +16,7 @@ You can view the the levels of missingness for each variable, or download a form
 
 <a href="https://github.com/york-aow/curatedDataset/blob/main/missing_table_years.csv" target="_blank" rel="noopener noreferrer">
   View the Levels of Missingness (opens in new tab)
-</a>
+</a> <br>
 <a href="{{ site.baseurl }}/missing_table_years_formatted.xlsx" download>
   Download the Formatted Excel File
 </a>
