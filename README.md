@@ -11,3 +11,12 @@ You can view a complete list of all the data variables available here:
 <a href="https://github.com/york-aow/curatedDataset/blob/main/aow_curated_variables.csv" target="_blank" rel="noopener noreferrer">
   View the Project Data Variables (opens in new tab)
 </a>
+
+You can view the the levels of missingness for each variable, or download a formatted version to open in Excel/Sheets here:
+
+<a href="https://github.com/york-aow/curatedDataset/blob/main/missing_table_years.csv" target="_blank" rel="noopener noreferrer">
+  View the Levels of Missingness (opens in new tab)
+</a>
+<a href="{{ site.baseurl }}/missing_table_years_formatted.xlsx" download>
+  Download the Formatted Excel File
+</a>
