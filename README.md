@@ -23,13 +23,11 @@ You can view the the levels of missingness for each variable, or download a form
 
 ### Script
 
-You can view the R script used to create the curated dataset here:
+You can view the R script used to create the curated dataset or download as an R script file here:
 
 <a href="https://github.com/york-aow/curatedDataset/blob/main/aow_curated_script.R" target="_blank" rel="noopener noreferrer">
   View the Curated Data R Script (opens in new tab)
 </a> <br>
-
-You can download the R script here:
 <a href="{{ site.baseurl }}/aow_curated_script.R" download>
   Download the Curated Data R Script
 </a>
