@@ -10,7 +10,7 @@ You can view a complete list of all the data variables available here:
 
 <a href="https://github.com/york-aow/curatedDataset/blob/main/aow_curated_variables.csv" target="_blank" rel="noopener noreferrer">
   View the Project Data Variables (opens in new tab)
-</a>
+</a> <br>
 
 You can view the the levels of missingness for each variable, or download a formatted version to open in Excel/Sheets here:
 
@@ -19,7 +19,7 @@ You can view the the levels of missingness for each variable, or download a form
 </a> <br>
 <a href="{{ site.baseurl }}/missing_table_years_formatted.xlsx" download>
   Download the Formatted Excel File
-</a>
+</a> <br>
 
 ### Script
 
@@ -27,7 +27,7 @@ You can view the R script used to create the curated dataset here:
 
 <a href="https://github.com/york-aow/curatedDataset/blob/main/aow_curated_script.R" target="_blank" rel="noopener noreferrer">
   View the Curated Data R Script (opens in new tab)
-</a>
+</a> <br>
 
 You can download the R script here:
 <a href="{{ site.baseurl }}/aow_curated_script.R" download>
