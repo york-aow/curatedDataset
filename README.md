@@ -6,6 +6,14 @@ For more details and/or collaboration opportunities, please contact dohs-aow-pro
 
 ### Data Variables
 
+You can view a list of the measures used in the Age of Wonder Curated Dataset here:
+
+-Link-
+
+You can view the Born in Bradford Age of Wonder Questionnaires here:
+
+-Link-
+
 You can view a complete list of all the data variables available here:
 
 <a href="https://github.com/york-aow/curatedDataset/blob/main/aow_curated_variables.csv" target="_blank" rel="noopener noreferrer">
@@ -30,7 +38,13 @@ You can view the R script used to create the curated dataset or download as an R
 </a> <br>
 <a href="{{ site.baseurl }}/aow_curated_script.R" download>
   Download the Curated Data R Script
-</a>
+</a> <br>
+
+Useful R script commands to get more out of the data can be found here:
+
+<a href="{{ site.baseurl }}/Useful commands.R" download>
+  Download Useful Commands for the Curated Data R script
+</a> <br>
 
 ### AoW Curated Dataset: Cohort Profile
 
