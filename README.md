@@ -6,13 +6,20 @@ For more details and/or collaboration opportunities, please contact dohs-aow-pro
 
 ### Data Variables
 
-You can view a list of the measures used in the Age of Wonder Curated Dataset here:
+You can view a information on the measures used in the Age of Wonder Curated Dataset here:
 
--Link-
+<a href="{{ site.baseurl }}/Curated dataset information draft.pdf" target="_blank">
+  View the Information on Measures PDF
+</a> <br>
 
 You can view the Born in Bradford Age of Wonder Questionnaires here:
 
--Link-
+<a href="{{ site.baseurl }}/AoW231_researcher.pdf" target="_blank">
+  Module 231 (2023-24)
+</a> <br>
+<a href="{{ site.baseurl }}/AoW232_researcher.pdf.pdf" target="_blank">
+  Module 232 (2023-24)
+</a> <br>
 
 You can view a complete list of all the data variables available here:
 
