@@ -1,6 +1,6 @@
-#### Functions ####
+# Functions ####
 
-#### Get dataframe variable info as a dataframe + save as CSV ####
+## Get dataframe variable info as a dataframe + save as CSV ####
 
 df_info <- function(df, file = NULL) {
   # Initialize empty vectors to store names, types, and labels
@@ -48,4 +48,39 @@ df_info <- function(df, file = NULL) {
       warning(paste("Failed to save CSV to", file, ":", e$message))
     })
   }
+}
+
+## Create recode functions ####
+
+#requires dplyr
+library(dplyr)
+
+# Recode Likert scale 1-4 to 0-3
+recode14_03 <- function(x) {
+  case_match(x,
+             1 ~ 0,
+             2 ~ 1,
+             3 ~ 2,
+             4 ~ 3,
+             NA ~ NA)
+}
+
+# Reverse code 0-2 Likert scale
+recode02_20 <- function(x) {
+  case_match(x,
+             0 ~ 2,
+             1 ~ 1,
+             2 ~ 0,
+             NA ~ NA)
+}
+
+# Reverse code 1-5 Likert scale
+recode15_51 <- function(x) {
+  case_match(x,
+             1 ~ 5,
+             2 ~ 4,
+             3 ~ 3,
+             4 ~ 2,
+             5 ~ 1,
+             NA ~ NA)
 }
