@@ -8,7 +8,9 @@ For more details and/or collaboration opportunities, please contact dohs-aow-pro
 
 You can view information on the measures used in the Age of Wonder Curated Dataset here:
 
-
+<a href="{{ site.baseurl }}/Curated dataset information.pdf" target="_blank">
+  View the Information on Measures PDF
+</a> <br>
 
 You can view the Born in Bradford Age of Wonder Questionnaires here:
 
