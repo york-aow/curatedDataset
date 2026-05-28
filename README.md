@@ -11,7 +11,7 @@ You can view information on the measures used in the Age of Wonder Curated Datas
 <a href="{{ site.baseurl }}/Curated dataset information.pdf" target="_blank">
   View the Information on Measures PDF
   
-</a> <br>
+<br>
 
 You can view the Born in Bradford Age of Wonder Questionnaires here:
 
@@ -36,6 +36,13 @@ You can view the the levels of missingness for each variable, or download a form
 <a href="{{ site.baseurl }}/missing_table_years_formatted.xlsx" download>
   Download the Formatted Excel File
 </a> <br>
+
+### Instructions for Using and Storing the Data
+
+If you are a University of York student, instructions for using and storing the Curated Dataset can be found here:
+<a href="{{ site.baseurl }}/Data storage guide - York students.pdf" target="_blank">
+Data storage guide - University of York
+<br>
 
 ### Script
 
