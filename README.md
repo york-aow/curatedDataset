@@ -41,7 +41,7 @@ You can view the the levels of missingness for each variable, or download a form
 
 If you are a University of York student, instructions for using and storing the Curated Dataset can be found here:
 <a href="{{ site.baseurl }}/Data storage guide - York students.pdf" target="_blank">
-Data storage guide - University of York
+Data storage guide - University of York PDF
 <br>
 
 ### Script
