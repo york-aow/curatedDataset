@@ -8,19 +8,18 @@ For more details and/or collaboration opportunities, please contact dohs-aow-pro
 
 You can view information on the measures used in the Age of Wonder Curated Dataset here:
 
-<a href="{{ site.baseurl }}/Curated dataset information.pdf" target="_blank">
+<a href="Curated%20dataset%20information.pdf" target="_blank">
   View the Information on Measures PDF
-  
-<br>
+</a>
 
 You can view the Born in Bradford Age of Wonder Questionnaires here:
 
-<a href="{{ site.baseurl }}/AoW231_researcher.pdf" target="_blank">
+<a href="AoW231_researcher.pdf" target="_blank">
   Module 231 (2023-24)
-</a> <br>
-<a href="{{ site.baseurl }}/AoW232_researcher.pdf" target="_blank">
+</a>
+<a href="AoW232_researcher.pdf" target="_blank">
   Module 232 (2023-24)
-</a> <br>
+</a>
 
 You can view a complete list of all the data variables available here:
 
@@ -33,16 +32,16 @@ You can view the the levels of missingness for each variable, or download a form
 <a href="https://github.com/york-aow/curatedDataset/blob/main/missing_table_years.csv" target="_blank" rel="noopener noreferrer">
   View the Levels of Missingness (opens in new tab)
 </a> <br>
-<a href="{{ site.baseurl }}/missing_table_years_formatted.xlsx" download>
+<a href="missing_table_years_formatted.xlsx" download>
   Download the Formatted Excel File
 </a> <br>
 
 ### Instructions for Using and Storing the Data
 
 If you are a University of York student, instructions for using and storing the Curated Dataset can be found here:
-<a href="{{ site.baseurl }}/Data storage guide - York students.pdf" target="_blank">
+<a href="Data%20storage%20guide%20-%20York%20students.pdf" target="_blank">
 Data storage guide - University of York PDF
-<br>
+</a>
 
 ### Script
 
@@ -51,13 +50,13 @@ You can view the R script used to create the curated dataset or download as an R
 <a href="https://github.com/york-aow/curatedDataset/blob/main/aow_curated_script.R" target="_blank" rel="noopener noreferrer">
   View the Curated Data R Script (opens in new tab)
 </a> <br>
-<a href="{{ site.baseurl }}/aow_curated_script.R" download>
+<a href="aow_curated_script.R" download>
   Download the Curated Data R Script
 </a> <br>
 
 Useful R script commands to get more out of the data can be found here:
 
-<a href="{{ site.baseurl }}/Useful commands.R" download>
+<a href="Useful commands.R" download>
   Download Useful Commands for the Curated Data R script
 </a> <br>
 
