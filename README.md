@@ -6,52 +6,52 @@ For more details and/or collaboration opportunities, please contact dohs-aow-pro
 
 ### Data Variables
 
-You can view information on the measures used in the Age of Wonder Curated Dataset here:
+You can view information on the measures used in the Age of Wonder Curated Dataset here: <br>
 <a href="Curated%20dataset%20information.pdf" target="_blank">
-  View the Information on Measures PDF
+View the Information on Measures PDF
 </a>
 
-You can view the Born in Bradford Age of Wonder Questionnaires here:
+You can view the Born in Bradford Age of Wonder Questionnaires here: <br>
 <a href="AoW231_researcher.pdf" target="_blank">
-  Module 231 (2023-24)
-</a>
+Module 231 (2023-24)
+</a> <br>
 <a href="AoW232_researcher.pdf" target="_blank">
-  Module 232 (2023-24)
+Module 232 (2023-24)
 </a>
 
-You can view a complete list of all the data variables available here:
+You can view a complete list of all the data variables available here: <br>
 <a href="https://github.com/york-aow/curatedDataset/blob/main/aow_curated_variables.csv" target="_blank" rel="noopener noreferrer">
-  View the Project Data Variables (opens in new tab)
+View the Project Data Variables (opens in new tab)
 </a>
 
-You can view the the levels of missingness for each variable, or download a formatted version to open in Excel/Sheets here:
+You can view the the levels of missingness for each variable, or download a formatted version to open in Excel/Sheets here: <br>
 <a href="https://github.com/york-aow/curatedDataset/blob/main/missing_table_years.csv" target="_blank" rel="noopener noreferrer">
-  View the Levels of Missingness (opens in new tab)
-</a>
+View the Levels of Missingness (opens in new tab)
+</a> <br>
 <a href="missing_table_years_formatted.xlsx" download>
-  Download the Formatted Excel File
+Download the Formatted Excel File
 </a>
 
 ### Instructions for Using and Storing the Data
 
-If you are a University of York student, instructions for using and storing the Curated Dataset can be found here:
+If you are a University of York student, instructions for using and storing the Curated Dataset can be found here: <br>
 <a href="Data%20storage%20guide%20-%20York%20students.pdf" target="_blank">
-  Data storage guide - University of York PDF
+Data storage guide - University of York PDF
 </a>
 
 ### Script
 
-You can view the R script used to create the curated dataset or download as an R script file here:
+You can view the R script used to create the curated dataset or download as an R script file here: <br>
 <a href="https://github.com/york-aow/curatedDataset/blob/main/aow_curated_script.R" target="_blank" rel="noopener noreferrer">
-  View the Curated Data R Script (opens in new tab)
-</a>
+View the Curated Data R Script (opens in new tab)
+</a> <br>
 <a href="aow_curated_script.R" download>
-  Download the Curated Data R Script
+Download the Curated Data R Script
 </a>
 
-Useful R script commands to get more out of the data can be found here:
+Useful R script commands to get more out of the data can be found here: <br>
 <a href="Useful commands.R" download>
-  Download Useful Commands for the Curated Data R script
+Download Useful Commands for the Curated Data R script
 </a>
 
 ### AoW Curated Dataset: Cohort Profile
